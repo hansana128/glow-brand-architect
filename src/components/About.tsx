@@ -1,0 +1,116 @@
+
+import React from "react";
+
+const About = () => {
+  return (
+    <section id="about" className="py-20 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-brand-blue/20 blur-[80px]"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-brand-orange/10 blur-[100px]"></div>
+      </div>
+
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          {/* Left Column - Image */}
+          <div className="flex justify-center md:justify-end">
+            {/* PLACEHOLDER FOR MALSHI'S ABOUT IMAGE */}
+            <div className="relative">
+              <div className="w-80 h-96 rounded-xl overflow-hidden border border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.3)]">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+                  alt="Malshi Hansana"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Floating Logos */}
+              <div className="floating-icons-container absolute inset-0 w-full h-full">
+                {/* Figma logo */}
+                <div className="absolute top-[-20px] right-[-20px] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg">
+                  <img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma" className="w-full h-full object-contain" />
+                </div>
+                
+                {/* WordPress logo */}
+                <div className="absolute top-[20%] left-[-30px] w-14 h-14 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{ animationDelay: "0.5s" }}>
+                  <img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="WordPress" className="w-full h-full object-contain" />
+                </div>
+                
+                {/* LinkedIn logo */}
+                <div className="absolute bottom-[30%] right-[-25px] w-10 h-10 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{ animationDelay: "1s" }}>
+                  <img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" className="w-full h-full object-contain" />
+                </div>
+                
+                {/* HTML/CSS logo */}
+                <div className="absolute bottom-[-15px] left-[30%] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{ animationDelay: "1.5s" }}>
+                  <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML/CSS" className="w-full h-full object-contain" />
+                </div>
+                
+                {/* Canva logo */}
+                <div className="absolute top-[40%] left-[90%] w-11 h-11 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{ animationDelay: "2s" }}>
+                  <img src="https://cdn.worldvectorlogo.com/logos/canva-1.svg" alt="Canva" className="w-full h-full object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Text Content */}
+          <div className="text-left">
+            <h2 className="text-3xl font-bold mb-6">
+              <span className="text-brand-orange">🔥</span> About Malshi
+            </h2>
+
+            <div className="space-y-4 text-gray-200">
+              <p className="text-lg">
+                Are you tired of boring websites that don't convert or digital marketing that doesn't deliver?
+              </p>
+              <p>
+                If yes, you've landed on the right profile. I help startups, small businesses, and personal brands build a powerful online presence using the perfect mix of:
+              </p>
+              
+              <ul className="ml-5 space-y-2">
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">✅</span>
+                  <span>Modern web development</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">✅</span>
+                  <span>Creative design</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">✅</span>
+                  <span>Smart digital marketing</span>
+                </li>
+              </ul>
+              
+              <p>
+                I've worked with dozens of brands to turn basic ideas into stunning, high-performing websites — paired with content that actually connects and campaigns that grow fast.
+              </p>
+
+              <ul className="ml-5 space-y-2">
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">🚀</span>
+                  <span>Stronger online visibility</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">🚀</span>
+                  <span>Better user experience</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">🚀</span>
+                  <span>Real customer engagement</span>
+                </li>
+              </ul>
+
+              <p className="font-semibold">
+                Send me a message with the word "LEVEL UP" to get started.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
