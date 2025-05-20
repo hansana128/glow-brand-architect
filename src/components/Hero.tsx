@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
 
       <div className="container px-4 mx-auto z-10">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col items-start text-left">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-wide">
               <span className="text-white">TURN </span>
@@ -27,7 +27,7 @@ const Hero = () => {
               <span className="text-brand-orange">LEGACY.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-lg">
+            <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-lg">
               Not just a developer — a creative force transforming bold ideas into unforgettable brands.
             </p>
 

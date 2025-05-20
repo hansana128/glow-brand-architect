@@ -1,7 +1,6 @@
 
 import React from "react";
 import { Linkedin, Mail, Instagram, BarChart, MessageSquare } from "lucide-react";
-import { Button } from "./ui/button";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -44,14 +43,13 @@ const Footer = () => {
               <div className="flex flex-wrap gap-4">
                 {["home", "about", "services", "portfolio", "contact"].map(
                   (item) => (
-                    <Button
+                    <span
                       key={item}
                       onClick={() => scrollToSection(item)}
-                      variant="outline"
-                      className="text-sm border-brand-orange text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full"
+                      className="text-gray-300 text-sm hover:text-brand-orange transition-colors duration-300 cursor-pointer"
                     >
                       {item.charAt(0).toUpperCase() + item.slice(1)}
-                    </Button>
+                    </span>
                   )
                 )}
               </div>

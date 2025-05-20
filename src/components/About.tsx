@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
+    <section id="about" className="py-12 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-brand-blue/20 blur-[80px]"></div>
@@ -11,7 +11,7 @@ const About = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Image */}
           <div className="flex justify-center md:justify-end">
             {/* PLACEHOLDER FOR MALSHI'S ABOUT IMAGE */}
@@ -55,8 +55,8 @@ const About = () => {
           </div>
 
           {/* Right Column - Text Content */}
-          <div className="text-left">
-            <h2 className="text-3xl font-bold mb-6">
+          <div className="text-left px-2">
+            <h2 className="text-3xl font-bold mb-4">
               <span className="text-brand-orange">🔥</span> About Malshi
             </h2>
 

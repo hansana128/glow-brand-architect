@@ -12,11 +12,11 @@ interface ServiceCardProps {
 const ServiceCard = ({ icon, title, description }: ServiceCardProps) => {
   return (
     <div className="glassmorphism-card p-6">
-      <div className="flex flex-col items-center text-center space-y-4">
-        <div className="text-4xl mb-2 animate-pulse">{icon}</div>
+      <div className="flex flex-col items-center text-center space-y-3">
+        <div className="text-4xl mb-1 animate-pulse">{icon}</div>
         <h3 className="text-xl font-bold text-white">{title}</h3>
         <p className="text-gray-300 text-sm">{description}</p>
-        <button className="mt-4 py-2 px-4 rounded-full text-white text-sm font-medium border border-brand-orange/50 transition-all duration-300 hover:border-brand-orange hover:shadow-[0_0_10px_rgba(255,94,58,0.6)]">
+        <button className="mt-3 py-2 px-4 rounded-full text-white text-sm font-medium border border-brand-orange/50 transition-all duration-300 hover:border-brand-orange hover:shadow-[0_0_10px_rgba(255,94,58,0.6)]">
           See More
         </button>
       </div>
@@ -60,7 +60,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden">
+    <section id="services" className="py-12 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-brand-blue/30 blur-[100px]"></div>
@@ -68,8 +68,8 @@ const Services = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">
             <span className="text-white">WHAT I'M </span>
             <span className="text-brand-orange">OFFERING</span>
           </h2>
@@ -78,7 +78,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
