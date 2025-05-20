@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
+      className="relative py-16 flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage: "radial-gradient(circle at 30% 40%, #0B132B 0%, #000000 70%)",
       }}
@@ -16,8 +16,8 @@ const Hero = () => {
         <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-brand-blue/30 blur-[100px]"></div>
       </div>
 
-      <div className="container px-4 mx-auto z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="container px-4 mx-auto z-10 max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col items-start text-left">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-wide">
               <span className="text-white">TURN </span>
@@ -46,9 +46,8 @@ const Hero = () => {
 
           <div className="flex items-center justify-center">
             {/* PLACEHOLDER FOR MALSHI'S PHOTO */}
-            {/* Replace the src with your actual image path */}
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.5)]">
+              <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.5)]">
                 <img
                   src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
                   alt="Malshi Hansana"

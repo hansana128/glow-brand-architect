@@ -20,26 +20,26 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-brand-black py-5 relative z-50">
-      <div className="container mx-auto px-4 md:px-6">
+    <header className="bg-brand-black py-4 relative z-50">
+      <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
             href="#hero"
-            className="text-white font-bold text-xl md:text-2xl flex items-center gap-2"
+            className="text-white font-bold text-lg md:text-xl flex items-center gap-1"
           >
             {/* Replace with your logo if needed */}
             <span className="text-brand-orange">Malshi</span> Hansana
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-2">
             {["home", "about", "services", "portfolio", "contact"].map((item) => (
               <Button
                 key={item}
                 onClick={() => scrollToSection(item)}
                 variant="outline"
-                className="uppercase text-sm font-medium border-brand-orange text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full"
+                className="uppercase text-xs font-medium border-brand-orange/70 text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full py-1 px-3 h-auto"
               >
                 {item}
               </Button>
@@ -52,9 +52,9 @@ const Navbar = () => {
             className="md:hidden text-white hover:text-brand-orange transition-colors duration-300"
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5" />
             ) : (
-              <MenuIcon className="w-6 h-6" />
+              <MenuIcon className="w-5 h-5" />
             )}
           </button>
         </div>
@@ -66,13 +66,13 @@ const Navbar = () => {
             mobileMenuOpen ? "max-h-screen" : "max-h-0"
           )}
         >
-          <div className="flex flex-col p-4 gap-3">
+          <div className="flex flex-col p-4 gap-2">
             {["home", "about", "services", "portfolio", "contact"].map((item) => (
               <Button
                 key={item}
                 onClick={() => scrollToSection(item)}
                 variant="outline"
-                className="uppercase text-base font-medium border-brand-orange text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full justify-start"
+                className="uppercase text-sm font-medium border-brand-orange/70 text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full justify-start"
               >
                 {item}
               </Button>

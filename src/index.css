@@ -55,7 +55,7 @@
 
 @layer components {
   .glow-btn {
-    @apply relative inline-flex items-center justify-center px-6 py-3 rounded-full overflow-hidden bg-transparent text-white uppercase font-bold tracking-wider border border-brand-orange transition-all duration-300;
+    @apply relative inline-flex items-center justify-center px-5 py-2 rounded-full overflow-hidden bg-transparent text-white uppercase font-bold tracking-wider border border-brand-orange transition-all duration-300;
   }
   
   .glow-btn::before {
@@ -75,7 +75,7 @@
   }
   
   .glassmorphism-card {
-    @apply bg-brand-blue/30 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300;
+    @apply bg-brand-blue/30 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300 h-full;
   }
   
   .glassmorphism-card:hover {
@@ -87,15 +87,15 @@
   }
   
   .scroll-top-btn {
-    @apply fixed bottom-6 left-6 p-3 rounded-full bg-brand-blue text-white shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer shadow-[0_0_10px_rgba(255,94,58,0.3)] hover:shadow-[0_0_15px_rgba(255,94,58,0.6)] z-50;
+    @apply fixed bottom-6 left-6 p-2 rounded-full bg-brand-blue text-white shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer shadow-[0_0_10px_rgba(255,94,58,0.3)] hover:shadow-[0_0_15px_rgba(255,94,58,0.6)] z-50;
   }
   
   .chat-toggle {
-    @apply fixed bottom-6 right-6 p-3 rounded-full bg-brand-blue text-white shadow-lg transition-all duration-300 cursor-pointer shadow-[0_0_10px_rgba(255,94,58,0.3)] hover:shadow-[0_0_15px_rgba(255,94,58,0.6)] z-50;
+    @apply fixed bottom-6 right-6 p-2 rounded-full bg-brand-blue text-white shadow-lg transition-all duration-300 cursor-pointer shadow-[0_0_10px_rgba(255,94,58,0.3)] hover:shadow-[0_0_15px_rgba(255,94,58,0.6)] z-50;
   }
   
   .chat-menu {
-    @apply fixed bottom-20 right-6 flex flex-col gap-3 p-3 rounded-xl bg-brand-blue/80 backdrop-blur-sm border border-white/10 shadow-lg transition-all duration-300 z-50 scale-0 opacity-0 origin-bottom-right;
+    @apply fixed bottom-16 right-6 flex flex-col gap-2 p-2 rounded-xl bg-brand-blue/80 backdrop-blur-sm border border-white/10 shadow-lg transition-all duration-300 z-50 scale-0 opacity-0 origin-bottom-right;
   }
   
   .chat-menu.active {
@@ -103,7 +103,7 @@
   }
   
   .chat-menu-item {
-    @apply p-3 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110;
+    @apply p-2 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110;
   }
 
   /* Portfolio card effects */
@@ -121,5 +121,16 @@
   
   .portfolio-card:hover img {
     @apply scale-110;
+  }
+  
+  /* Animation for floating icons */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 }

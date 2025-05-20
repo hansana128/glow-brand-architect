@@ -18,28 +18,27 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-brand-blue/30 py-12 relative">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-10 mb-8">
+    <footer className="bg-brand-blue/30 py-8 relative">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
           {/* Left side */}
           <div className="flex flex-col">
             {/* Logo placeholder */}
-            {/* <!-- Logo goes here --> */}
             <h3 className="text-xl font-bold text-white mb-2">
               <span className="text-brand-orange">Malshi</span> Hansana
             </h3>
             <p className="text-gray-300 text-sm">
               Web Developer | Digital Marketer
             </p>
-            <p className="text-gray-400 text-sm mt-4 max-w-md">
+            <p className="text-gray-400 text-sm mt-2 max-w-md">
               Transforming bold ideas into unforgettable digital experiences.
             </p>
           </div>
 
           {/* Right side */}
           <div className="flex flex-col md:items-end">
-            <div className="flex flex-col mb-6">
-              <h4 className="text-white font-bold mb-3">Navigation</h4>
+            <div className="flex flex-col mb-4">
+              <h4 className="text-white font-bold mb-2">Navigation</h4>
               <div className="flex flex-wrap gap-4">
                 {["home", "about", "services", "portfolio", "contact"].map(
                   (item) => (
@@ -58,36 +57,36 @@ const Footer = () => {
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="border-t border-white/10 pt-6 mt-6">
+        <div className="border-t border-white/10 pt-4 mt-4">
           {/* Social Icons Row */}
-          <div className="flex justify-center mb-4 gap-4">
+          <div className="flex justify-center mb-3 gap-3">
             <a
               href="https://www.linkedin.com/in/malshi-hansana"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+              className="w-9 h-9 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
             >
-              <Linkedin size={18} />
+              <Linkedin size={16} />
             </a>
             <a
               href="mailto:info@malshihansana.com"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+              className="w-9 h-9 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
             >
-              <Mail size={18} />
+              <Mail size={16} />
             </a>
             <a
               href="https://www.instagram.com/malshi__xii/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+              className="w-9 h-9 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
             >
-              <Instagram size={18} />
+              <Instagram size={16} />
             </a>
             <a
               href="#analytics"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+              className="w-9 h-9 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
             >
-              <BarChart size={18} />
+              <BarChart size={16} />
             </a>
           </div>
 
@@ -99,12 +98,12 @@ const Footer = () => {
           {/* Scroll to top button - moved to the bottom right */}
           <button
             onClick={scrollToTop}
-            className="absolute bottom-6 right-20 w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+            className="absolute bottom-6 right-20 w-9 h-9 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
             aria-label="Scroll to top"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-4 w-4"
               viewBox="0 0 20 20"
               fill="currentColor"
             >

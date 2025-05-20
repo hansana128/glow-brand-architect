@@ -1,24 +1,25 @@
+
 import React from "react";
 const About = () => {
-  return <section id="about" className="py-12 relative overflow-hidden">
+  return <section id="about" className="py-6 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-brand-blue/20 blur-[80px]"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-brand-orange/10 blur-[100px]"></div>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-6 items-center">
           {/* Left Column - Image */}
           <div className="flex justify-center md:justify-end">
             {/* PLACEHOLDER FOR MALSHI'S ABOUT IMAGE */}
             <div className="relative">
-              <div className="w-80 h-96 rounded-xl overflow-hidden border border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.3)]">
+              <div className="w-72 h-80 rounded-xl overflow-hidden border border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.3)]">
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Malshi Hansana" className="w-full h-full object-cover" />
               </div>
 
               {/* Floating Logos */}
-              <div className="floating-icons-container absolute inset-0 w-full h-full mx-0 my-0 px-[20px] py-[50px] rounded-lg bg-neutral-950">
+              <div className="floating-icons-container absolute inset-0 w-full h-full mx-0 my-0 px-[20px] py-[50px] rounded-lg bg-neutral-950/80">
                 {/* Figma logo */}
                 <div className="absolute top-[-20px] right-[-20px] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg">
                   <img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma" className="w-full h-full object-contain" />
@@ -57,11 +58,11 @@ const About = () => {
 
           {/* Right Column - Text Content */}
           <div className="text-left px-2">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-3">
               <span className="text-brand-orange">🔥</span> About Malshi
             </h2>
 
-            <div className="space-y-4 text-gray-200">
+            <div className="space-y-3 text-gray-200">
               <p className="text-lg">
                 Are you tired of boring websites that don't convert or digital marketing that doesn't deliver?
               </p>
@@ -69,7 +70,7 @@ const About = () => {
                 If yes, you've landed on the right profile. I help startups, small businesses, and personal brands build a powerful online presence using the perfect mix of:
               </p>
               
-              <ul className="ml-5 space-y-2">
+              <ul className="ml-5 space-y-1">
                 <li className="flex items-start">
                   <span className="text-brand-orange mr-2">✅</span>
                   <span>Modern web development</span>
@@ -88,7 +89,7 @@ const About = () => {
                 I've worked with dozens of brands to turn basic ideas into stunning, high-performing websites — paired with content that actually connects and campaigns that grow fast.
               </p>
 
-              <ul className="ml-5 space-y-2">
+              <ul className="ml-5 space-y-1">
                 <li className="flex items-start">
                   <span className="text-brand-orange mr-2">🚀</span>
                   <span>Stronger online visibility</span>

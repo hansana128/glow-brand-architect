@@ -18,7 +18,7 @@ const PortfolioCard = ({ image, title, category }: PortfolioItemProps) => {
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
           <h3 className="text-lg font-bold text-white">{title}</h3>
           <p className="text-sm text-gray-300">{category}</p>
         </div>
@@ -64,16 +64,16 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-12 relative overflow-hidden">
+    <section id="portfolio" className="py-6 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-40 right-20 w-96 h-96 rounded-full bg-brand-blue/30 blur-[100px]"></div>
         <div className="absolute bottom-40 left-20 w-80 h-80 rounded-full bg-brand-orange/20 blur-[80px]"></div>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">
             <span className="text-white">EXPLORE MY </span>
             <span className="text-brand-orange">WORK</span>
           </h2>
@@ -82,7 +82,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
           {portfolioItems.map((item, index) => (
             <PortfolioCard
               key={index}
@@ -93,7 +93,7 @@ const Portfolio = () => {
           ))}
         </div>
 
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-6">
           <a href="#" className="glow-btn">
             <span>See Full Portfolio</span>
           </a>

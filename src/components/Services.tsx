@@ -11,15 +11,13 @@ interface ServiceCardProps {
 // Service card component
 const ServiceCard = ({ icon, title, description }: ServiceCardProps) => {
   return (
-    <div className="glassmorphism-card p-6">
-      <div className="flex flex-col items-center text-center space-y-3">
-        <div className="text-4xl mb-1 animate-pulse">{icon}</div>
-        <h3 className="text-xl font-bold text-white">{title}</h3>
-        <p className="text-gray-300 text-sm">{description}</p>
-        <button className="mt-3 py-2 px-4 rounded-full text-white text-sm font-medium border border-brand-orange/50 transition-all duration-300 hover:border-brand-orange hover:shadow-[0_0_10px_rgba(255,94,58,0.6)]">
-          See More
-        </button>
-      </div>
+    <div className="glassmorphism-card p-5 flex flex-col items-center text-center h-full">
+      <div className="text-4xl mb-2 text-brand-orange">{icon}</div>
+      <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
+      <p className="text-gray-300 text-sm">{description}</p>
+      <button className="mt-auto py-2 px-4 rounded-full text-white text-sm font-medium border border-brand-orange/50 transition-all duration-300 hover:border-brand-orange hover:shadow-[0_0_10px_rgba(255,94,58,0.6)]">
+        See More
+      </button>
     </div>
   );
 };
@@ -60,16 +58,16 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-12 relative overflow-hidden">
+    <section id="services" className="py-6 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-brand-blue/30 blur-[100px]"></div>
         <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-brand-orange/20 blur-[80px]"></div>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">
             <span className="text-white">WHAT I'M </span>
             <span className="text-brand-orange">OFFERING</span>
           </h2>
@@ -78,7 +76,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
