@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { MenuIcon, X } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,15 +56,16 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-4">
             {["home", "about", "services", "portfolio", "contact"].map((item) => (
-              <button
+              <Button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="uppercase text-sm font-medium text-white hover:text-brand-orange transition-colors duration-300"
+                variant="outline"
+                className="uppercase text-sm font-medium border-brand-orange text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full"
               >
                 {item}
-              </button>
+              </Button>
             ))}
           </nav>
 
@@ -87,15 +89,16 @@ const Navbar = () => {
             mobileMenuOpen ? "max-h-screen" : "max-h-0"
           )}
         >
-          <div className="flex flex-col p-4">
+          <div className="flex flex-col p-4 gap-3">
             {["home", "about", "services", "portfolio", "contact"].map((item) => (
-              <button
+              <Button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="uppercase text-base font-medium text-white hover:text-brand-orange transition-colors duration-300 py-3 border-b border-white/10"
+                variant="outline"
+                className="uppercase text-base font-medium border-brand-orange text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full justify-start"
               >
                 {item}
-              </button>
+              </Button>
             ))}
           </div>
         </div>

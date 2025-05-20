@@ -1,6 +1,7 @@
 
 import React from "react";
-import { Linkedin, Mail, MessageSquare, Instagram, ArrowUp } from "lucide-react";
+import { Linkedin, Mail, Instagram, BarChart, MessageSquare } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -23,6 +24,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 gap-10 mb-8">
           {/* Left side */}
           <div className="flex flex-col">
+            {/* Logo placeholder */}
+            {/* <!-- Logo goes here --> */}
             <h3 className="text-xl font-bold text-white mb-2">
               <span className="text-brand-orange">Malshi</span> Hansana
             </h3>
@@ -41,62 +44,78 @@ const Footer = () => {
               <div className="flex flex-wrap gap-4">
                 {["home", "about", "services", "portfolio", "contact"].map(
                   (item) => (
-                    <button
+                    <Button
                       key={item}
                       onClick={() => scrollToSection(item)}
-                      className="text-sm text-gray-300 hover:text-brand-orange transition-colors duration-300"
+                      variant="outline"
+                      className="text-sm border-brand-orange text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full"
                     >
                       {item.charAt(0).toUpperCase() + item.slice(1)}
-                    </button>
+                    </Button>
                   )
                 )}
               </div>
             </div>
-
-            <div className="flex gap-4">
-              <a
-                href="https://www.linkedin.com/in/malshi-hansana"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href="mailto:info@malshihansana.com"
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
-              >
-                <Mail size={18} />
-              </a>
-              <a
-                href="https://www.instagram.com/malshi__xii/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="https://www.facebook.com/malshi.hansana128/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
-              >
-                <MessageSquare size={18} />
-              </a>
-            </div>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+        {/* Bottom Copyright Bar */}
+        <div className="border-t border-white/10 pt-6 mt-6">
+          {/* Social Icons Row */}
+          <div className="flex justify-center mb-4 gap-4">
+            <a
+              href="https://www.linkedin.com/in/malshi-hansana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+            >
+              <Linkedin size={18} />
+            </a>
+            <a
+              href="mailto:info@malshihansana.com"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+            >
+              <Mail size={18} />
+            </a>
+            <a
+              href="https://www.instagram.com/malshi__xii/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
+              href="#analytics"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+            >
+              <BarChart size={18} />
+            </a>
+          </div>
+
+          {/* Copyright Text */}
+          <p className="text-gray-400 text-sm text-center">
             © Copyright {new Date().getFullYear()} by Malshi Hansana. All rights reserved.
           </p>
+
+          {/* Scroll to top button - moved to the bottom right */}
           <button
             onClick={scrollToTop}
-            className="mt-4 md:mt-0 w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+            className="absolute bottom-6 right-20 w-10 h-10 rounded-full flex items-center justify-center bg-brand-blue/50 text-white hover:bg-brand-orange/80 transition-colors duration-300"
+            aria-label="Scroll to top"
           >
-            <ArrowUp size={18} />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
           </button>
         </div>
       </div>
