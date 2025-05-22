@@ -25,6 +25,101 @@ const PortfolioDetail = () => {
     // In a real app, this would be an API call
     // For now, we're using sample data
     const projects: PortfolioProject[] = [
+      // WordPress Projects
+      {
+        id: "wordpress-ecommerce",
+        image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+        title: "Online Fashion Store",
+        category: "WordPress E-commerce",
+        description: "A custom WordPress e-commerce site built for a fashion retailer. Features include custom product categories, integrated payment processing, and a unique shopping experience.",
+        tools: ["WordPress", "WooCommerce", "Custom PHP", "JavaScript", "CSS3"],
+        challenges: "Creating a unique shopping experience while maintaining the ease of WordPress management for the client.",
+        solutions: "Developed custom WooCommerce templates and built a theme specifically tailored to the client's brand and product display needs.",
+        results: "40% increase in online sales within the first three months, 25% increase in average session duration."
+      },
+      {
+        id: "wordpress-blog",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+        title: "News Magazine",
+        category: "WordPress Publishing",
+        description: "A magazine-style WordPress site with advanced content categorization, featured stories, and subscription management.",
+        tools: ["WordPress", "Advanced Custom Fields", "Elementor Pro", "CSS3", "PHP"],
+        challenges: "Handling complex content relationships and creating an intuitive reading experience for long-form articles.",
+        solutions: "Implemented custom post types and taxonomies, with a focus on readability and content discovery.",
+        results: "Increased page views by 60% and reduced bounce rate by 15% compared to the client's previous site."
+      },
+      {
+        id: "wordpress-portfolio",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+        title: "Artist Portfolio",
+        category: "WordPress Showcase",
+        description: "A visually-focused portfolio site for a digital artist to showcase their work with minimal distractions and maximum impact.",
+        tools: ["WordPress", "Custom Theme", "GSAP Animation", "JavaScript", "Lightbox Gallery"],
+        challenges: "Creating a site that put the artwork front and center while still providing necessary information and contact options.",
+        solutions: "Built a minimalist custom theme with smooth transitions between works and detailed project pages accessible through a unique navigation system.",
+        results: "The artist secured two major gallery exhibitions based on work showcased on the site."
+      },
+      
+      // Custom Coded Projects
+      {
+        id: "coded-saas",
+        image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+        title: "SaaS Dashboard",
+        category: "React + Node.js",
+        description: "A comprehensive dashboard for a SaaS product with real-time analytics, user management, and subscription tracking.",
+        tools: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Chart.js"],
+        challenges: "Creating an intuitive interface for complex data visualization and ensuring real-time updates perform well across devices.",
+        solutions: "Implemented a modular component architecture with optimized rendering and WebSocket connections for live updates.",
+        results: "Increased user engagement with analytics by 45% and reduced support tickets related to account management by 60%."
+      },
+      {
+        id: "coded-app",
+        image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+        title: "Mobile Web App",
+        category: "React Native",
+        description: "A cross-platform mobile application for task management with offline capabilities and cloud synchronization.",
+        tools: ["React Native", "Firebase", "Redux", "Native Device APIs"],
+        challenges: "Ensuring consistent performance across iOS and Android while maintaining offline functionality.",
+        solutions: "Implemented a robust state management system with local storage and intelligent sync resolution when connectivity is restored.",
+        results: "4.8/5 star rating on app stores with over 10,000 downloads in the first month."
+      },
+      {
+        id: "coded-ecommerce",
+        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+        title: "Custom Shop",
+        category: "MERN Stack",
+        description: "A fully custom e-commerce platform built from scratch for a specialty retailer with unique inventory and ordering requirements.",
+        tools: ["MongoDB", "Express", "React", "Node.js", "Stripe API", "Redux"],
+        challenges: "Building a bespoke shopping experience that handled complex product configurations and custom ordering processes.",
+        solutions: "Developed a flexible product schema and custom checkout flow that guided customers through their specific options.",
+        results: "Conversion rate increased by 35% compared to the previous platform, with a 28% increase in average order value."
+      },
+      {
+        id: "coded-booking",
+        image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+        title: "Booking Platform",
+        category: "Next.js + GraphQL",
+        description: "An appointment booking system for a multi-location service business with staff management and resource allocation features.",
+        tools: ["Next.js", "GraphQL", "PostgreSQL", "TypeScript", "Tailwind CSS"],
+        challenges: "Creating a booking system that handled complex availability across multiple locations, staff members, and service types.",
+        solutions: "Implemented a GraphQL API with efficient queries for availability checking and a streamlined booking process for customers.",
+        results: "Reduced booking abandonment by 40% and increased staff utilization by 25%."
+      },
+      
+      // More project types with similar structure
+      {
+        id: "ai-explainer",
+        image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+        title: "AI Explainer",
+        category: "Educational Video",
+        description: "An animated explainer video about artificial intelligence concepts, designed for educational purposes.",
+        tools: ["Adobe After Effects", "Illustrator", "Premier Pro", "AI Voiceover", "Script Writing"],
+        challenges: "Breaking down complex AI concepts into digestible, engaging visual content for a general audience.",
+        solutions: "Created custom character animations and visual metaphors to explain technical concepts in an approachable way.",
+        results: "The video has been adopted by three educational platforms and has over 50,000 views across platforms."
+      },
+      
+      // Continue with more project entries following the same pattern...
       {
         id: "ecommerce-website",
         image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
@@ -138,7 +233,7 @@ const PortfolioDetail = () => {
         </div>
         
         {/* Hero Image */}
-        <div className="w-full rounded-xl overflow-hidden mb-12 shadow-[0_0_20px_rgba(255,94,58,0.5)] border border-brand-orange/30">
+        <div className="w-full rounded-xl overflow-hidden mb-12 shadow-[0_0_20px_rgba(255,94,58,0.6)] border-2 border-brand-orange">
           <img 
             src={project.image} 
             alt={project.title} 
@@ -156,7 +251,7 @@ const PortfolioDetail = () => {
             {project.tools.map((tool, index) => (
               <span 
                 key={index} 
-                className="bg-brand-blue/50 text-white px-3 py-1 rounded-full text-sm border border-brand-orange/30 shadow-[0_0_5px_rgba(255,94,58,0.3)]"
+                className="bg-brand-blue/50 text-white px-3 py-1 rounded-full text-sm border border-brand-orange shadow-[0_0_8px_rgba(255,94,58,0.4)]"
               >
                 {tool}
               </span>

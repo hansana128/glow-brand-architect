@@ -9,9 +9,9 @@ const About = () => {
       </div>
 
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-6 items-center">
-          {/* Left Column - Image */}
-          <div className="flex justify-center md:justify-end">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Image - Moved more to left with increased spacing */}
+          <div className="flex justify-start md:justify-start">
             {/* PLACEHOLDER FOR MALSHI'S ABOUT IMAGE */}
             <div className="relative">
               <div className="w-72 h-80 rounded-xl overflow-hidden border border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.3)]">
@@ -56,7 +56,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right Column - Text Content */}
+          {/* Right Column - Text Content - More spacing from image */}
           <div className="text-left px-2">
             <h2 className="text-2xl font-bold mb-3">
               <span className="text-brand-orange">🔥</span> About Malshi

@@ -1,6 +1,7 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // Portfolio item data type
 interface PortfolioItemProps {
@@ -30,44 +31,147 @@ const PortfolioCard = ({ image, title, category, id }: PortfolioItemProps) => {
 };
 
 const Portfolio = () => {
-  // Portfolio items data
-  // In a real scenario, replace these with actual portfolio images
-  const portfolioItems = [
+  const [activeTab, setActiveTab] = useState("wordpress");
+  
+  // WordPress projects
+  const wordpressProjects = [
     {
-      id: "ecommerce-website",
+      id: "wordpress-ecommerce",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      title: "E-Commerce Website",
-      category: "Web Development",
+      title: "Online Fashion Store",
+      category: "WordPress E-commerce",
     },
     {
-      id: "brand-identity",
+      id: "wordpress-blog",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      title: "Brand Identity Design",
-      category: "UI/UX Design",
+      title: "News Magazine",
+      category: "WordPress Publishing",
     },
     {
-      id: "linkedin-campaign",
+      id: "wordpress-portfolio",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      title: "LinkedIn Growth Campaign",
-      category: "Social Media Marketing",
+      title: "Artist Portfolio",
+      category: "WordPress Showcase",
     },
+  ];
+  
+  // Custom Coded projects
+  const codedProjects = [
     {
-      id: "personal-portfolio",
+      id: "coded-saas",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      title: "Personal Portfolio",
-      category: "Web Development",
+      title: "SaaS Dashboard",
+      category: "React + Node.js",
     },
     {
-      id: "seo-optimization",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      title: "SEO Optimization",
-      category: "Digital Marketing",
+      id: "coded-app",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      title: "Mobile Web App",
+      category: "React Native",
     },
     {
-      id: "mobile-app",
-      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
-      title: "Mobile App Design",
-      category: "UI/UX Design",
+      id: "coded-ecommerce",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      title: "Custom Shop",
+      category: "MERN Stack",
+    },
+    {
+      id: "coded-booking",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+      title: "Booking Platform",
+      category: "Next.js + GraphQL",
+    },
+  ];
+  
+  // AI Video Content
+  const videoProjects = [
+    {
+      id: "ai-explainer",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      title: "AI Explainer",
+      category: "Educational Video",
+    },
+    {
+      id: "ai-promo",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      title: "Product Promo",
+      category: "Marketing Video",
+    },
+    {
+      id: "ai-tutorial",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      title: "Software Tutorial",
+      category: "Tutorial Video",
+    },
+    {
+      id: "ai-commercial",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      title: "Brand Commercial",
+      category: "Promotional Video",
+    },
+  ];
+  
+  // Creative Visuals
+  const visualProjects = [
+    {
+      id: "visual-branding",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      title: "Brand Identity",
+      category: "Logo Design",
+    },
+    {
+      id: "visual-illustration",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      title: "Digital Illustration",
+      category: "Artwork",
+    },
+    {
+      id: "visual-banner",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      title: "Web Banners",
+      category: "UI Design",
+    },
+    {
+      id: "visual-social",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      title: "Social Media Kit",
+      category: "Marketing Design",
+    },
+    {
+      id: "visual-print",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      title: "Print Materials",
+      category: "Print Design",
+    },
+    {
+      id: "visual-presentation",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      title: "Presentation Design",
+      category: "Business Design",
+    },
+    {
+      id: "visual-icon",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+      title: "Icon Set",
+      category: "Graphic Design",
+    },
+    {
+      id: "visual-motion",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      title: "Motion Graphics",
+      category: "Animation",
+    },
+    {
+      id: "visual-3d",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      title: "3D Renders",
+      category: "3D Design",
+    },
+    {
+      id: "visual-infographic",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      title: "Infographics",
+      category: "Information Design",
     },
   ];
 
@@ -90,22 +194,101 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          {portfolioItems.map((item, index) => (
-            <PortfolioCard
-              key={index}
-              image={item.image}
-              title={item.title}
-              category={item.category}
-              id={item.id}
-            />
-          ))}
-        </div>
+        {/* Portfolio Tabs */}
+        <Tabs defaultValue="wordpress" className="mb-8" onValueChange={(value) => setActiveTab(value)}>
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-transparent">
+            <TabsTrigger 
+              value="wordpress" 
+              className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
+            >
+              WordPress Projects
+            </TabsTrigger>
+            <TabsTrigger 
+              value="coded" 
+              className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
+            >
+              Custom Coded Projects
+            </TabsTrigger>
+            <TabsTrigger 
+              value="video" 
+              className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
+            >
+              AI Video Content
+            </TabsTrigger>
+            <TabsTrigger 
+              value="visual" 
+              className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
+            >
+              Creative Visuals
+            </TabsTrigger>
+          </TabsList>
+
+          {/* WordPress Projects */}
+          <TabsContent value="wordpress" className="mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* <!-- Add your site thumbnails and their detail pages here --> */}
+              {wordpressProjects.map((project, index) => (
+                <PortfolioCard
+                  key={index}
+                  image={project.image}
+                  title={project.title}
+                  category={project.category}
+                  id={project.id}
+                />
+              ))}
+            </div>
+          </TabsContent>
+
+          {/* Custom Coded Projects */}
+          <TabsContent value="coded" className="mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {codedProjects.map((project, index) => (
+                <PortfolioCard
+                  key={index}
+                  image={project.image}
+                  title={project.title}
+                  category={project.category}
+                  id={project.id}
+                />
+              ))}
+            </div>
+          </TabsContent>
+
+          {/* Video Content */}
+          <TabsContent value="video" className="mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {videoProjects.map((project, index) => (
+                <PortfolioCard
+                  key={index}
+                  image={project.image}
+                  title={project.title}
+                  category={project.category}
+                  id={project.id}
+                />
+              ))}
+            </div>
+          </TabsContent>
+
+          {/* Creative Visuals */}
+          <TabsContent value="visual" className="mt-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+              {visualProjects.map((project, index) => (
+                <PortfolioCard
+                  key={index}
+                  image={project.image}
+                  title={project.title}
+                  category={project.category}
+                  id={project.id}
+                />
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
 
         <div className="flex justify-center mt-6">
-          <a href="#portfolio" className="glow-btn">
+          <Link to="/#portfolio" className="glow-btn">
             <span>See Full Portfolio</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
