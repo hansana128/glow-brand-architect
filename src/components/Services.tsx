@@ -100,114 +100,7 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
 const Services = () => {
   // Services data with expanded information
   const services = [
-    {
-      icon: <PenTool className="h-8 w-8" />,
-      title: "Designing & Branding",
-      description: "Design can be tough, and time is precious. Let us take some of that weight off your shoulders and help you shine!",
-      skills: [
-        "Visual Branding",
-        "Brand Identity Design",
-        "Logo Creation",
-        "Color Theory",
-        "Typography Design"
-      ],
-      technologies: [
-        "Vector Graphics",
-        "Digital Illustration",
-        "Brand Guidelines",
-        "Visual Language",
-        "Design Systems"
-      ],
-      tools: [
-        "Adobe Illustrator",
-        "Figma",
-        "Canva Pro",
-        "Adobe Photoshop",
-        "Procreate"
-      ],
-      color: "text-teal-400"
-    },
-    {
-      icon: <Linkedin className="h-8 w-8" />,
-      title: "LinkedIn Management",
-      description: "Stuck on LinkedIn? We'll help you connect the dots! Our management services will help you build up your online presence.",
-      skills: [
-        "Profile Optimization",
-        "Content Calendar Planning",
-        "Network Growth Strategy",
-        "Engagement Tactics",
-        "Analytics Analysis"
-      ],
-      technologies: [
-        "LinkedIn Algorithm",
-        "Social Media Strategy",
-        "Content Distribution",
-        "Audience Targeting",
-        "Performance Analytics"
-      ],
-      tools: [
-        "LinkedIn Sales Navigator",
-        "Hootsuite",
-        "Buffer",
-        "Canva",
-        "Descript"
-      ],
-      color: "text-teal-400"
-    },
-    {
-      icon: <MessageSquare className="h-8 w-8" />,
-      title: "LinkedIn Ghostwriting",
-      description: "Need help finding the right words? Our LinkedIn ghostwriting services will help you share your story & build your personal brand.",
-      skills: [
-        "Storytelling",
-        "Copywriting",
-        "Content Strategy",
-        "Audience Analysis",
-        "Personal Branding"
-      ],
-      technologies: [
-        "Content Frameworks",
-        "Engagement Formulas",
-        "Call-to-Action Design",
-        "Keyword Optimization",
-        "Narrative Structures"
-      ],
-      tools: [
-        "Grammarly",
-        "Hemingway Editor",
-        "ChatGPT",
-        "Notion",
-        "LinkedIn Polls"
-      ],
-      color: "text-teal-400"
-    },
-    {
-      icon: <User className="h-8 w-8" />,
-      title: "LinkedIn Profile Optimization",
-      description: "Get noticed on LinkedIn with our profile optimization services! We'll help you create a strong and effective profile.",
-      skills: [
-        "Personal Branding",
-        "Keyword Optimization",
-        "Achievement Highlighting",
-        "Professional Storytelling",
-        "Visual Profile Design"
-      ],
-      technologies: [
-        "LinkedIn Algorithm",
-        "Search Optimization",
-        "Profile Structure",
-        "Visual Formatting",
-        "Background Banner Design"
-      ],
-      tools: [
-        "Canva",
-        "Jobscan",
-        "Midjourney",
-        "LinkedIn Premium",
-        "Resume Worded"
-      ],
-      color: "text-teal-400"
-    },
+    
     {
       icon: <Code className="h-8 w-8" />,
       title: "Web Development",
@@ -392,7 +285,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
@@ -416,7 +309,7 @@ const Services = () => {
         }
         
         .service-card {
-          box-shadow: 0 0 15px rgba(20,184,166,0.2);
+          box-shadow: 0 0 15px rgba(240, 66, 13, 0.9);
           min-height: 380px;
         }
       `}</style>
