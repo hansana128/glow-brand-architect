@@ -1,17 +1,19 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Portfolio item data type
 interface PortfolioItemProps {
   image: string;
   title: string;
   category: string;
+  id: string;
 }
 
 // Portfolio card component
-const PortfolioCard = ({ image, title, category }: PortfolioItemProps) => {
+const PortfolioCard = ({ image, title, category, id }: PortfolioItemProps) => {
   return (
-    <div className="portfolio-card group">
+    <Link to={`/portfolio/${id}`} target="_blank" rel="noopener noreferrer" className="portfolio-card group">
       <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
         <img
           src={image}
@@ -23,7 +25,7 @@ const PortfolioCard = ({ image, title, category }: PortfolioItemProps) => {
           <p className="text-sm text-gray-300">{category}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -32,31 +34,37 @@ const Portfolio = () => {
   // In a real scenario, replace these with actual portfolio images
   const portfolioItems = [
     {
+      id: "ecommerce-website",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
       title: "E-Commerce Website",
       category: "Web Development",
     },
     {
+      id: "brand-identity",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
       title: "Brand Identity Design",
       category: "UI/UX Design",
     },
     {
+      id: "linkedin-campaign",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
       title: "LinkedIn Growth Campaign",
       category: "Social Media Marketing",
     },
     {
+      id: "personal-portfolio",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       title: "Personal Portfolio",
       category: "Web Development",
     },
     {
+      id: "seo-optimization",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       title: "SEO Optimization",
       category: "Digital Marketing",
     },
     {
+      id: "mobile-app",
       image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
       title: "Mobile App Design",
       category: "UI/UX Design",
@@ -89,12 +97,13 @@ const Portfolio = () => {
               image={item.image}
               title={item.title}
               category={item.category}
+              id={item.id}
             />
           ))}
         </div>
 
         <div className="flex justify-center mt-6">
-          <a href="#" className="glow-btn">
+          <a href="#portfolio" className="glow-btn">
             <span>See Full Portfolio</span>
           </a>
         </div>

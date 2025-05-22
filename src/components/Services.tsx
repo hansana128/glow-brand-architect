@@ -15,7 +15,7 @@ const ServiceCard = ({ icon, title, description }: ServiceCardProps) => {
       <div className="text-4xl mb-2 text-brand-orange">{icon}</div>
       <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
       <p className="text-gray-300 text-sm">{description}</p>
-      <button className="mt-auto py-2 px-4 rounded-full text-white text-sm font-medium border border-brand-orange/50 transition-all duration-300 hover:border-brand-orange hover:shadow-[0_0_10px_rgba(255,94,58,0.6)]">
+      <button className="mt-auto py-2 px-4 rounded-full text-white text-sm font-medium border border-brand-orange/50 transition-all duration-300 hover:border-brand-orange shadow-[0_0_10px_rgba(255,94,58,0.5)]">
         See More
       </button>
     </div>

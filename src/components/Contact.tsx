@@ -79,7 +79,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-brand-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-orange/50"
+                  className="neon-form-field"
                   placeholder="Your name"
                 />
               </div>
@@ -94,7 +94,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-brand-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-orange/50"
+                  className="neon-form-field"
                   placeholder="Your email"
                 />
               </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full bg-brand-blue/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-orange/50"
+                  className="neon-form-field"
                   placeholder="Your message"
                 ></textarea>
               </div>
@@ -127,7 +127,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/malshi-hansana"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue border border-white/10 text-white hover:shadow-[0_0_15px_rgba(255,94,58,0.5)] transition-all duration-300"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue border border-white/10 text-white shadow-[0_0_10px_rgba(255,94,58,0.5)] transition-all duration-300"
             >
               <Linkedin size={20} />
             </a>
@@ -135,7 +135,7 @@ const Contact = () => {
               href="https://wa.me/+123456789"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue border border-white/10 text-white hover:shadow-[0_0_15px_rgba(255,94,58,0.5)] transition-all duration-300"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue border border-white/10 text-white shadow-[0_0_10px_rgba(255,94,58,0.5)] transition-all duration-300"
             >
               <MessageSquare size={20} />
             </a>
