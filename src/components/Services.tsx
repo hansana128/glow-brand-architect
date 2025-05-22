@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Code, Image, Layout, Video, Settings, Palette, Brain } from "lucide-react";
+import { Code, Layout, Video, Settings, Palette, Brain, PenTool, Linkedin, MessageSquare, User } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 // Service card type definition
 interface ServiceCardProps {
@@ -17,104 +18,196 @@ interface ServiceCardProps {
 
 // Service card component
 const ServiceCard = ({ icon, title, description, skills, technologies, tools, color }: ServiceCardProps) => {
-  const [showDetails, setShowDetails] = useState(false);
-
   return (
-    <div className="relative">
-      {/* Main Service Card */}
-      <div 
-        className="glassmorphism-card p-5 flex flex-col items-center text-center h-full cursor-pointer"
-        onClick={() => setShowDetails(true)}
-      >
-        <div className={`text-4xl mb-2 ${color}`}>{icon}</div>
-        <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-        <p className="text-gray-300 text-sm">{description}</p>
-        <button className="mt-auto py-2 px-4 rounded-full text-white text-sm font-medium border border-brand-orange/50 transition-all duration-300 hover:border-brand-orange shadow-[0_0_10px_rgba(255,94,58,0.5)]">
-          See More
-        </button>
-      </div>
-
-      {/* Details overlay */}
-      {showDetails && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
-          <div className="glassmorphism-card max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6">
-            <div className="flex justify-between items-start mb-6">
-              <div className="flex items-center gap-3">
-                <div className={`text-4xl ${color}`}>{icon}</div>
-                <h2 className="text-2xl font-bold text-white">{title}</h2>
-              </div>
-              <button 
-                onClick={() => setShowDetails(false)}
-                className="text-gray-300 hover:text-white text-2xl"
-              >
-                &times;
-              </button>
+    <Dialog>
+      <DialogTrigger asChild>
+        <div className="service-card-container">
+          <div className="service-card relative bg-black/80 border border-gray-800 rounded-3xl p-8 flex flex-col items-center text-center h-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] group">
+            <div className="service-icon-container mb-6 rounded-full bg-black border-2 border-teal-400 p-4 w-24 h-24 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(20,184,166,0.7)]">
+              <div className="text-teal-400 text-4xl">{icon}</div>
             </div>
-            
-            <p className="text-gray-200 mb-6">{description}</p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {/* Skills */}
-              <Card className="bg-brand-blue/50 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.5)]">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-white text-lg">Skills</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="list-disc pl-5 text-gray-200 text-sm">
-                    {skills.map((skill, i) => (
-                      <li key={i} className="mb-1">{skill}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              {/* Technologies */}
-              <Card className="bg-brand-blue/50 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.5)]">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-white text-lg">Technologies</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="list-disc pl-5 text-gray-200 text-sm">
-                    {technologies.map((tech, i) => (
-                      <li key={i} className="mb-1">{tech}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              {/* Tools */}
-              <Card className="bg-brand-blue/50 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.5)]">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-white text-lg">Tools</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="list-disc pl-5 text-gray-200 text-sm">
-                    {tools.map((tool, i) => (
-                      <li key={i} className="mb-1">{tool}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <div className="flex justify-center">
-              <button 
-                onClick={() => setShowDetails(false)}
-                className="glow-btn"
-              >
-                <span>Back to Services</span>
+            <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+            <p className="text-gray-300 mb-6">{description}</p>
+            <div className="mt-auto">
+              <button className="see-more-btn flex items-center justify-center gap-2 border border-teal-400 text-teal-400 px-6 py-2 rounded-full hover:bg-teal-400/10 transition-all duration-300">
+                <span>See More</span>
+                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 1L17 5M17 5L13 9M17 5H1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </button>
             </div>
           </div>
         </div>
-      )}
-    </div>
+      </DialogTrigger>
+      
+      <DialogContent className="sm:max-w-2xl bg-black/90 text-white border border-teal-400 shadow-[0_0_15px_rgba(20,184,166,0.5)]">
+        <DialogHeader>
+          <DialogTitle className="flex items-center gap-2 text-2xl font-bold">
+            <span className={`text-teal-400`}>{icon}</span>
+            {title}
+          </DialogTitle>
+          <DialogDescription className="text-gray-300 text-base">{description}</DialogDescription>
+        </DialogHeader>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          {/* Skills */}
+          <Card className="bg-black/50 border border-teal-400/40 shadow-[0_0_10px_rgba(20,184,166,0.3)]">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-white text-lg">Skills</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc pl-5 text-gray-300 text-sm">
+                {skills.map((skill, i) => (
+                  <li key={i} className="mb-1">{skill}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+          
+          {/* Technologies */}
+          <Card className="bg-black/50 border border-teal-400/40 shadow-[0_0_10px_rgba(20,184,166,0.3)]">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-white text-lg">Technologies</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc pl-5 text-gray-300 text-sm">
+                {technologies.map((tech, i) => (
+                  <li key={i} className="mb-1">{tech}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+          
+          {/* Tools */}
+          <Card className="bg-black/50 border border-teal-400/40 shadow-[0_0_10px_rgba(20,184,166,0.3)]">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-white text-lg">Tools</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc pl-5 text-gray-300 text-sm">
+                {tools.map((tool, i) => (
+                  <li key={i} className="mb-1">{tool}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 
 const Services = () => {
   // Services data with expanded information
   const services = [
+    {
+      icon: <PenTool className="h-8 w-8" />,
+      title: "Designing & Branding",
+      description: "Design can be tough, and time is precious. Let us take some of that weight off your shoulders and help you shine!",
+      skills: [
+        "Visual Branding",
+        "Brand Identity Design",
+        "Logo Creation",
+        "Color Theory",
+        "Typography Design"
+      ],
+      technologies: [
+        "Vector Graphics",
+        "Digital Illustration",
+        "Brand Guidelines",
+        "Visual Language",
+        "Design Systems"
+      ],
+      tools: [
+        "Adobe Illustrator",
+        "Figma",
+        "Canva Pro",
+        "Adobe Photoshop",
+        "Procreate"
+      ],
+      color: "text-teal-400"
+    },
+    {
+      icon: <Linkedin className="h-8 w-8" />,
+      title: "LinkedIn Management",
+      description: "Stuck on LinkedIn? We'll help you connect the dots! Our management services will help you build up your online presence.",
+      skills: [
+        "Profile Optimization",
+        "Content Calendar Planning",
+        "Network Growth Strategy",
+        "Engagement Tactics",
+        "Analytics Analysis"
+      ],
+      technologies: [
+        "LinkedIn Algorithm",
+        "Social Media Strategy",
+        "Content Distribution",
+        "Audience Targeting",
+        "Performance Analytics"
+      ],
+      tools: [
+        "LinkedIn Sales Navigator",
+        "Hootsuite",
+        "Buffer",
+        "Canva",
+        "Descript"
+      ],
+      color: "text-teal-400"
+    },
+    {
+      icon: <MessageSquare className="h-8 w-8" />,
+      title: "LinkedIn Ghostwriting",
+      description: "Need help finding the right words? Our LinkedIn ghostwriting services will help you share your story & build your personal brand.",
+      skills: [
+        "Storytelling",
+        "Copywriting",
+        "Content Strategy",
+        "Audience Analysis",
+        "Personal Branding"
+      ],
+      technologies: [
+        "Content Frameworks",
+        "Engagement Formulas",
+        "Call-to-Action Design",
+        "Keyword Optimization",
+        "Narrative Structures"
+      ],
+      tools: [
+        "Grammarly",
+        "Hemingway Editor",
+        "ChatGPT",
+        "Notion",
+        "LinkedIn Polls"
+      ],
+      color: "text-teal-400"
+    },
+    {
+      icon: <User className="h-8 w-8" />,
+      title: "LinkedIn Profile Optimization",
+      description: "Get noticed on LinkedIn with our profile optimization services! We'll help you create a strong and effective profile.",
+      skills: [
+        "Personal Branding",
+        "Keyword Optimization",
+        "Achievement Highlighting",
+        "Professional Storytelling",
+        "Visual Profile Design"
+      ],
+      technologies: [
+        "LinkedIn Algorithm",
+        "Search Optimization",
+        "Profile Structure",
+        "Visual Formatting",
+        "Background Banner Design"
+      ],
+      tools: [
+        "Canva",
+        "Jobscan",
+        "Midjourney",
+        "LinkedIn Premium",
+        "Resume Worded"
+      ],
+      color: "text-teal-400"
+    },
     {
       icon: <Code className="h-8 w-8" />,
       title: "Web Development",
@@ -141,7 +234,7 @@ const Services = () => {
         "Chrome DevTools",
         "Lighthouse"
       ],
-      color: "text-blue-400"
+      color: "text-teal-400"
     },
     {
       icon: <Layout className="h-8 w-8" />,
@@ -168,7 +261,7 @@ const Services = () => {
         "InVision",
         "Maze"
       ],
-      color: "text-purple-400"
+      color: "text-teal-400"
     },
     {
       icon: <Palette className="h-8 w-8" />,
@@ -195,7 +288,7 @@ const Services = () => {
         "Affinity Designer",
         "Procreate"
       ],
-      color: "text-pink-400"
+      color: "text-teal-400"
     },
     {
       icon: <Video className="h-8 w-8" />,
@@ -222,7 +315,7 @@ const Services = () => {
         "Sprout Social",
         "Canva"
       ],
-      color: "text-green-400"
+      color: "text-teal-400"
     },
     {
       icon: <Settings className="h-8 w-8" />,
@@ -249,7 +342,7 @@ const Services = () => {
         "Google Analytics",
         "Screaming Frog"
       ],
-      color: "text-yellow-400"
+      color: "text-teal-400"
     },
     {
       icon: <Brain className="h-8 w-8" />,
@@ -276,30 +369,30 @@ const Services = () => {
         "Midjourney",
         "ChatGPT"
       ],
-      color: "text-red-400"
+      color: "text-teal-400"
     },
   ];
 
   return (
-    <section id="services" className="py-6 relative overflow-hidden">
+    <section id="services" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-brand-blue/30 blur-[100px]"></div>
-        <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-brand-orange/20 blur-[80px]"></div>
+        <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-teal-400/20 blur-[100px]"></div>
+        <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-teal-500/20 blur-[80px]"></div>
       </div>
 
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-white">WHAT I'M </span>
-            <span className="text-brand-orange">OFFERING</span>
+            <span className="text-teal-400">OFFERING</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Comprehensive digital solutions to elevate your online presence and drive real business results.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
@@ -314,6 +407,19 @@ const Services = () => {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        .service-card-container {
+          cursor: pointer;
+          transform: perspective(1000px);
+          transition: all 0.3s ease;
+        }
+        
+        .service-card {
+          box-shadow: 0 0 15px rgba(20,184,166,0.2);
+          min-height: 380px;
+        }
+      `}</style>
     </section>
   );
 };
