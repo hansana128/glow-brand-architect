@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Code, Image, Layout, Video, Settings, Canva, Ai } from "lucide-react";
+import { Code, Image, Layout, Video, Settings, Palette, Brain } from "lucide-react";
 
 // Service card type definition
 interface ServiceCardProps {
@@ -171,7 +171,7 @@ const Services = () => {
       color: "text-purple-400"
     },
     {
-      icon: <Canva className="h-8 w-8" />,
+      icon: <Palette className="h-8 w-8" />,
       title: "Graphic Design",
       description: "Eye-catching visual content designed to build trust, authority, and engagement across platforms.",
       skills: [
@@ -252,7 +252,7 @@ const Services = () => {
       color: "text-yellow-400"
     },
     {
-      icon: <Ai className="h-8 w-8" />,
+      icon: <Brain className="h-8 w-8" />,
       title: "Performance Marketing",
       description: "Ad strategies that sell. I help you run high-ROI paid campaigns that drive results.",
       skills: [
