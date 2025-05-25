@@ -1,9 +1,8 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Play } from "lucide-react";
+import { Play, ExternalLink } from "lucide-react";
 
 // Portfolio item data type
 interface PortfolioItemProps {
@@ -17,6 +16,43 @@ interface PortfolioItemProps {
 interface VideoProps extends PortfolioItemProps {
   videoUrl: string;
 }
+
+// WordPress project data type
+interface WordPressProjectProps {
+  image: string;
+  title: string;
+  category: string;
+  url: string;
+}
+
+// WordPress project card component
+const WordPressProjectCard = ({ image, title, category, url }: WordPressProjectProps) => {
+  return (
+    <a 
+      href={url} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="portfolio-card group block"
+    >
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="text-lg font-bold text-white">{title}</h3>
+              <p className="text-sm text-gray-300">{category}</p>
+            </div>
+            <ExternalLink className="text-brand-orange" size={20} />
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+};
 
 // Portfolio card component
 const PortfolioCard = ({ image, title, category, id }: PortfolioItemProps) => {
@@ -90,25 +126,25 @@ const Portfolio = () => {
   const [selectedVideo, setSelectedVideo] = useState<VideoProps | null>(null);
   const [selectedImage, setSelectedImage] = useState<PortfolioItemProps | null>(null);
   
-  // WordPress projects
+  // WordPress projects with actual website links
   const wordpressProjects = [
     {
-      id: "wordpress-ecommerce",
+      url: "https://infocusmedia.lk/",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      title: "Online Fashion Store",
-      category: "WordPress E-commerce",
+      title: "Infocus Media",
+      category: "WordPress Business Site",
     },
     {
-      id: "wordpress-blog",
+      url: "https://iogglobal.au/",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      title: "News Magazine",
-      category: "WordPress Publishing",
+      title: "IOG Global",
+      category: "WordPress Corporate Site",
     },
     {
-      id: "wordpress-portfolio",
+      url: "https://charityforlife.lk/",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      title: "Artist Portfolio",
-      category: "WordPress Showcase",
+      title: "Charity For Life",
+      category: "WordPress Non-Profit Site",
     },
   ];
   
@@ -325,12 +361,12 @@ const Portfolio = () => {
           <TabsContent value="wordpress" className="mt-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {wordpressProjects.map((project, index) => (
-                <PortfolioCard
+                <WordPressProjectCard
                   key={index}
                   image={project.image}
                   title={project.title}
                   category={project.category}
-                  id={project.id}
+                  url={project.url}
                 />
               ))}
             </div>
