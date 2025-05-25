@@ -27,7 +27,7 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-brand-orange flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/406d1338-beed-4b08-8cf9-6088435fbdfc.png" 
+                  src="/lovable-uploads/c144e353-e02a-466b-8b4f-757281971299.png" 
                   alt="Malshi Hansana Logo" 
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -81,14 +81,11 @@ const Footer = () => {
                 >
                   Portfolio
                 </span>
-                <span className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer">
-                  Packages
-                </span>
                 <span
                   onClick={() => scrollToSection("contact")}
                   className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
                 >
-                  Contact us
+                  Contact me
                 </span>
               </div>
             </div>
@@ -136,13 +133,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact us floating button */}
+          {/* Contact me floating button */}
           <div className="absolute -top-3 right-8">
             <button
               onClick={() => scrollToSection("contact")}
               className="bg-white text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-300 shadow-lg"
             >
-              Contact us
+              Contact me
             </button>
           </div>
         </div>
