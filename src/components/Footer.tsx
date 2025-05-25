@@ -25,15 +25,19 @@ const Footer = () => {
           <div className="flex flex-col space-y-6">
             {/* Profile Section */}
             <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 rounded-full bg-brand-orange/20 border-2 border-brand-orange flex items-center justify-center">
-                <span className="text-brand-orange font-bold text-xl">MH</span>
+              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-brand-orange flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/d014bd77-30f4-4b0e-aa9f-74dcb03c1127.png" 
+                  alt="Malshi Hansana Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">
                   <span className="text-brand-orange">Malshi</span> Hansana
                 </h3>
                 <p className="text-gray-300 text-sm">
-                  Branding Strategist | Graphic Designer
+                  Web Developer | Digital Marketer
                 </p>
               </div>
             </div>
