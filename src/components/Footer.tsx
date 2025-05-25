@@ -1,65 +1,13 @@
 
-import React, { useState } from "react";
+import React from "react";
 import { Linkedin, Mail, Instagram, BarChart } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  
-  const { toast } = useToast();
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Error",
-        description: "Please fill in all fields",
-        variant: "destructive",
-      });
-      return;
-    }
-    
-    // Create mailto link with form data
-    const subject = `Contact Form Message from ${formData.name}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    const mailtoLink = `mailto:malshihansana128@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Thanks for reaching out!",
-      description: "I'll get back to you soon.",
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
   };
 
   return (
@@ -85,7 +33,7 @@ const Footer = () => {
                   <span className="text-brand-orange">Malshi</span> Hansana
                 </h3>
                 <p className="text-gray-300 text-sm">
-                  Web Developer | Digital Marketer
+                  Branding Strategist | Graphic Designer
                 </p>
               </div>
             </div>
@@ -93,79 +41,59 @@ const Footer = () => {
             {/* Description */}
             <div className="max-w-md">
               <p className="text-gray-300 text-sm leading-relaxed">
-                Transforming bold ideas into unforgettable digital experiences. 
-                Helping brands with innovative designs & strategies. Graphic Designer | 
-                Personal Branding Strategist | Expert in Web Development + 
-                Digital Marketing.
+                Helping BRANDS with bossy designs & strategies | Graphic Designer | 
+                Personal Branding Strategist | Ravikan Top 10 in Personal Branding + 
+                Audience Building
               </p>
-            </div>
-
-            {/* Navigation Links */}
-            <div>
-              <h4 className="text-white font-bold mb-3 text-lg">Quick Links</h4>
-              <div className="flex flex-wrap gap-4">
-                {["home", "about", "services", "portfolio", "contact"].map((item) => (
-                  <span
-                    key={item}
-                    onClick={() => scrollToSection(item)}
-                    className="text-gray-300 text-sm hover:text-brand-orange transition-colors duration-300 cursor-pointer capitalize"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
 
-          {/* Right Side - Contact Form */}
-          <div>
-            <h4 className="text-white font-bold mb-6 text-xl">Contact Me</h4>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors"
-                />
+          {/* Right Side - Navigation Links */}
+          <div className="flex justify-end">
+            <div className="grid grid-cols-2 gap-x-16 gap-y-4">
+              <div className="flex flex-col space-y-4">
+                <span
+                  onClick={() => scrollToSection("home")}
+                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                >
+                  Home
+                </span>
+                <span
+                  onClick={() => scrollToSection("about")}
+                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                >
+                  About
+                </span>
+                <span
+                  onClick={() => scrollToSection("services")}
+                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                >
+                  Services
+                </span>
               </div>
-              
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Your Email"
-                  className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors"
-                />
+              <div className="flex flex-col space-y-4">
+                <span
+                  onClick={() => scrollToSection("portfolio")}
+                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                >
+                  Portfolio
+                </span>
+                <span className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer">
+                  Packages
+                </span>
+                <span
+                  onClick={() => scrollToSection("contact")}
+                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                >
+                  Contact us
+                </span>
               </div>
-              
-              <div>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Your Message"
-                  rows={4}
-                  className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors resize-none"
-                ></textarea>
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full bg-brand-orange text-white py-3 rounded-lg font-medium hover:bg-brand-orange/90 transition-colors duration-300"
-              >
-                Send Message
-              </button>
-            </form>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-800 pt-8">
+        {/* Bottom Section with Copyright and Social Icons */}
+        <div className="bg-gray-800/30 rounded-2xl px-8 py-6 relative">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <p className="text-gray-400 text-sm">
@@ -178,53 +106,43 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/malshi-hansana"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
+                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
               >
-                <Linkedin size={18} />
+                <Linkedin size={20} />
               </a>
               <a
                 href="mailto:malshihansana128@gmail.com"
-                className="w-10 h-10 rounded-full bg-gray-800/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
+                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
               >
-                <Mail size={18} />
+                <Mail size={20} />
+              </a>
+              <a
+                href="#analytics"
+                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
+              >
+                <BarChart size={20} />
               </a>
               <a
                 href="https://www.instagram.com/malshi__xii/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
+                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
               >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="#analytics"
-                className="w-10 h-10 rounded-full bg-gray-800/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
-              >
-                <BarChart size={18} />
+                <Instagram size={20} />
               </a>
             </div>
           </div>
-        </div>
 
-        {/* Scroll to top button */}
-        <button
-          onClick={scrollToTop}
-          className="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-brand-orange/20 border-2 border-brand-orange flex items-center justify-center text-brand-orange hover:bg-brand-orange hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,94,58,0.3)]"
-          aria-label="Scroll to top"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
+          {/* Contact us floating button */}
+          <div className="absolute -top-3 right-8">
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="bg-white text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-300 shadow-lg"
+            >
+              Contact us
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
   );
