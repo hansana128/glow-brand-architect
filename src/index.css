@@ -112,9 +112,9 @@
     @apply border-2 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)] rounded-xl overflow-hidden;
   }
 
-  /* New teal-themed service cards */
-  .teal-service-card {
-    @apply border-2 border-teal-400 shadow-[0_0_15px_rgba(20,184,166,0.6)] rounded-xl overflow-hidden;
+  /* Orange-themed service cards */
+  .orange-service-card {
+    @apply border-2 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)] rounded-xl overflow-hidden;
   }
   
   /* Animation for floating icons */
@@ -143,16 +143,26 @@
     @apply inline-flex items-center gap-2 text-white bg-brand-blue/50 border-2 border-brand-orange px-4 py-2 rounded-full text-sm font-medium shadow-[0_0_15px_rgba(255,94,58,0.6)] transition-all hover:shadow-[0_0_20px_rgba(255,94,58,0.8)];
   }
 
-  /* Teal-themed Service Cards */
+  /* Orange-themed Service Cards */
   .service-card {
-    @apply relative overflow-hidden rounded-3xl transition-all duration-500;
+    @apply relative overflow-hidden rounded-3xl transition-all duration-500 border-2 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)];
   }
   
   .service-icon-container {
-    @apply relative z-10 shadow-[0_0_15px_rgba(20,184,166,0.5)];
+    @apply relative z-10 shadow-[0_0_15px_rgba(255,94,58,0.5)];
   }
   
   .see-more-btn {
-    @apply shadow-[0_0_10px_rgba(20,184,166,0.3)];
+    @apply shadow-[0_0_10px_rgba(255,94,58,0.3)];
+  }
+
+  .service-card-container {
+    cursor: pointer;
+    transform: perspective(1000px);
+    transition: all 0.3s ease;
+  }
+  
+  .service-card {
+    min-height: 380px;
   }
 }
