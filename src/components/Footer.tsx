@@ -51,8 +51,8 @@ const Footer = () => {
     window.location.href = mailtoLink;
     
     toast({
-      title: "Success!",
-      description: "Your email client will open with the message. Please send it from there.",
+      title: "Thanks for reaching out!",
+      description: "I'll get back to you soon.",
     });
     
     setFormData({
@@ -119,7 +119,7 @@ const Footer = () => {
 
           {/* Right Side - Contact Form */}
           <div>
-            <h4 className="text-white font-bold mb-6 text-xl">Get In Touch</h4>
+            <h4 className="text-white font-bold mb-6 text-xl">Contact Me</h4>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <input
