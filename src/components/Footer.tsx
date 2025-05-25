@@ -27,9 +27,9 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-brand-orange flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/d014bd77-30f4-4b0e-aa9f-74dcb03c1127.png" 
+                  src="/lovable-uploads/59a0890e-0b7b-4a1a-9770-574399c25ae1.png" 
                   alt="Malshi Hansana Logo" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-full"
                 />
               </div>
               <div>
