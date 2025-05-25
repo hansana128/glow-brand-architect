@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Linkedin, Mail, Instagram, BarChart } from "lucide-react";
 
@@ -26,7 +27,7 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-brand-orange flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/59a0890e-0b7b-4a1a-9770-574399c25ae1.png" 
+                  src="/lovable-uploads/406d1338-beed-4b08-8cf9-6088435fbdfc.png" 
                   alt="Malshi Hansana Logo" 
                   className="w-full h-full object-cover rounded-full"
                 />
