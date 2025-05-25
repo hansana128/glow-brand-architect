@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -126,23 +127,23 @@ const Portfolio = () => {
   const [selectedVideo, setSelectedVideo] = useState<VideoProps | null>(null);
   const [selectedImage, setSelectedImage] = useState<PortfolioItemProps | null>(null);
   
-  // WordPress projects with actual website links
+  // WordPress projects with actual website links and homepage screenshots
   const wordpressProjects = [
     {
       url: "https://infocusmedia.lk/",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      image: "/lovable-uploads/fdd3ce05-68e6-4fd6-83eb-4b8bdba07d6c.png",
       title: "Infocus Media",
       category: "WordPress Business Site",
     },
     {
       url: "https://iogglobal.au/",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      image: "/lovable-uploads/452d2ac4-523f-4ed1-aeed-5e4457923511.png",
       title: "IOG Global",
       category: "WordPress Corporate Site",
     },
     {
       url: "https://charityforlife.lk/",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      image: "/lovable-uploads/20098842-4e3f-40e0-a68d-4593037eb0fe.png",
       title: "Charity For Life",
       category: "WordPress Non-Profit Site",
     },
