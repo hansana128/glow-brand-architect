@@ -20,20 +20,29 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-brand-black py-4 relative z-50">
+    <header className="bg-gradient-to-r from-brand-black via-gray-900 to-brand-black py-4 relative z-50 shadow-lg border-b border-brand-orange/20">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
             href="#hero"
-            className="text-white font-bold text-lg md:text-xl flex items-center gap-1"
+            className="flex items-center gap-3"
           >
-            {/* Replace with your logo if needed */}
-            <span className="text-brand-orange">Malshi</span> Hansana
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-orange shadow-lg">
+              <img 
+                src="/lovable-uploads/ca53c9f5-d0ac-45e6-a4f7-c1ba0bc1ba87.png" 
+                alt="Malshi Hansana Logo" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text-white font-bold text-lg md:text-xl">
+              <span className="text-brand-orange">MALSHI</span> HANSANA
+              <p className="text-xs text-gray-300 font-normal">Web Developer | Digital Marketer</p>
+            </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-2">
+          {/* Desktop Navigation - moved to left */}
+          <nav className="hidden md:flex items-center gap-2 ml-8">
             {["home", "about", "services", "portfolio", "contact"].map((item) => (
               <Button
                 key={item}
@@ -62,7 +71,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "md:hidden fixed top-[60px] left-0 right-0 bg-brand-blue/95 backdrop-blur-md transition-all duration-500 overflow-hidden",
+            "md:hidden fixed top-[80px] left-0 right-0 bg-brand-blue/95 backdrop-blur-md transition-all duration-500 overflow-hidden",
             mobileMenuOpen ? "max-h-screen" : "max-h-0"
           )}
         >
