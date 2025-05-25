@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Linkedin, Mail, Instagram, BarChart } from "lucide-react";
 
@@ -45,9 +44,8 @@ const Footer = () => {
             {/* Description */}
             <div className="max-w-md">
               <p className="text-gray-300 text-sm leading-relaxed">
-                Helping BRANDS with bossy designs & strategies | Graphic Designer | 
-                Personal Branding Strategist | Ravikan Top 10 in Personal Branding + 
-                Audience Building
+                Helping brands stand out with bold strategies, standout visuals & strong online presence
+                Personal UI/UX Designer | Vibe Coder who loves working with AI
               </p>
             </div>
           </div>
