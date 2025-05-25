@@ -20,7 +20,6 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Form validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Error",
@@ -30,16 +29,18 @@ const Contact = () => {
       return;
     }
     
-    // In a real scenario, you would send the form data to a backend
-    console.log("Form submitted:", formData);
+    // Create mailto link with form data
+    const subject = `Contact Form Message from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const mailtoLink = `mailto:malshihansana128@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    // Show success message
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Success!",
-      description: "Your message has been sent. I'll get back to you soon!",
+      title: "Thanks for reaching out!",
+      description: "I'll get back to you soon.",
     });
     
-    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -56,70 +57,53 @@ const Contact = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-white">LET'S CREATE </span>
-            <span className="text-brand-orange">MAGIC</span>
-          </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Ready to elevate your digital presence? Get in touch and let's discuss how I can help you achieve your goals.
-          </p>
-        </div>
-
         <div className="max-w-3xl mx-auto">
-          <form onSubmit={handleSubmit} className="glassmorphism-card p-8">
-            <div className="grid grid-cols-1 gap-6">
-              <div className="form-group">
-                <label htmlFor="name" className="block text-white text-sm mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="neon-form-field"
-                  placeholder="Your name"
-                />
-              </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              CONTACT ME
+            </h2>
+          </div>
 
-              <div className="form-group">
-                <label htmlFor="email" className="block text-white text-sm mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="neon-form-field"
-                  placeholder="Your email"
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message" className="block text-white text-sm mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="neon-form-field"
-                  placeholder="Your message"
-                ></textarea>
-              </div>
-
-              <div className="form-group">
-                <button type="submit" className="glow-btn w-full">
-                  <span>Send Message</span>
-                </button>
-              </div>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                className="w-full bg-gray-800/50 border border-gray-600 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors text-lg"
+              />
             </div>
+
+            <div>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                className="w-full bg-gray-800/50 border border-gray-600 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors text-lg"
+              />
+            </div>
+
+            <div>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your Message"
+                rows={6}
+                className="w-full bg-gray-800/50 border border-gray-600 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors resize-none text-lg"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white py-4 rounded-2xl font-semibold text-lg transition-colors duration-300"
+            >
+              Send Message
+            </button>
           </form>
 
           <div className="mt-10 flex justify-center space-x-6">
