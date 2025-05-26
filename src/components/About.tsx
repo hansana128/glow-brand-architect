@@ -12,10 +12,10 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Image - Moved more to left with increased spacing */}
           <div className="flex justify-start md:justify-start">
-            {/* PLACEHOLDER FOR MALSHI'S ABOUT IMAGE */}
+            {/* MALSHI'S ABOUT IMAGE */}
             <div className="relative">
               <div className="w-72 h-80 rounded-xl overflow-hidden border border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.3)]">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Malshi Hansana" className="w-full h-full object-cover" />
+                <img src="/lovable-uploads/f3ab18ef-7d4d-4950-a922-50ca5b987c35.png" alt="Malshi Hansana" className="w-full h-full object-cover" />
               </div>
 
               {/* Floating Logos */}
