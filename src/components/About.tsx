@@ -1,37 +1,6 @@
 
-import React, { useEffect, useRef } from "react";
-
+import React from "react";
 const About = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = container.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      const icons = container.querySelectorAll('.floating-icon');
-      
-      icons.forEach((icon, index) => {
-        const iconElement = icon as HTMLElement;
-        const speed = (index + 1) * 0.5;
-        const xOffset = (x - rect.width / 2) * speed * 0.01;
-        const yOffset = (y - rect.height / 2) * speed * 0.01;
-        
-        iconElement.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
-      });
-    };
-
-    container.addEventListener('mousemove', handleMouseMove);
-    
-    return () => {
-      container.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
   return <section id="about" className="py-6 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
@@ -49,39 +18,39 @@ const About = () => {
                 <img src="/lovable-uploads/d6e96e97-f894-4995-9509-9194140e94f9.png" alt="Malshi Hansana" className="w-full h-full object-cover" />
               </div>
 
-              {/* Floating Logos with Cursor Motion */}
-              <div ref={containerRef} className="floating-icons-container absolute inset-0 w-full h-full mx-0 my-0 px-[20px] py-[50px] rounded-lg bg-neutral-950/80 cursor-none">
+              {/* Floating Logos */}
+              <div className="floating-icons-container absolute inset-0 w-full h-full mx-0 my-0 px-[20px] py-[50px] rounded-lg bg-neutral-950/80">
                 {/* Figma logo */}
-                <div className="floating-icon absolute top-[-20px] right-[-20px] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg transition-transform duration-200 ease-out">
-                  <img src="/lovable-uploads/20098842-4e3f-40e0-a68d-4593037eb0fe.png" alt="Figma" className="w-full h-full object-contain" />
+                <div className="absolute top-[-20px] right-[-20px] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg">
+                  <img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma" className="w-full h-full object-contain" />
                 </div>
                 
-                {/* Developer logo */}
-                <div className="floating-icon absolute top-[20%] left-[-30px] w-14 h-14 bg-black/80 rounded-full p-2 animate-float shadow-lg transition-transform duration-200 ease-out" style={{
+                {/* WordPress logo */}
+                <div className="absolute top-[20%] left-[-30px] w-14 h-14 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
                 animationDelay: "0.5s"
               }}>
-                  <img src="/lovable-uploads/406d1338-beed-4b08-8cf9-6088435fbdfc.png" alt="Developer" className="w-full h-full object-contain" />
+                  <img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="WordPress" className="w-full h-full object-contain" />
                 </div>
                 
-                {/* Third logo - using first logo again */}
-                <div className="floating-icon absolute bottom-[30%] right-[-25px] w-10 h-10 bg-black/80 rounded-full p-2 animate-float shadow-lg transition-transform duration-200 ease-out" style={{
+                {/* LinkedIn logo */}
+                <div className="absolute bottom-[30%] right-[-25px] w-10 h-10 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
                 animationDelay: "1s"
               }}>
-                  <img src="/lovable-uploads/20098842-4e3f-40e0-a68d-4593037eb0fe.png" alt="Design" className="w-full h-full object-contain" />
+                  <img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" className="w-full h-full object-contain" />
                 </div>
                 
-                {/* Developer logo again */}
-                <div className="floating-icon absolute bottom-[-15px] left-[30%] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg transition-transform duration-200 ease-out" style={{
+                {/* HTML/CSS logo */}
+                <div className="absolute bottom-[-15px] left-[30%] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
                 animationDelay: "1.5s"
               }}>
-                  <img src="/lovable-uploads/406d1338-beed-4b08-8cf9-6088435fbdfc.png" alt="Development" className="w-full h-full object-contain" />
+                  <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML/CSS" className="w-full h-full object-contain" />
                 </div>
                 
-                {/* Figma logo again */}
-                <div className="floating-icon absolute top-[40%] left-[90%] w-11 h-11 bg-black/80 rounded-full p-2 animate-float shadow-lg transition-transform duration-200 ease-out" style={{
+                {/* Canva logo */}
+                <div className="absolute top-[40%] left-[90%] w-11 h-11 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
                 animationDelay: "2s"
               }}>
-                  <img src="/lovable-uploads/20098842-4e3f-40e0-a68d-4593037eb0fe.png" alt="UI/UX" className="w-full h-full object-contain" />
+                  <img src="https://cdn.worldvectorlogo.com/logos/canva-1.svg" alt="Canva" className="w-full h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -144,5 +113,4 @@ const About = () => {
       </div>
     </section>;
 };
-
 export default About;
