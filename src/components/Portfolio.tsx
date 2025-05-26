@@ -26,8 +26,45 @@ interface WordPressProjectProps {
   url: string;
 }
 
+// Custom coded project data type
+interface CustomCodedProjectProps {
+  image: string;
+  title: string;
+  category: string;
+  url: string;
+}
+
 // WordPress project card component
 const WordPressProjectCard = ({ image, title, category, url }: WordPressProjectProps) => {
+  return (
+    <a 
+      href={url} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="portfolio-card group block"
+    >
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="text-lg font-bold text-white">{title}</h3>
+              <p className="text-sm text-gray-300">{category}</p>
+            </div>
+            <ExternalLink className="text-brand-orange" size={20} />
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+};
+
+// Custom coded project card component
+const CustomCodedProjectCard = ({ image, title, category, url }: CustomCodedProjectProps) => {
   return (
     <a 
       href={url} 
@@ -149,31 +186,19 @@ const Portfolio = () => {
     },
   ];
   
-  // Custom Coded projects
+  // Custom Coded projects with actual URLs
   const codedProjects = [
     {
-      id: "coded-saas",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      title: "SaaS Dashboard",
-      category: "React + Node.js",
+      url: "https://instant-crypto-trade-hub.lovable.app/",
+      image: "/lovable-uploads/da9567be-31e4-44a6-910d-afd879780170.png",
+      title: "Crypto Trade Hub",
+      category: "React + TypeScript",
     },
     {
-      id: "coded-app",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      title: "Mobile Web App",
-      category: "React Native",
-    },
-    {
-      id: "coded-ecommerce",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      title: "Custom Shop",
-      category: "MERN Stack",
-    },
-    {
-      id: "coded-booking",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-      title: "Booking Platform",
-      category: "Next.js + GraphQL",
+      url: "https://preview--shimmering-web-garden.lovable.app/",
+      image: "/lovable-uploads/d8e94b00-1cfd-418a-9eb8-8b8d3dba03ff.png",
+      title: "Web Garden",
+      category: "React Application",
     },
   ];
   
@@ -375,14 +400,14 @@ const Portfolio = () => {
 
           {/* Custom Coded Projects */}
           <TabsContent value="coded" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {codedProjects.map((project, index) => (
-                <PortfolioCard
+                <CustomCodedProjectCard
                   key={index}
                   image={project.image}
                   title={project.title}
                   category={project.category}
-                  id={project.id}
+                  url={project.url}
                 />
               ))}
             </div>
