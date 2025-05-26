@@ -45,11 +45,11 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center justify-center">
-            {/* PLACEHOLDER FOR MALSHI'S PHOTO */}
+            {/* MALSHI'S HERO IMAGE */}
             <div className="relative">
               <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.5)]">
                 <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                  src="/lovable-uploads/7b5b5d5f-3294-4553-a668-9f1df2366547.png"
                   alt="Malshi Hansana"
                   className="w-full h-full object-cover"
                 />
