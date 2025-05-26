@@ -33,7 +33,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               {/* Download CV Button */}
-              <a href="https://yourdomain.com/Malshi-Hansana-CV.pdf" className="glow-btn" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1O0sZHZMcy52LWxOM0sjwAN3PbOBTYT8i/view?usp=sharing" className="glow-btn" target="_blank" rel="noopener noreferrer">
                 <span>Download CV</span>
               </a>
 
@@ -49,7 +49,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.5)]">
                 <img
-                  src="/lovable-uploads/7b5b5d5f-3294-4553-a668-9f1df2366547.png"
+                  src="/lovable-uploads/d6df25b7-3e50-4827-ad70-43fc4bb88cfa.png"
                   alt="Malshi Hansana"
                   className="w-full h-full object-cover"
                 />
