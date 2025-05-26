@@ -271,6 +271,18 @@ const Portfolio = () => {
   // Creative Visuals
   const visualProjects = [
     {
+      id: "visual-site-speed",
+      image: "/lovable-uploads/53ad39ad-77ee-4728-af5e-c0d68fbddb68.png",
+      title: "Site Performance Analysis",
+      category: "SEO & Performance Design",
+    },
+    {
+      id: "visual-wordpress-fix",
+      image: "/lovable-uploads/cf85f042-03ab-48ef-9abe-16bdcd87bcbf.png",
+      title: "WordPress Optimization Guide",
+      category: "Technical Content Design",
+    },
+    {
       id: "visual-branding",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
       title: "Brand Identity",
@@ -317,18 +329,6 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
       title: "Motion Graphics",
       category: "Animation",
-    },
-    {
-      id: "visual-3d",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      title: "3D Renders",
-      category: "3D Design",
-    },
-    {
-      id: "visual-infographic",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      title: "Infographics",
-      category: "Information Design",
     },
   ];
 

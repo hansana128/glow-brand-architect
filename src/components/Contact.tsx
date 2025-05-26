@@ -72,7 +72,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
-                className="w-full bg-gray-800/50 border border-gray-600 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors text-lg"
+                className="w-full bg-brand-blue/30 border-2 border-brand-orange rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)] transition-all text-lg"
               />
             </div>
 
@@ -83,7 +83,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
-                className="w-full bg-gray-800/50 border border-gray-600 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors text-lg"
+                className="w-full bg-brand-blue/30 border-2 border-brand-orange rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)] transition-all text-lg"
               />
             </div>
 
@@ -94,13 +94,13 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Message"
                 rows={6}
-                className="w-full bg-gray-800/50 border border-gray-600 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors resize-none text-lg"
+                className="w-full bg-brand-blue/30 border-2 border-brand-orange rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)] resize-none transition-all text-lg"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white py-4 rounded-2xl font-semibold text-lg transition-colors duration-300"
+              className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white py-4 rounded-2xl font-semibold text-lg transition-colors duration-300 shadow-[0_0_15px_rgba(255,94,58,0.6)] border-2 border-brand-orange"
             >
               Send Message
             </button>
@@ -111,7 +111,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/malshi-hansana"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue border border-white/10 text-white shadow-[0_0_10px_rgba(255,94,58,0.5)] transition-all duration-300"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue/30 border-2 border-brand-orange text-white shadow-[0_0_15px_rgba(255,94,58,0.6)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,94,58,0.8)]"
             >
               <Linkedin size={20} />
             </a>
@@ -119,7 +119,7 @@ const Contact = () => {
               href="https://wa.me/+123456789"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue border border-white/10 text-white shadow-[0_0_10px_rgba(255,94,58,0.5)] transition-all duration-300"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue/30 border-2 border-brand-orange text-white shadow-[0_0_15px_rgba(255,94,58,0.6)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,94,58,0.8)]"
             >
               <MessageSquare size={20} />
             </a>
