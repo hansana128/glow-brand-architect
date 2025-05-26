@@ -10,6 +10,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import FloatingChat from "../components/FloatingChat";
 import ScrollToTop from "../components/ScrollToTop";
+import CursorMotionEffect from "../components/CursorMotionEffect";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <Footer />
       <FloatingChat />
       <ScrollToTop />
+      <CursorMotionEffect />
     </div>
   );
 };
