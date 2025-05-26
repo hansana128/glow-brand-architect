@@ -81,9 +81,6 @@ const Footer = () => {
                 >
                   Portfolio
                 </span>
-                <span className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer">
-                  Packages
-                </span>
                 <span
                   onClick={() => scrollToSection("contact")}
                   className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
