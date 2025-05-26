@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -125,20 +126,6 @@
   
   .animate-float {
     animation: float 3s ease-in-out infinite;
-  }
-
-  /* Cursor motion effect for floating icons */
-  .floating-icons-container {
-    perspective: 1000px;
-  }
-
-  .floating-icons-container > div {
-    transition: transform 0.3s ease-out;
-    will-change: transform;
-  }
-
-  .floating-icons-container:hover > div {
-    transform-style: preserve-3d;
   }
 
   /* Form fields with enhanced neon glow */

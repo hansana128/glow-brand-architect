@@ -1,3 +1,4 @@
+
 import React from "react";
 const About = () => {
   return <section id="about" className="py-6 relative overflow-hidden">
@@ -14,33 +15,41 @@ const About = () => {
             {/* MALSHI'S ABOUT IMAGE */}
             <div className="relative">
               <div className="w-72 h-80 rounded-xl overflow-hidden border border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.3)]">
-                <img src="/lovable-uploads/ac453bb7-1c53-4215-b987-65f206710b5e.png" alt="Malshi Hansana" className="w-full h-full object-cover" />
+                <img src="/lovable-uploads/d6e96e97-f894-4995-9509-9194140e94f9.png" alt="Malshi Hansana" className="w-full h-full object-cover" />
               </div>
 
-              {/* Floating Logos with cursor motion */}
+              {/* Floating Logos */}
               <div className="floating-icons-container absolute inset-0 w-full h-full mx-0 my-0 px-[20px] py-[50px] rounded-lg bg-neutral-950/80">
-                {/* Developer logo - replacing Figma */}
-                <div className="absolute top-[-20px] right-[-20px] w-12 h-12 bg-black/80 rounded-full p-2 shadow-lg transition-transform duration-300 ease-out cursor-pointer">
-                  <img src="/lovable-uploads/ac453bb7-1c53-4215-b987-65f206710b5e.png" alt="Developer" className="w-full h-full object-contain" />
+                {/* Figma logo */}
+                <div className="absolute top-[-20px] right-[-20px] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg">
+                  <img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma" className="w-full h-full object-contain" />
                 </div>
                 
                 {/* WordPress logo */}
-                <div className="absolute top-[20%] left-[-30px] w-14 h-14 bg-black/80 rounded-full p-2 shadow-lg transition-transform duration-300 ease-out cursor-pointer">
+                <div className="absolute top-[20%] left-[-30px] w-14 h-14 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                animationDelay: "0.5s"
+              }}>
                   <img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="WordPress" className="w-full h-full object-contain" />
                 </div>
                 
                 {/* LinkedIn logo */}
-                <div className="absolute bottom-[30%] right-[-25px] w-10 h-10 bg-black/80 rounded-full p-2 shadow-lg transition-transform duration-300 ease-out cursor-pointer">
+                <div className="absolute bottom-[30%] right-[-25px] w-10 h-10 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                animationDelay: "1s"
+              }}>
                   <img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" className="w-full h-full object-contain" />
                 </div>
                 
                 {/* HTML/CSS logo */}
-                <div className="absolute bottom-[-15px] left-[30%] w-12 h-12 bg-black/80 rounded-full p-2 shadow-lg transition-transform duration-300 ease-out cursor-pointer">
+                <div className="absolute bottom-[-15px] left-[30%] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                animationDelay: "1.5s"
+              }}>
                   <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML/CSS" className="w-full h-full object-contain" />
                 </div>
                 
                 {/* Canva logo */}
-                <div className="absolute top-[40%] left-[90%] w-11 h-11 bg-black/80 rounded-full p-2 shadow-lg transition-transform duration-300 ease-out cursor-pointer">
+                <div className="absolute top-[40%] left-[90%] w-11 h-11 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                animationDelay: "2s"
+              }}>
                   <img src="https://cdn.worldvectorlogo.com/logos/canva-1.svg" alt="Canva" className="w-full h-full object-contain" />
                 </div>
               </div>
