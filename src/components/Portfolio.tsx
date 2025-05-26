@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -302,52 +301,34 @@ const Portfolio = () => {
       category: "AI & Technology Design",
     },
     {
-      id: "visual-branding",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      title: "Brand Identity",
-      category: "Logo Design",
+      id: "visual-skincare",
+      image: "/lovable-uploads/41d31eb8-9291-48d4-82ab-c610e2a68b68.png",
+      title: "Skincare Brand Visual",
+      category: "Product Design",
     },
     {
-      id: "visual-illustration",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      title: "Digital Illustration",
-      category: "Artwork",
+      id: "visual-nature-heart",
+      image: "/lovable-uploads/2a7b0935-6513-4587-b123-e49d0c3f1636.png",
+      title: "Environmental Awareness",
+      category: "Social Impact Design",
     },
     {
-      id: "visual-banner",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      title: "Web Banners",
-      category: "UI Design",
+      id: "visual-education",
+      image: "/lovable-uploads/2caaa8fe-2d2a-4112-8880-191e137c4038.png",
+      title: "Educational Content Design",
+      category: "Learning & Development",
     },
     {
-      id: "visual-social",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      title: "Social Media Kit",
-      category: "Marketing Design",
+      id: "visual-vastram",
+      image: "/lovable-uploads/df7ea797-f833-41e9-8134-a707d0a57d44.png",
+      title: "Vastram Fashion Brand",
+      category: "Fashion Design",
     },
     {
-      id: "visual-print",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      title: "Print Materials",
-      category: "Print Design",
-    },
-    {
-      id: "visual-presentation",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      title: "Presentation Design",
-      category: "Business Design",
-    },
-    {
-      id: "visual-icon",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-      title: "Icon Set",
-      category: "Graphic Design",
-    },
-    {
-      id: "visual-motion",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      title: "Motion Graphics",
-      category: "Animation",
+      id: "visual-sarees",
+      image: "/lovable-uploads/e3666428-ee61-49f6-9a41-9c119b4dc26d.png",
+      title: "Indian Sarees Collection",
+      category: "Cultural Fashion Design",
     },
   ];
 
