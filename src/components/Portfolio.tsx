@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -281,6 +282,24 @@ const Portfolio = () => {
       image: "/lovable-uploads/cf85f042-03ab-48ef-9abe-16bdcd87bcbf.png",
       title: "WordPress Optimization Guide",
       category: "Technical Content Design",
+    },
+    {
+      id: "visual-digital-stars",
+      image: "/lovable-uploads/ab478334-175a-4af6-b36f-4295a9d1901e.png",
+      title: "Teaching Digital Navigation",
+      category: "Educational Design",
+    },
+    {
+      id: "visual-ai-marketing",
+      image: "/lovable-uploads/cf264931-7c5a-47c0-aa8e-28c77f4c7133.png",
+      title: "AI Digital Marketing Mastery",
+      category: "Marketing Design",
+    },
+    {
+      id: "visual-ai-tools",
+      image: "/lovable-uploads/1f6b582f-cf5f-4a42-a35d-aeb5faa54de9.png",
+      title: "5 AI Tools for Content Creation",
+      category: "AI & Technology Design",
     },
     {
       id: "visual-branding",
