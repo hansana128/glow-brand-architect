@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -188,6 +187,12 @@ const Portfolio = () => {
   
   // Custom Coded projects with actual URLs
   const codedProjects = [
+    {
+      url: "https://preview--sleek-online-creation.lovable.app/",
+      image: "/lovable-uploads/ce45593f-6b51-404b-a53c-29f5926592c1.png",
+      title: "HIEUBOWL Vietnamese Kitchen",
+      category: "React + TypeScript Restaurant Site",
+    },
     {
       url: "https://instant-crypto-trade-hub.lovable.app/",
       image: "/lovable-uploads/da9567be-31e4-44a6-910d-afd879780170.png",
