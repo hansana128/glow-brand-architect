@@ -30,7 +30,7 @@ const Navbar = () => {
           >
             <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-orange shadow-lg">
               <img 
-                src="/lovable-uploads/934fb85c-2166-4add-9a77-b07432c124d4.png" 
+                src="/lovable-uploads/8ce66691-2b2c-43b5-b7e1-0c982d79d88c.png" 
                 alt="Malshi Hansana Logo" 
                 className="w-full h-full object-cover"
               />
