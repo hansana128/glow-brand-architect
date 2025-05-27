@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -16,6 +15,7 @@ interface PortfolioItemProps {
 // Video data type
 interface VideoProps extends PortfolioItemProps {
   videoUrl: string;
+  youtubeId?: string;
 }
 
 // WordPress project data type
@@ -273,14 +273,15 @@ const Portfolio = () => {
     },
   ];
   
-  // AI Video Content with provided videos
+  // AI Video Content with YouTube integration
   const videoProjects = [
     {
       id: "cool-soap-ad",
       image: "/lovable-uploads/b5bae181-32b0-4b1a-a375-568f262b3454.png",
       title: "Cool Soap Advertisement",
       category: "Product Commercial",
-      videoUrl: "https://drive.google.com/file/d/19cJXe7Kzre0z59sfIA-stllOVAv2Y24T/view?usp=sharing",
+      videoUrl: "https://youtu.be/nHkMufUDzsM",
+      youtubeId: "nHkMufUDzsM",
     },
     {
       id: "dogs-playing-video",
@@ -472,19 +473,32 @@ const Portfolio = () => {
           <DialogHeader>
             <DialogTitle className="text-white">{selectedVideo?.title}</DialogTitle>
           </DialogHeader>
-          <div className="aspect-video bg-black/30 rounded-md flex items-center justify-center">
-            {selectedVideo && (
-              <div className="text-center text-gray-300">
-                <Play size={48} className="mx-auto text-brand-orange mb-2" />
-                <p className="mb-2">Video: {selectedVideo.title}</p>
-                <a 
-                  href={selectedVideo.videoUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-brand-orange hover:underline"
-                >
-                  Watch on Google Drive
-                </a>
+          <div className="aspect-video bg-black/30 rounded-md overflow-hidden">
+            {selectedVideo && selectedVideo.youtubeId ? (
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}`}
+                title={selectedVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            ) : (
+              <div className="flex items-center justify-center h-full text-center text-gray-300">
+                <div>
+                  <Play size={48} className="mx-auto text-brand-orange mb-2" />
+                  <p className="mb-2">Video: {selectedVideo?.title}</p>
+                  <a 
+                    href={selectedVideo?.videoUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-brand-orange hover:underline"
+                  >
+                    Watch on External Platform
+                  </a>
+                </div>
               </div>
             )}
           </div>
