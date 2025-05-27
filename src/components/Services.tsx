@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -136,7 +135,11 @@ const Services = () => {
         "GitHub",
         "Vercel/Netlify",
         "Chrome DevTools",
-        "Lighthouse"
+        "Lighthouse",
+        "Lovable",
+        "Bolt.new",
+        "V0.dev",
+        "WordPress"
       ],
       color: "text-brand-orange"
     },
