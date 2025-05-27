@@ -280,15 +280,16 @@ const Portfolio = () => {
       image: "/lovable-uploads/b5bae181-32b0-4b1a-a375-568f262b3454.png",
       title: "Cool Soap Advertisement",
       category: "Product Commercial",
-      videoUrl: "https://youtu.be/nHkMufUDzsM",
-      youtubeId: "nHkMufUDzsM",
+      videoUrl: "https://youtu.be/uYMXE_hbRo4",
+      youtubeId: "uYMXE_hbRo4",
     },
     {
       id: "dogs-playing-video",
       image: "/lovable-uploads/e4f1dc21-eebf-43ef-a05b-29219fddeebd.png",
       title: "Dogs Playing in Park",
       category: "Lifestyle Video",
-      videoUrl: "https://drive.google.com/file/d/1W22IwNkd7e5tlDXWVth09bWepINqhOB7/view?usp=sharing",
+      videoUrl: "https://youtu.be/nHkMufUDzsM",
+      youtubeId: "nHkMufUDzsM",
     },
   ];
   
