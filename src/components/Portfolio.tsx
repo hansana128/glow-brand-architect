@@ -350,13 +350,13 @@ const Portfolio = () => {
             <span className="text-brand-orange">WORK</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            A showcase of my projects and collaborations across web development, design, and digital marketing.
+            I build fast, secure, and beautiful websites that convert visitors into customers using modern technologies.
           </p>
         </div>
 
         {/* Portfolio Tabs */}
         <Tabs defaultValue="wordpress" className="mb-8" onValueChange={(value) => setActiveTab(value)}>
-          <TabsList className="grid grid-cols-2 md:grid-cols-5 gap-2 bg-transparent">
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-transparent">
             <TabsTrigger 
               value="wordpress" 
               className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
@@ -368,12 +368,6 @@ const Portfolio = () => {
               className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
             >
               Custom Coded Projects
-            </TabsTrigger>
-            <TabsTrigger 
-              value="tools" 
-              className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
-            >
-              Web Development Tools
             </TabsTrigger>
             <TabsTrigger 
               value="video" 
@@ -414,21 +408,6 @@ const Portfolio = () => {
                   title={project.title}
                   category={project.category}
                   url={project.url}
-                />
-              ))}
-            </div>
-          </TabsContent>
-
-          {/* Web Development Tools */}
-          <TabsContent value="tools" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {webTools.map((tool, index) => (
-                <ToolCard
-                  key={index}
-                  image={tool.image}
-                  title={tool.title}
-                  category={tool.category}
-                  url={tool.url}
                 />
               ))}
             </div>
