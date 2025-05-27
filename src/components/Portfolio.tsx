@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -27,6 +28,14 @@ interface WordPressProjectProps {
 
 // Custom coded project data type
 interface CustomCodedProjectProps {
+  image: string;
+  title: string;
+  category: string;
+  url: string;
+}
+
+// Tools data type
+interface ToolProps {
   image: string;
   title: string;
   category: string;
@@ -64,6 +73,35 @@ const WordPressProjectCard = ({ image, title, category, url }: WordPressProjectP
 
 // Custom coded project card component
 const CustomCodedProjectCard = ({ image, title, category, url }: CustomCodedProjectProps) => {
+  return (
+    <a 
+      href={url} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="portfolio-card group block"
+    >
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="text-lg font-bold text-white">{title}</h3>
+              <p className="text-sm text-gray-300">{category}</p>
+            </div>
+            <ExternalLink className="text-brand-orange" size={20} />
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+};
+
+// Tools card component
+const ToolCard = ({ image, title, category, url }: ToolProps) => {
   return (
     <a 
       href={url} 
@@ -206,65 +244,50 @@ const Portfolio = () => {
       category: "React Application",
     },
   ];
+
+  // Web Development Tools
+  const webTools = [
+    {
+      url: "https://lovable.dev/",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      title: "Lovable",
+      category: "AI Web Development Platform",
+    },
+    {
+      url: "https://bolt.new/",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      title: "Bolt.new",
+      category: "AI Code Generation Tool",
+    },
+    {
+      url: "https://v0.dev/",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      title: "V0.dev",
+      category: "AI UI Component Generator",
+    },
+    {
+      url: "https://wordpress.com/",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      title: "WordPress",
+      category: "Content Management System",
+    },
+  ];
   
-  // AI Video Content
+  // AI Video Content with provided videos
   const videoProjects = [
     {
-      id: "ai-explainer",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      title: "AI Explainer",
-      category: "Educational Video",
-      videoUrl: "#",
+      id: "cool-soap-ad",
+      image: "/lovable-uploads/b5bae181-32b0-4b1a-a375-568f262b3454.png",
+      title: "Cool Soap Advertisement",
+      category: "Product Commercial",
+      videoUrl: "https://drive.google.com/file/d/19cJXe7Kzre0z59sfIA-stllOVAv2Y24T/view?usp=sharing",
     },
     {
-      id: "ai-promo",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      title: "Product Promo",
-      category: "Marketing Video",
-      videoUrl: "#",
-    },
-    {
-      id: "ai-tutorial",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      title: "Software Tutorial",
-      category: "Tutorial Video",
-      videoUrl: "#",
-    },
-    {
-      id: "ai-commercial",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      title: "Brand Commercial",
-      category: "Promotional Video",
-      videoUrl: "#",
-    },
-    // Added videos from the previous VideoGallery component
-    {
-      id: "video1",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-      title: "Brand Promotion Video",
-      category: "Marketing",
-      videoUrl: "#",
-    },
-    {
-      id: "video2",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      title: "Product Showcase",
-      category: "Product Video",
-      videoUrl: "#",
-    },
-    {
-      id: "video3",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      title: "Client Testimonial",
-      category: "Testimonial",
-      videoUrl: "#",
-    },
-    {
-      id: "video4",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      title: "Company Overview",
-      category: "Corporate",
-      videoUrl: "#",
+      id: "dogs-playing-video",
+      image: "/lovable-uploads/e4f1dc21-eebf-43ef-a05b-29219fddeebd.png",
+      title: "Dogs Playing in Park",
+      category: "Lifestyle Video",
+      videoUrl: "https://drive.google.com/file/d/1W22IwNkd7e5tlDXWVth09bWepINqhOB7/view?usp=sharing",
     },
   ];
   
@@ -300,36 +323,6 @@ const Portfolio = () => {
       title: "5 AI Tools for Content Creation",
       category: "AI & Technology Design",
     },
-    {
-      id: "visual-skincare",
-      image: "/lovable-uploads/41d31eb8-9291-48d4-82ab-c610e2a68b68.png",
-      title: "Skincare Brand Visual",
-      category: "Product Design",
-    },
-    {
-      id: "visual-nature-heart",
-      image: "/lovable-uploads/2a7b0935-6513-4587-b123-e49d0c3f1636.png",
-      title: "Environmental Awareness",
-      category: "Social Impact Design",
-    },
-    {
-      id: "visual-education",
-      image: "/lovable-uploads/2caaa8fe-2d2a-4112-8880-191e137c4038.png",
-      title: "Educational Content Design",
-      category: "Learning & Development",
-    },
-    {
-      id: "visual-vastram",
-      image: "/lovable-uploads/df7ea797-f833-41e9-8134-a707d0a57d44.png",
-      title: "Vastram Fashion Brand",
-      category: "Fashion Design",
-    },
-    {
-      id: "visual-sarees",
-      image: "/lovable-uploads/e3666428-ee61-49f6-9a41-9c119b4dc26d.png",
-      title: "Indian Sarees Collection",
-      category: "Cultural Fashion Design",
-    },
   ];
 
   const openVideoModal = (video: VideoProps) => {
@@ -361,7 +354,7 @@ const Portfolio = () => {
 
         {/* Portfolio Tabs */}
         <Tabs defaultValue="wordpress" className="mb-8" onValueChange={(value) => setActiveTab(value)}>
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-transparent">
+          <TabsList className="grid grid-cols-2 md:grid-cols-5 gap-2 bg-transparent">
             <TabsTrigger 
               value="wordpress" 
               className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
@@ -373,6 +366,12 @@ const Portfolio = () => {
               className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
             >
               Custom Coded Projects
+            </TabsTrigger>
+            <TabsTrigger 
+              value="tools" 
+              className="data-[state=active]:bg-brand-orange data-[state=active]:text-white"
+            >
+              Web Development Tools
             </TabsTrigger>
             <TabsTrigger 
               value="video" 
@@ -418,9 +417,24 @@ const Portfolio = () => {
             </div>
           </TabsContent>
 
+          {/* Web Development Tools */}
+          <TabsContent value="tools" className="mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {webTools.map((tool, index) => (
+                <ToolCard
+                  key={index}
+                  image={tool.image}
+                  title={tool.title}
+                  category={tool.category}
+                  url={tool.url}
+                />
+              ))}
+            </div>
+          </TabsContent>
+
           {/* Video Content */}
           <TabsContent value="video" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {videoProjects.map((video, index) => (
                 <VideoCard
                   key={index}
@@ -459,12 +473,20 @@ const Portfolio = () => {
             <DialogTitle className="text-white">{selectedVideo?.title}</DialogTitle>
           </DialogHeader>
           <div className="aspect-video bg-black/30 rounded-md flex items-center justify-center">
-            {/* Replace with actual video player */}
-            <div className="text-center text-gray-300">
-              <Play size={48} className="mx-auto text-brand-orange mb-2" />
-              <p>Video player would load here</p>
-              <p className="text-xs mt-1">Demo purposes only</p>
-            </div>
+            {selectedVideo && (
+              <div className="text-center text-gray-300">
+                <Play size={48} className="mx-auto text-brand-orange mb-2" />
+                <p className="mb-2">Video: {selectedVideo.title}</p>
+                <a 
+                  href={selectedVideo.videoUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-brand-orange hover:underline"
+                >
+                  Watch on Google Drive
+                </a>
+              </div>
+            )}
           </div>
         </DialogContent>
       </Dialog>
