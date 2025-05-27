@@ -273,7 +273,7 @@ const Portfolio = () => {
     },
   ];
   
-  // AI Video Content with YouTube integration
+  // AI Video Content with YouTube integration - Updated with new videos
   const videoProjects = [
     {
       id: "cool-soap-ad",
@@ -290,6 +290,30 @@ const Portfolio = () => {
       category: "Lifestyle Video",
       videoUrl: "https://youtu.be/nHkMufUDzsM",
       youtubeId: "nHkMufUDzsM",
+    },
+    {
+      id: "strawberry-milkshake-ad",
+      image: "/lovable-uploads/0ee29585-e9a2-4bf2-a8b7-9867c881317f.png",
+      title: "Strawberry Milkshake Commercial",
+      category: "Product Advertisement",
+      videoUrl: "https://youtube.com/shorts/YrAgd3Jqajw?feature=share",
+      youtubeId: "YrAgd3Jqajw",
+    },
+    {
+      id: "bio-drink-parachute",
+      image: "/lovable-uploads/f8acf954-98aa-42b0-8704-c5f487be380d.png",
+      title: "Bio Drink Parachute Adventure",
+      category: "Creative Commercial",
+      videoUrl: "https://youtube.com/shorts/JF1FfAIJR_s?si=_l7h0lCuoOZvMbiS",
+      youtubeId: "JF1FfAIJR_s",
+    },
+    {
+      id: "banana-honey-splash",
+      image: "/lovable-uploads/57139484-ee80-403e-8e0e-81acf92b4051.png",
+      title: "Banana Honey Smoothie",
+      category: "Food & Beverage",
+      videoUrl: "https://youtube.com/shorts/0eWyKKVE8Gc?si=5ezHs3jqGAu_jsQn",
+      youtubeId: "0eWyKKVE8Gc",
     },
   ];
   
