@@ -51,7 +51,7 @@ const WordPressProjectCard = ({ image, title, category, url }: WordPressProjectP
       rel="noopener noreferrer" 
       className="portfolio-card group block"
     >
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border border-brand-blue/30 shadow-[0_0_15px_rgba(30,64,175,0.3)]">
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-blue-800 shadow-[0_0_15px_rgba(30,64,175,0.3)]">
         <img
           src={image}
           alt={title}

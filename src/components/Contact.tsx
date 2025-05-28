@@ -72,7 +72,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
-                className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-blue-500 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all text-lg"
+                className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-blue-800 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 shadow-[0_0_15px_rgba(30,58,138,0.4)] transition-all text-lg"
               />
             </div>
 
@@ -83,7 +83,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
-                className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-blue-500 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all text-lg"
+                className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-blue-800 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 shadow-[0_0_15px_rgba(30,58,138,0.4)] transition-all text-lg"
               />
             </div>
 
@@ -94,7 +94,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Message"
                 rows={6}
-                className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-blue-500 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.4)] resize-none transition-all text-lg"
+                className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-blue-800 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 shadow-[0_0_15px_rgba(30,58,138,0.4)] resize-none transition-all text-lg"
               ></textarea>
             </div>
 
