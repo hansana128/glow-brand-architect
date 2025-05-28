@@ -303,7 +303,7 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-white">WHAT I'M </span>
-            <span className="text-blue-400">OFFERING</span>
+            <span className="text-[#0047FF]">OFFERING</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Comprehensive digital solutions to elevate your online presence and drive real business results.
