@@ -20,7 +20,12 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-brand-black via-gray-900 to-brand-black py-4 relative z-50 shadow-lg border-b border-brand-yellow/20">
+    <header 
+      className="py-4 relative z-50 shadow-lg border-b border-brand-yellow/20"
+      style={{
+        background: "linear-gradient(135deg, #0a0e14 0%, #15256e 100%)",
+      }}
+    >
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -71,7 +76,8 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "md:hidden fixed top-[80px] left-0 right-0 bg-brand-blue/95 backdrop-blur-md transition-all duration-500 overflow-hidden",
+            "md:hidden fixed top-[80px] left-0 right-0 backdrop-blur-md transition-all duration-500 overflow-hidden",
+            "bg-gradient-to-b from-[#0a0e14] to-[#15256e]",
             mobileMenuOpen ? "max-h-screen" : "max-h-0"
           )}
         >
