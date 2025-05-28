@@ -67,7 +67,7 @@
   }
   
   .glassmorphism-card {
-    @apply bg-[#0047FF]/30 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300 h-full shadow-[0_0_15px_rgba(255,215,0,0.5)];
+    @apply bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300 h-full shadow-[0_0_15px_rgba(255,215,0,0.5)];
   }
   
   .smooth-scroll {
@@ -75,15 +75,15 @@
   }
   
   .scroll-top-btn {
-    @apply fixed bottom-6 left-6 p-2 rounded-full bg-[#0047FF] text-white shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-[#FFD700];
+    @apply fixed bottom-6 left-6 p-2 rounded-full bg-gray-800 text-white shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-[#FFD700];
   }
   
   .chat-toggle {
-    @apply fixed bottom-6 right-6 p-2 rounded-full bg-[#0047FF] text-white shadow-lg transition-all duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-[#FFD700];
+    @apply fixed bottom-6 right-6 p-2 rounded-full bg-gray-800 text-white shadow-lg transition-all duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-[#FFD700];
   }
   
   .chat-menu {
-    @apply fixed bottom-16 right-6 flex flex-col gap-2 p-2 rounded-xl bg-[#0047FF]/80 backdrop-blur-sm border border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.5)] transition-all duration-300 z-50 scale-0 opacity-0 origin-bottom-right;
+    @apply fixed bottom-16 right-6 flex flex-col gap-2 p-2 rounded-xl bg-gray-800/80 backdrop-blur-sm border border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.5)] transition-all duration-300 z-50 scale-0 opacity-0 origin-bottom-right;
   }
   
   .chat-menu.active {
@@ -130,7 +130,7 @@
 
   /* Form fields with enhanced neon glow */
   .neon-form-field {
-    @apply w-full bg-[#0047FF]/30 border-2 border-[#FFD700] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] shadow-[0_0_12px_rgba(255,215,0,0.5)];
+    @apply w-full bg-gray-800/30 border-2 border-[#FFD700] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] shadow-[0_0_12px_rgba(255,215,0,0.5)];
   }
 
   /* Video card with neon glow */
@@ -140,7 +140,7 @@
 
   /* Back button for portfolio detail */
   .back-btn {
-    @apply inline-flex items-center gap-2 text-white bg-[#0047FF]/50 border-2 border-[#FFD700] px-4 py-2 rounded-full text-sm font-medium shadow-[0_0_15px_rgba(255,215,0,0.6)] transition-all hover:shadow-[0_0_20px_rgba(255,215,0,0.8)];
+    @apply inline-flex items-center gap-2 text-white bg-gray-800/50 border-2 border-[#FFD700] px-4 py-2 rounded-full text-sm font-medium shadow-[0_0_15px_rgba(255,215,0,0.6)] transition-all hover:shadow-[0_0_20px_rgba(255,215,0,0.8)];
   }
 
   /* Yellow-themed Service Cards */

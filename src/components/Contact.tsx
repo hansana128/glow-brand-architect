@@ -63,7 +63,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-white">CONTACT </span>
-            <span className="text-[#0047FF]">ME</span>
+            <span className="text-[#FFD700]">ME</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Ready to bring your digital vision to life? Let's discuss your project and create something amazing together.
@@ -115,7 +115,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="glassmorphism-card p-8">
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300 h-full shadow-[0_0_15px_rgba(255,215,0,0.5)] p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-white font-medium mb-2">
