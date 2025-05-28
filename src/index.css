@@ -16,8 +16,8 @@
     --popover: 222 47% 11%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 8 100% 61%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 222 47% 11%;
     --secondary-foreground: 0 0% 95%;
@@ -33,7 +33,7 @@
 
     --border: 222 47% 11%;
     --input: 222 47% 11%;
-    --ring: 8 100% 61%;
+    --ring: 51 100% 50%;
 
     --radius: 0.75rem;
   }
@@ -45,7 +45,7 @@
   }
 
   body {
-    @apply bg-brand-black text-brand-light-gray font-poppins overflow-x-hidden;
+    @apply bg-brand-black text-brand-white font-poppins overflow-x-hidden;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -55,11 +55,11 @@
 
 @layer components {
   .glow-btn {
-    @apply relative inline-flex items-center justify-center px-5 py-2 rounded-full overflow-hidden bg-transparent text-white uppercase font-bold tracking-wider border border-brand-orange transition-all duration-300 shadow-[0_0_15px_rgba(255,94,58,0.7)];
+    @apply relative inline-flex items-center justify-center px-5 py-2 rounded-full overflow-hidden bg-transparent text-white uppercase font-bold tracking-wider border border-brand-yellow transition-all duration-300 shadow-[0_0_15px_rgba(255,215,0,0.7)];
   }
   
   .glow-btn::before {
-    @apply content-[''] absolute inset-0 bg-gradient-to-r from-brand-orange to-brand-orange/70 opacity-70 transition-opacity duration-300;
+    @apply content-[''] absolute inset-0 bg-gradient-to-r from-brand-yellow to-brand-yellow/70 opacity-70 transition-opacity duration-300;
   }
   
   .glow-btn span {
@@ -67,7 +67,7 @@
   }
   
   .glassmorphism-card {
-    @apply bg-brand-blue/30 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300 h-full shadow-[0_0_15px_rgba(255,94,58,0.5)];
+    @apply bg-brand-blue/30 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden transition-all duration-300 h-full shadow-[0_0_15px_rgba(255,215,0,0.5)];
   }
   
   .smooth-scroll {
@@ -75,15 +75,15 @@
   }
   
   .scroll-top-btn {
-    @apply fixed bottom-6 left-6 p-2 rounded-full bg-brand-blue text-white shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,94,58,0.7)] hover:shadow-[0_0_20px_rgba(255,94,58,0.8)] z-50 border border-brand-orange;
+    @apply fixed bottom-6 left-6 p-2 rounded-full bg-brand-blue text-white shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-brand-yellow;
   }
   
   .chat-toggle {
-    @apply fixed bottom-6 right-6 p-2 rounded-full bg-brand-blue text-white shadow-lg transition-all duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,94,58,0.7)] hover:shadow-[0_0_20px_rgba(255,94,58,0.8)] z-50 border border-brand-orange;
+    @apply fixed bottom-6 right-6 p-2 rounded-full bg-brand-blue text-white shadow-lg transition-all duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-brand-yellow;
   }
   
   .chat-menu {
-    @apply fixed bottom-16 right-6 flex flex-col gap-2 p-2 rounded-xl bg-brand-blue/80 backdrop-blur-sm border border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.5)] transition-all duration-300 z-50 scale-0 opacity-0 origin-bottom-right;
+    @apply fixed bottom-16 right-6 flex flex-col gap-2 p-2 rounded-xl bg-brand-blue/80 backdrop-blur-sm border border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.5)] transition-all duration-300 z-50 scale-0 opacity-0 origin-bottom-right;
   }
   
   .chat-menu.active {
@@ -91,16 +91,16 @@
   }
   
   .chat-menu-item {
-    @apply p-2 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 border border-brand-orange shadow-[0_0_10px_rgba(255,94,58,0.5)];
+    @apply p-2 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 border border-brand-yellow shadow-[0_0_10px_rgba(255,215,0,0.5)];
   }
 
   /* Portfolio card effects with constant neon glow */
   .portfolio-card {
-    @apply relative overflow-hidden rounded-xl transition-all duration-500 shadow-[0_0_15px_rgba(255,94,58,0.6)] cursor-pointer border-2 border-brand-orange;
+    @apply relative overflow-hidden rounded-xl transition-all duration-500 shadow-[0_0_15px_rgba(255,215,0,0.6)] cursor-pointer border-2 border-brand-yellow;
   }
   
   .portfolio-card::before {
-    @apply content-[''] absolute inset-0 border-2 border-brand-orange opacity-100 transition-all duration-500 rounded-xl z-10;
+    @apply content-[''] absolute inset-0 border-2 border-brand-yellow opacity-100 transition-all duration-500 rounded-xl z-10;
   }
   
   .portfolio-card:hover img {
@@ -109,12 +109,12 @@
 
   /* Service box with neon glow */
   .service-box {
-    @apply border-2 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)] rounded-xl overflow-hidden;
+    @apply border-2 border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.6)] rounded-xl overflow-hidden;
   }
 
-  /* Orange-themed service cards */
-  .orange-service-card {
-    @apply border-2 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)] rounded-xl overflow-hidden;
+  /* Yellow-themed service cards */
+  .yellow-service-card {
+    @apply border-2 border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.6)] rounded-xl overflow-hidden;
   }
   
   /* Animation for floating icons */
@@ -130,30 +130,30 @@
 
   /* Form fields with enhanced neon glow */
   .neon-form-field {
-    @apply w-full bg-brand-blue/30 border-2 border-brand-orange rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-orange shadow-[0_0_12px_rgba(255,94,58,0.5)];
+    @apply w-full bg-brand-blue/30 border-2 border-brand-yellow rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow shadow-[0_0_12px_rgba(255,215,0,0.5)];
   }
 
   /* Video card with neon glow */
   .video-card {
-    @apply border-2 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)];
+    @apply border-2 border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.6)];
   }
 
   /* Back button for portfolio detail */
   .back-btn {
-    @apply inline-flex items-center gap-2 text-white bg-brand-blue/50 border-2 border-brand-orange px-4 py-2 rounded-full text-sm font-medium shadow-[0_0_15px_rgba(255,94,58,0.6)] transition-all hover:shadow-[0_0_20px_rgba(255,94,58,0.8)];
+    @apply inline-flex items-center gap-2 text-white bg-brand-blue/50 border-2 border-brand-yellow px-4 py-2 rounded-full text-sm font-medium shadow-[0_0_15px_rgba(255,215,0,0.6)] transition-all hover:shadow-[0_0_20px_rgba(255,215,0,0.8)];
   }
 
-  /* Orange-themed Service Cards */
+  /* Yellow-themed Service Cards */
   .service-card {
-    @apply relative overflow-hidden rounded-3xl transition-all duration-500 border-2 border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.6)];
+    @apply relative overflow-hidden rounded-3xl transition-all duration-500 border-2 border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.6)];
   }
   
   .service-icon-container {
-    @apply relative z-10 shadow-[0_0_15px_rgba(255,94,58,0.5)];
+    @apply relative z-10 shadow-[0_0_15px_rgba(255,215,0,0.5)];
   }
   
   .see-more-btn {
-    @apply shadow-[0_0_10px_rgba(255,94,58,0.3)];
+    @apply shadow-[0_0_10px_rgba(255,215,0,0.3)];
   }
 
   .service-card-container {

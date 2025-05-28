@@ -66,12 +66,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom brand colors
+				// Updated brand colors to match logo - yellow, blue, white
 				brand: {
-					orange: '#FF5E3A',
-					blue: '#0B132B',
+					yellow: '#FFD700', // Gold/Yellow from logo
+					blue: '#1E40AF', // Blue from logo
+					'dark-blue': '#1E3A8A', // Darker blue variant
+					white: '#FFFFFF',
+					'light-gray': '#F8FAFC',
 					black: '#000000',
-					'light-gray': '#F1F1F1',
 				}
 			},
 			borderRadius: {
@@ -93,9 +95,9 @@ export default {
 					'100%': { transform: 'translateX(-100%)' }
 				},
 				'glow': {
-					'0%': { boxShadow: '0 0 5px #FF5E3A' },
-					'50%': { boxShadow: '0 0 20px #FF5E3A' },
-					'100%': { boxShadow: '0 0 5px #FF5E3A' }
+					'0%': { boxShadow: '0 0 5px #FFD700' },
+					'50%': { boxShadow: '0 0 20px #FFD700' },
+					'100%': { boxShadow: '0 0 5px #FFD700' }
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },

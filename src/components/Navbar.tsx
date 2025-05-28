@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-brand-black via-gray-900 to-brand-black py-4 relative z-50 shadow-lg border-b border-brand-orange/20">
+    <header className="bg-gradient-to-r from-brand-black via-gray-900 to-brand-black py-4 relative z-50 shadow-lg border-b border-brand-yellow/20">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -28,7 +28,7 @@ const Navbar = () => {
             href="#hero"
             className="flex items-center gap-3"
           >
-            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-orange shadow-lg">
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-yellow shadow-lg">
               <img 
                 src="/lovable-uploads/8ce66691-2b2c-43b5-b7e1-0c982d79d88c.png" 
                 alt="Malshi Hansana Logo" 
@@ -36,7 +36,7 @@ const Navbar = () => {
               />
             </div>
             <div className="text-white font-bold text-lg md:text-xl">
-              <span className="text-brand-orange">MALSHI</span> HANSANA
+              <span className="text-brand-yellow">MALSHI</span> HANSANA
               <p className="text-xs text-gray-300 font-normal">Web Developer | Digital Marketer</p>
             </div>
           </a>
@@ -48,7 +48,7 @@ const Navbar = () => {
                 key={item}
                 onClick={() => scrollToSection(item)}
                 variant="outline"
-                className="uppercase text-xs font-medium border-brand-orange/70 text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full py-1 px-3 h-auto"
+                className="uppercase text-xs font-medium border-brand-yellow/70 text-white hover:bg-brand-yellow/20 hover:text-brand-yellow transition-colors duration-300 rounded-full py-1 px-3 h-auto"
               >
                 {item}
               </Button>
@@ -58,7 +58,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden text-white hover:text-brand-orange transition-colors duration-300"
+            className="md:hidden text-white hover:text-brand-yellow transition-colors duration-300"
           >
             {mobileMenuOpen ? (
               <X className="w-5 h-5" />
@@ -81,7 +81,7 @@ const Navbar = () => {
                 key={item}
                 onClick={() => scrollToSection(item)}
                 variant="outline"
-                className="uppercase text-sm font-medium border-brand-orange/70 text-white hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-300 rounded-full justify-start"
+                className="uppercase text-sm font-medium border-brand-yellow/70 text-white hover:bg-brand-yellow/20 hover:text-brand-yellow transition-colors duration-300 rounded-full justify-start"
               >
                 {item}
               </Button>

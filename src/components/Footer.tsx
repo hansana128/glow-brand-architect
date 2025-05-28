@@ -14,8 +14,8 @@ const Footer = () => {
     <footer className="bg-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-brand-orange/20 blur-[80px]"></div>
-        <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full bg-brand-orange/20 blur-[60px]"></div>
+        <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-brand-yellow/20 blur-[80px]"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full bg-brand-yellow/20 blur-[60px]"></div>
       </div>
 
       <div className="container mx-auto px-4 max-w-7xl py-16 relative">
@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="flex flex-col space-y-6">
             {/* Profile Section */}
             <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-brand-orange flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-brand-yellow flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/406d1338-beed-4b08-8cf9-6088435fbdfc.png" 
                   alt="Malshi Hansana Logo" 
@@ -34,7 +34,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">
-                  <span className="text-brand-orange">Malshi</span> Hansana
+                  <span className="text-brand-yellow">Malshi</span> Hansana
                 </h3>
                 <p className="text-gray-300 text-sm">
                   Web Developer | Digital Marketer
@@ -57,19 +57,19 @@ const Footer = () => {
               <div className="flex flex-col space-y-4">
                 <span
                   onClick={() => scrollToSection("home")}
-                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                  className="text-gray-300 text-lg hover:text-brand-yellow transition-colors duration-300 cursor-pointer"
                 >
                   Home
                 </span>
                 <span
                   onClick={() => scrollToSection("about")}
-                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                  className="text-gray-300 text-lg hover:text-brand-yellow transition-colors duration-300 cursor-pointer"
                 >
                   About
                 </span>
                 <span
                   onClick={() => scrollToSection("services")}
-                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                  className="text-gray-300 text-lg hover:text-brand-yellow transition-colors duration-300 cursor-pointer"
                 >
                   Services
                 </span>
@@ -77,13 +77,13 @@ const Footer = () => {
               <div className="flex flex-col space-y-4">
                 <span
                   onClick={() => scrollToSection("portfolio")}
-                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                  className="text-gray-300 text-lg hover:text-brand-yellow transition-colors duration-300 cursor-pointer"
                 >
                   Portfolio
                 </span>
                 <span
                   onClick={() => scrollToSection("contact")}
-                  className="text-gray-300 text-lg hover:text-brand-orange transition-colors duration-300 cursor-pointer"
+                  className="text-gray-300 text-lg hover:text-brand-yellow transition-colors duration-300 cursor-pointer"
                 >
                   Contact us
                 </span>
@@ -106,19 +106,19 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/malshi-hansana"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
+                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-yellow hover:border-brand-yellow transition-colors duration-300"
               >
                 <Linkedin size={20} />
               </a>
               <a
                 href="mailto:malshihansana128@gmail.com"
-                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
+                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-yellow hover:border-brand-yellow transition-colors duration-300"
               >
                 <Mail size={20} />
               </a>
               <a
                 href="#analytics"
-                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
+                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-yellow hover:border-brand-yellow transition-colors duration-300"
               >
                 <BarChart size={20} />
               </a>
@@ -126,7 +126,7 @@ const Footer = () => {
                 href="https://www.instagram.com/malshi__xii/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-orange hover:border-brand-orange transition-colors duration-300"
+                className="w-12 h-12 rounded-full bg-gray-700/50 border border-gray-600 flex items-center justify-center text-gray-300 hover:text-brand-yellow hover:border-brand-yellow transition-colors duration-300"
               >
                 <Instagram size={20} />
               </a>

@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -21,14 +22,14 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
     <Dialog>
       <DialogTrigger asChild>
         <div className="service-card-container">
-          <div className="service-card relative bg-black/80 border border-gray-800 rounded-3xl p-8 flex flex-col items-center text-center h-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,94,58,0.5)] group">
-            <div className="service-icon-container mb-6 rounded-full bg-black border-2 border-brand-orange p-4 w-24 h-24 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(255,94,58,0.7)]">
-              <div className="text-brand-orange text-4xl">{icon}</div>
+          <div className="service-card relative bg-black/80 border border-gray-800 rounded-3xl p-8 flex flex-col items-center text-center h-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,215,0,0.5)] group">
+            <div className="service-icon-container mb-6 rounded-full bg-black border-2 border-brand-yellow p-4 w-24 h-24 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(255,215,0,0.7)]">
+              <div className="text-brand-yellow text-4xl">{icon}</div>
             </div>
             <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
             <p className="text-gray-300 mb-6">{description}</p>
             <div className="mt-auto">
-              <button className="see-more-btn flex items-center justify-center gap-2 border border-brand-orange text-brand-orange px-6 py-2 rounded-full hover:bg-brand-orange/10 transition-all duration-300">
+              <button className="see-more-btn flex items-center justify-center gap-2 border border-brand-yellow text-brand-yellow px-6 py-2 rounded-full hover:bg-brand-yellow/10 transition-all duration-300">
                 <span>See More</span>
                 <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13 1L17 5M17 5L13 9M17 5H1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -39,10 +40,10 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
         </div>
       </DialogTrigger>
       
-      <DialogContent className="sm:max-w-2xl bg-black/90 text-white border border-brand-orange shadow-[0_0_15px_rgba(255,94,58,0.5)]">
+      <DialogContent className="sm:max-w-2xl bg-black/90 text-white border border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.5)]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-2xl font-bold">
-            <span className="text-brand-orange">{icon}</span>
+            <span className="text-brand-yellow">{icon}</span>
             {title}
           </DialogTitle>
           <DialogDescription className="text-gray-300 text-base">{description}</DialogDescription>
@@ -50,7 +51,7 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
           {/* Skills */}
-          <Card className="bg-black/50 border border-brand-orange/40 shadow-[0_0_10px_rgba(255,94,58,0.3)]">
+          <Card className="bg-black/50 border border-brand-yellow/40 shadow-[0_0_10px_rgba(255,215,0,0.3)]">
             <CardHeader className="pb-2">
               <CardTitle className="text-white text-lg">Skills</CardTitle>
             </CardHeader>
@@ -64,7 +65,7 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
           </Card>
           
           {/* Technologies */}
-          <Card className="bg-black/50 border border-brand-orange/40 shadow-[0_0_10px_rgba(255,94,58,0.3)]">
+          <Card className="bg-black/50 border border-brand-yellow/40 shadow-[0_0_10px_rgba(255,215,0,0.3)]">
             <CardHeader className="pb-2">
               <CardTitle className="text-white text-lg">Technologies</CardTitle>
             </CardHeader>
@@ -78,7 +79,7 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
           </Card>
           
           {/* Tools */}
-          <Card className="bg-black/50 border border-brand-orange/40 shadow-[0_0_10px_rgba(255,94,58,0.3)]">
+          <Card className="bg-black/50 border border-brand-yellow/40 shadow-[0_0_10px_rgba(255,215,0,0.3)]">
             <CardHeader className="pb-2">
               <CardTitle className="text-white text-lg">Tools</CardTitle>
             </CardHeader>
@@ -93,12 +94,12 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
         </div>
 
         {/* Footer */}
-        <div className="mt-6 pt-4 border-t border-brand-orange/30">
+        <div className="mt-6 pt-4 border-t border-brand-yellow/30">
           <p className="text-gray-300 text-sm text-center">
             Ready to elevate your digital presence? Let's create something amazing together.
           </p>
           <div className="flex justify-center mt-3">
-            <button className="bg-brand-orange text-white px-6 py-2 rounded-full font-medium hover:bg-brand-orange/90 transition-colors">
+            <button className="bg-brand-yellow text-black px-6 py-2 rounded-full font-medium hover:bg-brand-yellow/90 transition-colors">
               Get Started
             </button>
           </div>
@@ -284,15 +285,15 @@ const Services = () => {
     <section id="services" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-brand-orange/20 blur-[100px]"></div>
-        <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-brand-orange/20 blur-[80px]"></div>
+        <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-brand-yellow/20 blur-[100px]"></div>
+        <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-brand-yellow/20 blur-[80px]"></div>
       </div>
 
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-white">WHAT I'M </span>
-            <span className="text-brand-orange">OFFERING</span>
+            <span className="text-brand-yellow">OFFERING</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Comprehensive digital solutions to elevate your online presence and drive real business results.

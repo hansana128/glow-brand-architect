@@ -5,7 +5,7 @@ const About = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-brand-blue/20 blur-[80px]"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-brand-orange/10 blur-[100px]"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-brand-yellow/10 blur-[100px]"></div>
       </div>
 
       <div className="container mx-auto px-4 max-w-6xl">
@@ -14,7 +14,7 @@ const About = () => {
           <div className="flex justify-start md:justify-start">
             {/* MALSHI'S ABOUT IMAGE */}
             <div className="relative">
-              <div className="w-72 h-80 rounded-xl overflow-hidden border border-brand-orange shadow-[0_0_25px_rgba(255,94,58,0.3)]">
+              <div className="w-72 h-80 rounded-xl overflow-hidden border border-brand-yellow shadow-[0_0_25px_rgba(255,215,0,0.3)]">
                 <img src="/lovable-uploads/d6e96e97-f894-4995-9509-9194140e94f9.png" alt="Malshi Hansana" className="w-full h-full object-cover" />
               </div>
 
@@ -59,7 +59,7 @@ const About = () => {
           {/* Right Column - Text Content - More spacing from image */}
           <div className="text-left px-2">
             <h2 className="text-2xl font-bold mb-3">
-              <span className="text-brand-orange">🔥</span> About Malshi
+              <span className="text-brand-yellow">🔥</span> About Malshi
             </h2>
 
             <div className="space-y-3 text-gray-200">
@@ -72,15 +72,15 @@ const About = () => {
               
               <ul className="ml-5 space-y-1">
                 <li className="flex items-start">
-                  <span className="text-brand-orange mr-2">✅</span>
+                  <span className="text-brand-yellow mr-2">✅</span>
                   <span>Modern web development</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-brand-orange mr-2">✅</span>
+                  <span className="text-brand-yellow mr-2">✅</span>
                   <span>Creative design</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-brand-orange mr-2">✅</span>
+                  <span className="text-brand-yellow mr-2">✅</span>
                   <span>Smart digital marketing</span>
                 </li>
               </ul>
@@ -91,15 +91,15 @@ const About = () => {
 
               <ul className="ml-5 space-y-1">
                 <li className="flex items-start">
-                  <span className="text-brand-orange mr-2">🚀</span>
+                  <span className="text-brand-yellow mr-2">🚀</span>
                   <span>Stronger online visibility</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-brand-orange mr-2">🚀</span>
+                  <span className="text-brand-yellow mr-2">🚀</span>
                   <span>Better user experience</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-brand-orange mr-2">🚀</span>
+                  <span className="text-brand-yellow mr-2">🚀</span>
                   <span>Real customer engagement</span>
                 </li>
               </ul>
