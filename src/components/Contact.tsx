@@ -51,9 +51,9 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-brand-yellow/20 blur-[100px]"></div>
-        <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-brand-blue/30 blur-[80px]"></div>
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-blue-500/20 blur-[100px]"></div>
+        <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-blue-600/30 blur-[80px]"></div>
       </div>
 
       <div className="container mx-auto px-4">
@@ -72,7 +72,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
-                className="w-full bg-brand-blue/30 border-2 border-brand-yellow rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.6)] transition-all text-lg"
+                className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-gray-700 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 shadow-[0_0_15px_rgba(30,58,138,0.4)] transition-all text-lg"
               />
             </div>
 
@@ -83,7 +83,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
-                className="w-full bg-brand-blue/30 border-2 border-brand-yellow rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.6)] transition-all text-lg"
+                className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-gray-700 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 shadow-[0_0_15px_rgba(30,58,138,0.4)] transition-all text-lg"
               />
             </div>
 
@@ -94,13 +94,13 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Message"
                 rows={6}
-                className="w-full bg-brand-blue/30 border-2 border-brand-yellow rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.6)] resize-none transition-all text-lg"
+                className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-gray-700 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 shadow-[0_0_15px_rgba(30,58,138,0.4)] resize-none transition-all text-lg"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-brand-yellow hover:bg-brand-yellow/90 text-black py-4 rounded-2xl font-semibold text-lg transition-colors duration-300 shadow-[0_0_15px_rgba(255,215,0,0.6)] border-2 border-brand-yellow"
+              className="w-full bg-gradient-to-r from-blue-800 to-blue-700 hover:from-blue-700 hover:to-blue-600 text-white py-4 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-[0_0_15px_rgba(30,58,138,0.4)] border-2 border-blue-800 hover:border-blue-700"
             >
               Send Message
             </button>
@@ -111,7 +111,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/malshi-hansana"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue/30 border-2 border-brand-yellow text-white shadow-[0_0_15px_rgba(255,215,0,0.6)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,215,0,0.8)]"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-gray-700 text-white shadow-[0_0_15px_rgba(30,58,138,0.4)] transition-all duration-300 hover:border-blue-800 hover:shadow-[0_0_20px_rgba(30,58,138,0.6)]"
             >
               <Linkedin size={20} />
             </a>
@@ -119,7 +119,7 @@ const Contact = () => {
               href="https://wa.me/+123456789"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue/30 border-2 border-brand-yellow text-white shadow-[0_0_15px_rgba(255,215,0,0.6)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,215,0,0.8)]"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-gray-700 text-white shadow-[0_0_15px_rgba(30,58,138,0.4)] transition-all duration-300 hover:border-blue-800 hover:shadow-[0_0_20px_rgba(30,58,138,0.6)]"
             >
               <MessageSquare size={20} />
             </a>
