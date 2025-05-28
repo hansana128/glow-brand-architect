@@ -18,36 +18,36 @@ const About = () => {
                 <img src="/lovable-uploads/d6e96e97-f894-4995-9509-9194140e94f9.png" alt="Malshi Hansana" className="w-full h-full object-cover" />
               </div>
 
-              {/* Floating Logos */}
-              <div className="floating-icons-container absolute inset-0 w-full h-full mx-0 my-0 px-[20px] py-[50px] rounded-lg bg-neutral-950/80">
-                {/* Figma logo - Updated */}
-                <div className="absolute top-[-20px] right-[-20px] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg">
+              {/* Floating Logos in Circle */}
+              <div className="floating-icons-container absolute inset-0 w-full h-full">
+                {/* Figma logo - Top */}
+                <div className="absolute top-[-25px] left-1/2 transform -translate-x-1/2 w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg">
                   <img src="/lovable-uploads/888dd1fe-0c06-4737-8102-4c0611d3d46a.png" alt="Figma" className="w-full h-full object-contain" />
                 </div>
                 
-                {/* WordPress logo */}
-                <div className="absolute top-[20%] left-[-30px] w-14 h-14 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                {/* WordPress logo - Top Right */}
+                <div className="absolute top-[15%] right-[-25px] w-14 h-14 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
                 animationDelay: "0.5s"
               }}>
                   <img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="WordPress" className="w-full h-full object-contain" />
                 </div>
                 
-                {/* LinkedIn logo */}
-                <div className="absolute bottom-[30%] right-[-25px] w-10 h-10 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                {/* LinkedIn logo - Bottom Right */}
+                <div className="absolute bottom-[15%] right-[-25px] w-10 h-10 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
                 animationDelay: "1s"
               }}>
                   <img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" className="w-full h-full object-contain" />
                 </div>
                 
-                {/* HTML/CSS logo */}
-                <div className="absolute bottom-[-15px] left-[30%] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                {/* HTML/CSS logo - Bottom */}
+                <div className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
                 animationDelay: "1.5s"
               }}>
                   <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML/CSS" className="w-full h-full object-contain" />
                 </div>
                 
-                {/* AI logo - Replaced Canva */}
-                <div className="absolute top-[40%] left-[90%] w-11 h-11 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                {/* AI logo - Top Left */}
+                <div className="absolute top-[15%] left-[-25px] w-11 h-11 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
                 animationDelay: "2s"
               }}>
                   <img src="/lovable-uploads/eac8b7f7-b450-480b-8ed7-8869ea51e80f.png" alt="AI" className="w-full h-full object-contain" />
