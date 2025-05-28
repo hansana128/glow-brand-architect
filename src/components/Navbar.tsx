@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <header 
-      className="py-4 relative z-50 shadow-lg border-b border-brand-yellow/20"
+      className="py-4 relative z-50 shadow-lg"
       style={{
         background: "linear-gradient(135deg, #0a0e14 0%, #15256e 100%)",
       }}
