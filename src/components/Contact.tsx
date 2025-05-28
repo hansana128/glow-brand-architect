@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -63,7 +62,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-white">CONTACT </span>
-            <span className="text-[#FFD700]">ME</span>
+            <span className="text-[#0047FF]">ME</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Ready to bring your digital vision to life? Let's discuss your project and create something amazing together.
