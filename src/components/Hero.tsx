@@ -31,6 +31,29 @@ const Hero = () => {
               Not just a developer — a creative force transforming bold ideas into unforgettable brands.
             </p>
 
+            {/* Marquee Section */}
+            <div className="w-full max-w-lg mb-6 overflow-hidden">
+              <div className="marquee-container relative whitespace-nowrap bg-[#FFD700]/10 rounded-full py-2 px-4 border border-[#FFD700]/30">
+                <div className="flex animate-marquee">
+                  {/* Duplicate the content to create seamless looping */}
+                  {Array(3).fill(0).map((_, index) => (
+                    <div key={index} className="flex items-center gap-4 mx-4">
+                      <span className="text-[#FFD700] text-lg">❄</span>
+                      <span className="text-white text-lg font-medium">Web Development</span>
+                      <span className="text-[#FFD700] text-lg">❄</span>
+                      <span className="text-white text-lg font-medium">UI/UX Design</span>
+                      <span className="text-[#FFD700] text-lg">❄</span>
+                      <span className="text-white text-lg font-medium">Branding</span>
+                      <span className="text-[#FFD700] text-lg">❄</span>
+                      <span className="text-white text-lg font-medium">Digital Marketing</span>
+                      <span className="text-[#FFD700] text-lg">❄</span>
+                      <span className="text-white text-lg font-medium">SEO Strategy</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4">
               {/* Download CV Button */}
               <a href="https://drive.google.com/file/d/1O0sZHZMcy52LWxOM0sjwAN3PbOBTYT8i/view?usp=sharing" className="glow-btn" target="_blank" rel="noopener noreferrer">
