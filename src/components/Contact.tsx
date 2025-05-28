@@ -98,7 +98,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-white font-medium">Location</p>
-                  <p className="text-gray-300">Colombo, Sri Lanka</p>
+                  <p className="text-gray-300">Sri Lanka</p>
                 </div>
               </div>
 
