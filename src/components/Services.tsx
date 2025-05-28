@@ -21,39 +21,49 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="service-card-container">
-          <div className="service-card relative bg-gradient-to-br from-brand-blue/30 to-brand-dark-blue/50 border border-brand-blue/30 rounded-3xl p-8 flex flex-col items-center text-center h-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(30,64,175,0.5)] group">
-            <div className="service-icon-container mb-6 rounded-full bg-gradient-to-r from-brand-blue to-brand-dark-blue border-2 border-brand-blue p-4 w-24 h-24 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(30,64,175,0.7)]">
-              <div className="text-white text-4xl">{icon}</div>
+        <div className="modern-service-card group cursor-pointer">
+          <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-700 rounded-3xl p-8 flex flex-col items-start text-left h-full transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] overflow-hidden">
+            {/* Background glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+            
+            {/* Icon container */}
+            <div className="relative z-10 mb-6 rounded-full bg-gradient-to-r from-gray-800 to-gray-700 border-2 border-cyan-400 p-4 w-16 h-16 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:border-cyan-300 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+              <div className="text-cyan-400 text-2xl group-hover:text-cyan-300 transition-colors duration-300">{icon}</div>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-            <p className="text-gray-300 mb-6">{description}</p>
-            <div className="mt-auto">
-              <button className="see-more-btn flex items-center justify-center gap-2 border border-brand-blue text-brand-blue px-6 py-2 rounded-full hover:bg-brand-blue/10 transition-all duration-300">
-                <span>See More</span>
-                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 1L17 5M17 5L13 9M17 5H1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
+            
+            {/* Content */}
+            <div className="relative z-10 flex-1 w-full">
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-50 transition-colors duration-300">{title}</h3>
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">{description}</p>
+              
+              {/* See More Button */}
+              <div className="mt-auto pt-4">
+                <div className="inline-flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-full hover:bg-cyan-400/10 transition-all duration-300 group-hover:border-cyan-300 group-hover:text-cyan-300 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                  <span className="text-sm font-medium">See More</span>
+                  <svg width="16" height="8" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 1L17 5M17 5L13 9M17 5H1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </DialogTrigger>
       
-      <DialogContent className="sm:max-w-2xl bg-black/90 text-white border border-brand-blue shadow-[0_0_15px_rgba(30,64,175,0.5)]">
+      <DialogContent className="sm:max-w-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white border-2 border-cyan-400 shadow-[0_0_30px_rgba(6,182,212,0.4)]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-2xl font-bold">
-            <span className="text-brand-blue">{icon}</span>
-            {title}
+            <span className="text-cyan-400">{icon}</span>
+            <span className="text-cyan-50">{title}</span>
           </DialogTitle>
           <DialogDescription className="text-gray-300 text-base">{description}</DialogDescription>
         </DialogHeader>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
           {/* Skills */}
-          <Card className="bg-gradient-to-br from-brand-blue/20 to-brand-dark-blue/30 border border-brand-blue/40 shadow-[0_0_10px_rgba(30,64,175,0.3)]">
+          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-cyan-400/40 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
             <CardHeader className="pb-2">
-              <CardTitle className="text-white text-lg">Skills</CardTitle>
+              <CardTitle className="text-cyan-50 text-lg">Skills</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="list-disc pl-5 text-gray-300 text-sm">
@@ -65,9 +75,9 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
           </Card>
           
           {/* Technologies */}
-          <Card className="bg-gradient-to-br from-brand-blue/20 to-brand-dark-blue/30 border border-brand-blue/40 shadow-[0_0_10px_rgba(30,64,175,0.3)]">
+          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-cyan-400/40 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
             <CardHeader className="pb-2">
-              <CardTitle className="text-white text-lg">Technologies</CardTitle>
+              <CardTitle className="text-cyan-50 text-lg">Technologies</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="list-disc pl-5 text-gray-300 text-sm">
@@ -79,9 +89,9 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
           </Card>
           
           {/* Tools */}
-          <Card className="bg-gradient-to-br from-brand-blue/20 to-brand-dark-blue/30 border border-brand-blue/40 shadow-[0_0_10px_rgba(30,64,175,0.3)]">
+          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-cyan-400/40 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
             <CardHeader className="pb-2">
-              <CardTitle className="text-white text-lg">Tools</CardTitle>
+              <CardTitle className="text-cyan-50 text-lg">Tools</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="list-disc pl-5 text-gray-300 text-sm">
@@ -94,12 +104,12 @@ const ServiceCard = ({ icon, title, description, skills, technologies, tools, co
         </div>
 
         {/* Footer */}
-        <div className="mt-6 pt-4 border-t border-brand-blue/30">
+        <div className="mt-6 pt-4 border-t border-cyan-400/30">
           <p className="text-gray-300 text-sm text-center">
             Ready to elevate your digital presence? Let's create something amazing together.
           </p>
           <div className="flex justify-center mt-3">
-            <button className="bg-gradient-to-r from-brand-blue to-brand-dark-blue text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full font-medium hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.3)]">
               Get Started
             </button>
           </div>
@@ -113,7 +123,7 @@ const Services = () => {
   // Services data with only the requested services
   const services = [
     {
-      icon: <Code className="h-8 w-8" />,
+      icon: <Code className="h-6 w-6" />,
       title: "Web Development",
       description: "I build fast, secure, and beautiful websites that convert visitors into customers using modern technologies.",
       skills: [
@@ -142,10 +152,10 @@ const Services = () => {
         "V0.dev",
         "WordPress"
       ],
-      color: "text-brand-blue"
+      color: "text-cyan-400"
     },
     {
-      icon: <Layout className="h-8 w-8" />,
+      icon: <Layout className="h-6 w-6" />,
       title: "UI/UX Design",
       description: "Designs that not only look good — but feel right. Intuitive, bold, and user-focused experiences.",
       skills: [
@@ -169,10 +179,10 @@ const Services = () => {
         "InVision",
         "Maze"
       ],
-      color: "text-brand-blue"
+      color: "text-cyan-400"
     },
     {
-      icon: <Palette className="h-8 w-8" />,
+      icon: <Palette className="h-6 w-6" />,
       title: "Graphic Design",
       description: "Eye-catching visual content designed to build trust, authority, and engagement across all platforms.",
       skills: [
@@ -196,10 +206,10 @@ const Services = () => {
         "Midjourney AI",
         "DALL-E 3"
       ],
-      color: "text-brand-blue"
+      color: "text-cyan-400"
     },
     {
-      icon: <Video className="h-8 w-8" />,
+      icon: <Video className="h-6 w-6" />,
       title: "Social Media Marketing",
       description: "Creative campaigns and strategies to help you grow faster, louder, and smarter online.",
       skills: [
@@ -223,10 +233,10 @@ const Services = () => {
         "Canva Pro",
         "ChatGPT"
       ],
-      color: "text-brand-blue"
+      color: "text-cyan-400"
     },
     {
-      icon: <Settings className="h-8 w-8" />,
+      icon: <Settings className="h-6 w-6" />,
       title: "SEO Optimization",
       description: "Make your brand discoverable. I optimize your site to rank, get seen, and attract the right audience.",
       skills: [
@@ -250,10 +260,10 @@ const Services = () => {
         "Google Analytics",
         "Screaming Frog"
       ],
-      color: "text-brand-blue"
+      color: "text-cyan-400"
     },
     {
-      icon: <Brain className="h-8 w-8" />,
+      icon: <Brain className="h-6 w-6" />,
       title: "Performance Marketing",
       description: "AI-powered ad strategies that sell. I help you run high-ROI paid campaigns that drive real results.",
       skills: [
@@ -277,30 +287,30 @@ const Services = () => {
         "ChatGPT",
         "Claude AI"
       ],
-      color: "text-brand-blue"
+      color: "text-cyan-400"
     },
   ];
 
   return (
     <section id="services" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-brand-blue/20 blur-[100px]"></div>
-        <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-brand-dark-blue/30 blur-[80px]"></div>
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-cyan-500/20 blur-[100px]"></div>
+        <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-blue-600/30 blur-[80px]"></div>
       </div>
 
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-white">WHAT I'M </span>
-            <span className="text-brand-blue">OFFERING</span>
+            <span className="text-cyan-400">OFFERING</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Comprehensive digital solutions to elevate your online presence and drive real business results.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
