@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -80,7 +81,7 @@ const CustomCodedProjectCard = ({ image, title, category, url }: CustomCodedProj
       rel="noopener noreferrer" 
       className="portfolio-card group block"
     >
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border border-[#0047FF]/30 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_15px_rgba(0,71,255,0.3)]">
         <img
           src={image}
           alt={title}
@@ -109,7 +110,7 @@ const ToolCard = ({ image, title, category, url }: ToolProps) => {
       rel="noopener noreferrer" 
       className="portfolio-card group block"
     >
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border border-[#0047FF]/30 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_15px_rgba(0,71,255,0.3)]">
         <img
           src={image}
           alt={title}
@@ -133,7 +134,7 @@ const ToolCard = ({ image, title, category, url }: ToolProps) => {
 const PortfolioCard = ({ image, title, category, id }: PortfolioItemProps) => {
   return (
     <Link to={`/portfolio/${id}`} target="_blank" rel="noopener noreferrer" className="portfolio-card group">
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border border-[#0047FF]/30 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_15px_rgba(0,71,255,0.3)]">
         <img
           src={image}
           alt={title}
@@ -152,7 +153,7 @@ const PortfolioCard = ({ image, title, category, id }: PortfolioItemProps) => {
 const VideoCard = ({ video, onPlay }: { video: VideoProps, onPlay: (video: VideoProps) => void }) => {
   return (
     <div
-      className="video-card relative rounded-xl overflow-hidden cursor-pointer shadow-[0_0_15px_rgba(0,71,255,0.5)] border border-[#0047FF]"
+      className="video-card relative rounded-xl overflow-hidden cursor-pointer shadow-[0_0_15px_rgba(0,71,255,0.5)] border-2 border-[#0047FF]"
       onClick={() => onPlay(video)}
     >
       <div className="aspect-video relative">
@@ -178,7 +179,7 @@ const VideoCard = ({ video, onPlay }: { video: VideoProps, onPlay: (video: Video
 const ImagePreviewCard = ({ project, onClick }: { project: PortfolioItemProps, onClick: (project: PortfolioItemProps) => void }) => {
   return (
     <div 
-      className="portfolio-card group cursor-pointer shadow-[0_0_15px_rgba(0,71,255,0.5)] border border-[#0047FF] rounded-xl overflow-hidden"
+      className="portfolio-card group cursor-pointer shadow-[0_0_15px_rgba(0,71,255,0.5)] border-2 border-[#0047FF] rounded-xl overflow-hidden"
       onClick={() => onClick(project)}
     >
       <div className="relative overflow-hidden aspect-[4/3]">
