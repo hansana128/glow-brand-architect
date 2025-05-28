@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Code, Layout, Video, Settings, Palette, Brain } from "lucide-react";
+import { Code, Layout, Video, Settings, Palette, Brain, Star } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 // Service card type definition
@@ -300,10 +300,21 @@ const Services = () => {
       </div>
 
       <div className="container mx-auto px-4 max-w-7xl">
+        {/* Top Center Icon with Blue Glowing Circle */}
+        <div className="flex justify-center mb-8">
+          <div className="relative">
+            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.6)] border-2 border-blue-400 animate-pulse">
+              <Star className="w-10 h-10 text-white" />
+            </div>
+            {/* Additional glow effect */}
+            <div className="absolute inset-0 w-20 h-20 rounded-full bg-blue-500/30 blur-md animate-pulse"></div>
+          </div>
+        </div>
+
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-white">WHAT I'M </span>
-            <span className="text-cyan-400">OFFERING</span>
+            <span className="text-blue-400">OFFERING</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Comprehensive digital solutions to elevate your online presence and drive real business results.
