@@ -20,9 +20,9 @@ const About = () => {
 
               {/* Floating Logos in Circle */}
               <div className="floating-icons-container absolute inset-0 w-full h-full">
-                {/* Figma logo - Top */}
+                {/* Figma logo - Top - Updated with new image */}
                 <div className="absolute top-[-25px] left-1/2 transform -translate-x-1/2 w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg">
-                  <img src="/lovable-uploads/888dd1fe-0c06-4737-8102-4c0611d3d46a.png" alt="Figma" className="w-full h-full object-contain" />
+                  <img src="/lovable-uploads/2ad9f6fc-6ba0-4d66-b07b-5ab11e530fc1.png" alt="Figma" className="w-full h-full object-contain" />
                 </div>
                 
                 {/* WordPress logo - Top Right */}
@@ -46,11 +46,11 @@ const About = () => {
                   <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML/CSS" className="w-full h-full object-contain" />
                 </div>
                 
-                {/* AI logo - Top Left */}
+                {/* Canva logo - Top Left - Updated with new image */}
                 <div className="absolute top-[15%] left-[-25px] w-11 h-11 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
                 animationDelay: "2s"
               }}>
-                  <img src="/lovable-uploads/eac8b7f7-b450-480b-8ed7-8869ea51e80f.png" alt="AI" className="w-full h-full object-contain" />
+                  <img src="/lovable-uploads/b5862b94-d81b-4f9e-a02d-b6ce1ee0f81e.png" alt="Canva" className="w-full h-full object-contain" />
                 </div>
               </div>
             </div>
