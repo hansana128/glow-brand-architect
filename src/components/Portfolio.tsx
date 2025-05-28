@@ -51,19 +51,19 @@ const WordPressProjectCard = ({ image, title, category, url }: WordPressProjectP
       rel="noopener noreferrer" 
       className="portfolio-card group block"
     >
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border border-brand-blue/30 shadow-[0_0_15px_rgba(30,64,175,0.3)]">
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.4)]">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-blue/90 via-brand-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/90 via-brand-dark-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-white">{title}</h3>
-              <p className="text-sm text-gray-300">{category}</p>
+              <h3 className="text-lg font-bold text-brand-yellow">{title}</h3>
+              <p className="text-sm text-gray-200">{category}</p>
             </div>
-            <ExternalLink className="text-brand-blue" size={20} />
+            <ExternalLink className="text-brand-yellow" size={20} />
           </div>
         </div>
       </div>
@@ -80,19 +80,19 @@ const CustomCodedProjectCard = ({ image, title, category, url }: CustomCodedProj
       rel="noopener noreferrer" 
       className="portfolio-card group block"
     >
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border border-brand-blue/30 shadow-[0_0_15px_rgba(30,64,175,0.3)]">
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.4)]">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-blue/90 via-brand-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/90 via-brand-dark-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-white">{title}</h3>
-              <p className="text-sm text-gray-300">{category}</p>
+              <h3 className="text-lg font-bold text-brand-yellow">{title}</h3>
+              <p className="text-sm text-gray-200">{category}</p>
             </div>
-            <ExternalLink className="text-brand-blue" size={20} />
+            <ExternalLink className="text-brand-yellow" size={20} />
           </div>
         </div>
       </div>
@@ -109,19 +109,19 @@ const ToolCard = ({ image, title, category, url }: ToolProps) => {
       rel="noopener noreferrer" 
       className="portfolio-card group block"
     >
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border border-brand-blue/30 shadow-[0_0_15px_rgba(30,64,175,0.3)]">
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.4)]">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-blue/90 via-brand-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/90 via-brand-dark-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-white">{title}</h3>
-              <p className="text-sm text-gray-300">{category}</p>
+              <h3 className="text-lg font-bold text-brand-yellow">{title}</h3>
+              <p className="text-sm text-gray-200">{category}</p>
             </div>
-            <ExternalLink className="text-brand-blue" size={20} />
+            <ExternalLink className="text-brand-yellow" size={20} />
           </div>
         </div>
       </div>
@@ -133,15 +133,15 @@ const ToolCard = ({ image, title, category, url }: ToolProps) => {
 const PortfolioCard = ({ image, title, category, id }: PortfolioItemProps) => {
   return (
     <Link to={`/portfolio/${id}`} target="_blank" rel="noopener noreferrer" className="portfolio-card group">
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border border-brand-blue/30 shadow-[0_0_15px_rgba(30,64,175,0.3)]">
+      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-brand-yellow shadow-[0_0_15px_rgba(255,215,0,0.4)]">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-blue/90 via-brand-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
-          <h3 className="text-lg font-bold text-white">{title}</h3>
-          <p className="text-sm text-gray-300">{category}</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/90 via-brand-dark-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+          <h3 className="text-lg font-bold text-brand-yellow">{title}</h3>
+          <p className="text-sm text-gray-200">{category}</p>
         </div>
       </div>
     </Link>
@@ -152,7 +152,7 @@ const PortfolioCard = ({ image, title, category, id }: PortfolioItemProps) => {
 const VideoCard = ({ video, onPlay }: { video: VideoProps, onPlay: (video: VideoProps) => void }) => {
   return (
     <div
-      className="video-card relative rounded-xl overflow-hidden cursor-pointer shadow-[0_0_15px_rgba(30,64,175,0.5)] border border-brand-blue"
+      className="video-card relative rounded-xl overflow-hidden cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.5)] border-2 border-brand-yellow"
       onClick={() => onPlay(video)}
     >
       <div className="aspect-video relative">
@@ -161,14 +161,14 @@ const VideoCard = ({ video, onPlay }: { video: VideoProps, onPlay: (video: Video
           alt={video.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-blue/80 to-transparent flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-          <div className="p-3 rounded-full bg-brand-blue/80 text-white">
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/80 to-transparent flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+          <div className="p-3 rounded-full bg-brand-yellow/80 text-brand-blue">
             <Play size={24} />
           </div>
         </div>
       </div>
-      <div className="p-3 bg-gradient-to-r from-brand-blue/30 to-brand-dark-blue/50 text-white">
-        <h3 className="text-sm font-semibold">{video.title}</h3>
+      <div className="p-3 bg-gradient-to-r from-brand-blue/60 to-brand-dark-blue/80 text-white">
+        <h3 className="text-sm font-semibold text-brand-yellow">{video.title}</h3>
       </div>
     </div>
   );
@@ -178,7 +178,7 @@ const VideoCard = ({ video, onPlay }: { video: VideoProps, onPlay: (video: Video
 const ImagePreviewCard = ({ project, onClick }: { project: PortfolioItemProps, onClick: (project: PortfolioItemProps) => void }) => {
   return (
     <div 
-      className="portfolio-card group cursor-pointer shadow-[0_0_15px_rgba(30,64,175,0.5)] border border-brand-blue rounded-xl overflow-hidden"
+      className="portfolio-card group cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.5)] border-2 border-brand-yellow rounded-xl overflow-hidden"
       onClick={() => onClick(project)}
     >
       <div className="relative overflow-hidden aspect-[4/3]">
@@ -187,9 +187,9 @@ const ImagePreviewCard = ({ project, onClick }: { project: PortfolioItemProps, o
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-blue/90 via-brand-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
-          <h3 className="text-lg font-bold text-white">{project.title}</h3>
-          <p className="text-sm text-gray-300">{project.category}</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/90 via-brand-dark-blue/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+          <h3 className="text-lg font-bold text-brand-yellow">{project.title}</h3>
+          <p className="text-sm text-gray-200">{project.category}</p>
         </div>
       </div>
     </div>
@@ -296,7 +296,7 @@ const Portfolio = () => {
       image: "/lovable-uploads/0ee29585-e9a2-4bf2-a8b7-9867c881317f.png",
       title: "Strawberry Milkshake Commercial",
       category: "Product Advertisement",
-      videoUrl: "https://youtube.com/shorts/YrAgd3Jqajw?feature=share",
+      videoUrl: "https://youtube.com/shorts/YrAgd3Jqajw?si=_l7h0lCuoOZvMbiS",
       youtubeId: "YrAgd3Jqajw",
     },
     {
@@ -363,15 +363,15 @@ const Portfolio = () => {
     <section id="portfolio" className="py-6 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-40 right-20 w-96 h-96 rounded-full bg-brand-blue/30 blur-[100px]"></div>
-        <div className="absolute bottom-40 left-20 w-80 h-80 rounded-full bg-brand-dark-blue/20 blur-[80px]"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 rounded-full bg-brand-yellow/40 blur-[100px]"></div>
+        <div className="absolute bottom-40 left-20 w-80 h-80 rounded-full bg-brand-blue/30 blur-[80px]"></div>
       </div>
 
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">
             <span className="text-white">EXPLORE MY </span>
-            <span className="text-brand-blue">WORK</span>
+            <span className="text-brand-yellow">WORK</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             I build fast, secure, and beautiful websites that convert visitors into customers using modern technologies.
@@ -383,25 +383,25 @@ const Portfolio = () => {
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-transparent">
             <TabsTrigger 
               value="wordpress" 
-              className="data-[state=active]:bg-brand-blue data-[state=active]:text-white"
+              className="data-[state=active]:bg-brand-yellow data-[state=active]:text-brand-black border border-brand-yellow/50 text-brand-yellow"
             >
               WordPress Projects
             </TabsTrigger>
             <TabsTrigger 
               value="coded" 
-              className="data-[state=active]:bg-brand-blue data-[state=active]:text-white"
+              className="data-[state=active]:bg-brand-yellow data-[state=active]:text-brand-black border border-brand-yellow/50 text-brand-yellow"
             >
               Custom Coded Projects
             </TabsTrigger>
             <TabsTrigger 
               value="video" 
-              className="data-[state=active]:bg-brand-blue data-[state=active]:text-white"
+              className="data-[state=active]:bg-brand-yellow data-[state=active]:text-brand-black border border-brand-yellow/50 text-brand-yellow"
             >
               AI Video Content
             </TabsTrigger>
             <TabsTrigger 
               value="visual" 
-              className="data-[state=active]:bg-brand-blue data-[state=active]:text-white"
+              className="data-[state=active]:bg-brand-yellow data-[state=active]:text-brand-black border border-brand-yellow/50 text-brand-yellow"
             >
               Creative Visuals
             </TabsTrigger>
@@ -465,7 +465,7 @@ const Portfolio = () => {
         </Tabs>
 
         <div className="flex justify-center mt-6">
-          <Link to="/#portfolio" className="glow-btn">
+          <Link to="/#portfolio" className="glow-btn bg-gradient-to-r from-brand-yellow to-brand-yellow/80 text-brand-black px-6 py-3 rounded-full font-semibold hover:from-brand-yellow/90 hover:to-brand-yellow shadow-[0_0_20px_rgba(255,215,0,0.4)] transition-all duration-300">
             <span>See Full Portfolio</span>
           </Link>
         </div>
@@ -473,9 +473,9 @@ const Portfolio = () => {
 
       {/* Video Modal */}
       <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
-        <DialogContent className="max-w-4xl bg-brand-black border border-brand-blue">
+        <DialogContent className="max-w-4xl bg-gradient-to-br from-brand-blue via-brand-dark-blue to-brand-black border-2 border-brand-yellow shadow-[0_0_30px_rgba(255,215,0,0.4)]">
           <DialogHeader>
-            <DialogTitle className="text-white">{selectedVideo?.title}</DialogTitle>
+            <DialogTitle className="text-brand-yellow">{selectedVideo?.title}</DialogTitle>
           </DialogHeader>
           <div className="aspect-video bg-black/30 rounded-md overflow-hidden">
             {selectedVideo && selectedVideo.youtubeId ? (
@@ -511,9 +511,9 @@ const Portfolio = () => {
 
       {/* Image Modal */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-4xl bg-brand-black border border-brand-blue">
+        <DialogContent className="max-w-4xl bg-gradient-to-br from-brand-blue via-brand-dark-blue to-brand-black border-2 border-brand-yellow shadow-[0_0_30px_rgba(255,215,0,0.4)]">
           <DialogHeader>
-            <DialogTitle className="text-white">{selectedImage?.title}</DialogTitle>
+            <DialogTitle className="text-brand-yellow">{selectedImage?.title}</DialogTitle>
           </DialogHeader>
           <div className="rounded-md overflow-hidden">
             {selectedImage && (
