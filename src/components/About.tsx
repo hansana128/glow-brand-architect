@@ -1,61 +1,116 @@
-import React from "react";
 
+import React from "react";
 const About = () => {
-  return (
-    <section id="about" className="py-20 relative overflow-hidden">
+  return <section id="about" className="py-6 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-40 left-20 w-96 h-96 rounded-full bg-blue-500/20 blur-[100px]"></div>
-        <div className="absolute bottom-40 right-20 w-80 h-80 rounded-full bg-blue-600/30 blur-[80px]"></div>
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-brand-blue/20 blur-[80px]"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-brand-yellow/10 blur-[100px]"></div>
       </div>
 
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-white">ABOUT </span>
-            <span className="text-blue-400">MALSHI</span>
-          </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            A passionate web developer and digital marketer dedicated to crafting
-            innovative digital solutions.
-          </p>
-        </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Image - Moved more to left with increased spacing */}
+          <div className="flex justify-start md:justify-start">
+            {/* MALSHI'S ABOUT IMAGE */}
+            <div className="relative">
+              <div className="w-72 h-80 rounded-xl overflow-hidden border border-brand-yellow shadow-[0_0_25px_rgba(255,215,0,0.3)]">
+                <img src="/lovable-uploads/d6e96e97-f894-4995-9509-9194140e94f9.png" alt="Malshi Hansana" className="w-full h-full object-cover" />
+              </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Image Section */}
-          <div className="relative">
-            <div className="absolute top-0 left-0 w-full h-full rounded-3xl bg-gradient-to-r from-blue-600/40 to-blue-800/50 -z-10"></div>
-            <img
-              src="/lovable-uploads/8ce66691-2b2c-43b5-b7e1-0c982d79d88c.png"
-              alt="Malshi Hansana"
-              className="rounded-3xl shadow-2xl"
-            />
+              {/* Floating Logos */}
+              <div className="floating-icons-container absolute inset-0 w-full h-full mx-0 my-0 px-[20px] py-[50px] rounded-lg bg-neutral-950/80">
+                {/* Figma logo */}
+                <div className="absolute top-[-20px] right-[-20px] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg">
+                  <img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma" className="w-full h-full object-contain" />
+                </div>
+                
+                {/* WordPress logo */}
+                <div className="absolute top-[20%] left-[-30px] w-14 h-14 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                animationDelay: "0.5s"
+              }}>
+                  <img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="WordPress" className="w-full h-full object-contain" />
+                </div>
+                
+                {/* LinkedIn logo */}
+                <div className="absolute bottom-[30%] right-[-25px] w-10 h-10 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                animationDelay: "1s"
+              }}>
+                  <img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" className="w-full h-full object-contain" />
+                </div>
+                
+                {/* HTML/CSS logo */}
+                <div className="absolute bottom-[-15px] left-[30%] w-12 h-12 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                animationDelay: "1.5s"
+              }}>
+                  <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML/CSS" className="w-full h-full object-contain" />
+                </div>
+                
+                {/* Canva logo */}
+                <div className="absolute top-[40%] left-[90%] w-11 h-11 bg-black/80 rounded-full p-2 animate-float shadow-lg" style={{
+                animationDelay: "2s"
+              }}>
+                  <img src="https://cdn.worldvectorlogo.com/logos/canva-1.svg" alt="Canva" className="w-full h-full object-contain" />
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Text Content Section */}
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-4">
-              My Story & Vision
-            </h3>
-            <p className="text-gray-300 mb-6">
-              From coding dynamic websites to driving impactful digital marketing
-              campaigns, I'm all about creating value. My mission is to transform
-              ideas into tangible digital realities.
-            </p>
-            <p className="text-gray-300 mb-6">
-              I blend technical expertise with creative strategies to deliver
-              cutting-edge solutions. Whether it's developing a responsive web
-              application or crafting a targeted marketing strategy, I approach
-              each project with passion and precision.
-            </p>
-            <p className="text-gray-300">
-              Let's collaborate and bring your vision to life!
-            </p>
+          {/* Right Column - Text Content - More spacing from image */}
+          <div className="text-left px-2">
+            <h2 className="text-2xl font-bold mb-3">
+              <span className="text-brand-yellow">🔥</span> About Malshi
+            </h2>
+
+            <div className="space-y-3 text-gray-200">
+              <p className="text-lg">
+                Are you tired of boring websites that don't convert or digital marketing that doesn't deliver?
+              </p>
+              <p>
+                If yes, you've landed on the right profile. I help startups, small businesses, and personal brands build a powerful online presence using the perfect mix of:
+              </p>
+              
+              <ul className="ml-5 space-y-1">
+                <li className="flex items-start">
+                  <span className="text-brand-yellow mr-2">✅</span>
+                  <span>Modern web development</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-yellow mr-2">✅</span>
+                  <span>Creative design</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-yellow mr-2">✅</span>
+                  <span>Smart digital marketing</span>
+                </li>
+              </ul>
+              
+              <p>
+                I've worked with dozens of brands to turn basic ideas into stunning, high-performing websites — paired with content that actually connects and campaigns that grow fast.
+              </p>
+
+              <ul className="ml-5 space-y-1">
+                <li className="flex items-start">
+                  <span className="text-brand-yellow mr-2">🚀</span>
+                  <span>Stronger online visibility</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-yellow mr-2">🚀</span>
+                  <span>Better user experience</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-yellow mr-2">🚀</span>
+                  <span>Real customer engagement</span>
+                </li>
+              </ul>
+
+              <p className="font-semibold">
+                Send me a message with the word "LEVEL UP" to get started.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
