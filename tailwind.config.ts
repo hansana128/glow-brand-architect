@@ -66,12 +66,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Updated brand colors to match logo - yellow, blue, white
+				// Updated brand colors to your exact specifications
 				brand: {
-					yellow: '#FFD700', // Gold/Yellow from logo
-					blue: '#1E40AF', // Blue from logo
-					'dark-blue': '#1E3A8A', // Darker blue variant
-					white: '#FFFFFF',
+					yellow: '#FFD700', // Your specified yellow
+					blue: '#0047FF', // Your specified blue
+					'dark-blue': '#0033CC', // Darker variant of your blue
+					white: '#FFFFFF', // Your specified white
 					'light-gray': '#F8FAFC',
 					black: '#000000',
 				}
