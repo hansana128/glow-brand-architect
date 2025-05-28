@@ -16,6 +16,100 @@ const Hero = () => {
         <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-[#0047FF]/30 blur-[100px]"></div>
       </div>
 
+      {/* Left Marquee - Scrolling Down */}
+      <div className="absolute left-0 top-0 bottom-0 w-48 flex flex-col justify-center overflow-hidden opacity-20">
+        <div className="animate-marquee-down flex flex-col gap-8">
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>WEB DEVELOPMENT</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>DIGITAL MARKETING</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>CREATIVE DESIGN</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>BRAND STRATEGY</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>UI/UX DESIGN</span>
+          </div>
+          {/* Duplicate for seamless loop */}
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>WEB DEVELOPMENT</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>DIGITAL MARKETING</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>CREATIVE DESIGN</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>BRAND STRATEGY</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>UI/UX DESIGN</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Marquee - Scrolling Up */}
+      <div className="absolute right-0 top-0 bottom-0 w-48 flex flex-col justify-center overflow-hidden opacity-20">
+        <div className="animate-marquee-up flex flex-col gap-8">
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>CONTENT CREATION</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>SEO OPTIMIZATION</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>SOCIAL MEDIA</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>E-COMMERCE</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>WORDPRESS</span>
+          </div>
+          {/* Duplicate for seamless loop */}
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>CONTENT CREATION</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>SEO OPTIMIZATION</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>SOCIAL MEDIA</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>E-COMMERCE</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/60 text-sm whitespace-nowrap">
+            <span>❄️</span>
+            <span>WORDPRESS</span>
+          </div>
+        </div>
+      </div>
+
       <div className="container px-4 mx-auto z-10 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col items-start text-left">

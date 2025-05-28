@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -66,12 +65,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Updated brand colors to your exact specifications
 				brand: {
-					yellow: '#FFD700', // Your specified yellow
-					blue: '#0047FF', // Your specified blue
-					'dark-blue': '#0033CC', // Darker variant of your blue
-					white: '#FFFFFF', // Your specified white
+					yellow: '#FFD700',
+					blue: '#0047FF',
+					'dark-blue': '#0033CC',
+					white: '#FFFFFF',
 					'light-gray': '#F8FAFC',
 					black: '#000000',
 				}
@@ -94,6 +92,14 @@ export default {
 					'0%': { transform: 'translateX(0%)' },
 					'100%': { transform: 'translateX(-100%)' }
 				},
+				'marquee-up': {
+					'0%': { transform: 'translateY(100%)' },
+					'100%': { transform: 'translateY(-100%)' }
+				},
+				'marquee-down': {
+					'0%': { transform: 'translateY(-100%)' },
+					'100%': { transform: 'translateY(100%)' }
+				},
 				'glow': {
 					'0%': { boxShadow: '0 0 5px #FFD700' },
 					'50%': { boxShadow: '0 0 20px #FFD700' },
@@ -112,6 +118,8 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'marquee': 'marquee 25s linear infinite',
+				'marquee-up': 'marquee-up 20s linear infinite',
+				'marquee-down': 'marquee-down 20s linear infinite',
 				'glow': 'glow 2s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'scale': 'scale 3s ease-in-out infinite'
