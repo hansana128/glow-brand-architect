@@ -227,6 +227,12 @@ const Portfolio = () => {
   // Custom Coded projects with actual URLs
   const codedProjects = [
     {
+      url: "https://layout-palette-craft.lovable.app/",
+      image: "/lovable-uploads/9ce14740-450e-4f73-953d-a26c00633e37.png",
+      title: "Layout Palette Craft",
+      category: "React + TypeScript E-commerce Site",
+    },
+    {
       url: "https://preview--sleek-online-creation.lovable.app/",
       image: "/lovable-uploads/ce45593f-6b51-404b-a53c-29f5926592c1.png",
       title: "HIEUBOWL Vietnamese Kitchen",
