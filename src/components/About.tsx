@@ -1,7 +1,9 @@
 
 import React from "react";
+
 const About = () => {
-  return <section id="about" className="py-6 relative overflow-hidden">
+  return (
+    <section id="about" className="py-6 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-brand-blue/20 blur-[80px]"></div>
@@ -10,8 +12,8 @@ const About = () => {
 
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Image - Moved more to left with increased spacing */}
-          <div className="flex justify-start md:justify-start">
+          {/* Left Column - Image - Hidden on mobile */}
+          <div className="hidden md:flex justify-start md:justify-start">
             {/* MALSHI'S ABOUT IMAGE */}
             <div className="relative">
               <div className="w-72 h-80 rounded-xl overflow-hidden border border-brand-yellow shadow-[0_0_25px_rgba(255,215,0,0.3)]">
@@ -56,8 +58,8 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right Column - Text Content - More spacing from image */}
-          <div className="text-left px-2">
+          {/* Right Column - Text Content - Full width on mobile */}
+          <div className="text-left px-2 md:col-span-1 col-span-2">
             <h2 className="text-2xl font-bold mb-3">
               <span className="text-brand-yellow">🔥</span> About Malshi
             </h2>
@@ -96,7 +98,7 @@ const About = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-brand-yellow mr-2">🚀</span>
-                  <span>Better user experience</span>
+                  <span>Better user engagement</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-brand-yellow mr-2">🚀</span>
@@ -111,6 +113,8 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default About;

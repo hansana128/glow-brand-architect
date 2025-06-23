@@ -2,6 +2,21 @@
 import React from "react";
 
 const Hero = () => {
+  const handleRequestCV = () => {
+    const email = "malshihansana128@gmail.com";
+    const subject = "Request for CV – Potential Collaboration";
+    const body = `Hi Malshi,
+
+I came across your portfolio and would like to request your CV to explore a possible opportunity to work together.
+
+Looking forward to hearing from you.
+
+Best regards,`;
+    
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
     <section
       id="home"
@@ -32,10 +47,10 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              {/* Download CV Button */}
-              <a href="https://drive.google.com/file/d/1O0sZHZMcy52LWxOM0sjwAN3PbOBTYT8i/view?usp=sharing" className="glow-btn" target="_blank" rel="noopener noreferrer">
-                <span>Download CV</span>
-              </a>
+              {/* Request CV Button */}
+              <button onClick={handleRequestCV} className="glow-btn">
+                <span>Request My CV</span>
+              </button>
 
               {/* Hire Me Button */}
               <a href="https://www.linkedin.com/in/malshi-hansana" className="glow-btn" target="_blank" rel="noopener noreferrer">
