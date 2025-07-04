@@ -245,10 +245,10 @@ const Portfolio = () => {
       category: "React + TypeScript",
     },
     {
-      url: "https://preview--shimmering-web-garden.lovable.app/",
-      image: "/lovable-uploads/d8e94b00-1cfd-418a-9eb8-8b8d3dba03ff.png",
-      title: "Web Garden",
-      category: "React Application",
+      url: "https://island-escape-website-build.lovable.app/",
+      image: "/lovable-uploads/ef21ed31-84fe-48ba-9e0c-60c9a5c0fdb8.png",
+      title: "Island Escape Sri Lanka",
+      category: "React Travel Website",
     },
   ];
 
