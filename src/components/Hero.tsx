@@ -20,21 +20,21 @@ Best regards,`;
   return (
     <section
       id="home"
-      className="relative py-16 flex items-center justify-center overflow-hidden"
+      className="relative section-padding flex items-center justify-center overflow-hidden min-h-screen"
       style={{
         backgroundImage: "radial-gradient(circle at 30% 40%, #0047FF 0%, #000000 70%)",
       }}
     >
       {/* Background gradient elements */}
       <div className="absolute top-0 left-0 right-0 bottom-0 opacity-30">
-        <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-[#FFD700]/20 blur-[80px]"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-[#0047FF]/30 blur-[100px]"></div>
+        <div className="absolute top-10 left-10 sm:top-20 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 rounded-full bg-[#FFD700]/20 blur-[60px] sm:blur-[80px]"></div>
+        <div className="absolute bottom-10 right-10 sm:bottom-20 sm:right-20 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-[#0047FF]/30 blur-[80px] sm:blur-[100px]"></div>
       </div>
 
-      <div className="container px-4 mx-auto z-10 max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="flex flex-col items-start text-left">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-wide">
+      <div className="container mx-auto z-10 max-w-6xl">
+        <div className="grid-responsive-2 items-center">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left order-2 md:order-1">
+            <h1 className="hero-title font-bold mb-4 sm:mb-6 tracking-wide">
               <span className="text-white">TURN </span>
               <span className="text-[#FFD700]">HEADS.</span>
               <br />
@@ -42,37 +42,37 @@ Best regards,`;
               <span className="text-[#FFD700]">LEGACY.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-lg">
+            <p className="body-text text-gray-200 mb-6 sm:mb-8 max-w-lg text-center md:text-left">
               Not just a developer — a creative force transforming bold ideas into unforgettable brands.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
               {/* Request CV Button */}
-              <button onClick={handleRequestCV} className="glow-btn">
+              <button onClick={handleRequestCV} className="glow-btn btn-responsive">
                 <span>Request My CV</span>
               </button>
 
               {/* Hire Me Button */}
-              <a href="https://www.linkedin.com/in/malshi-hansana" className="glow-btn" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/malshi-hansana" className="glow-btn btn-responsive" target="_blank" rel="noopener noreferrer">
                 <span>Hire Me</span>
               </a>
             </div>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center order-1 md:order-2 mb-6 md:mb-0">
             {/* MALSHI'S HERO IMAGE */}
             <div className="relative">
-              <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-[#FFD700] shadow-[0_0_25px_rgba(255,215,0,0.5)]">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-[#FFD700] shadow-[0_0_25px_rgba(255,215,0,0.5)]">
                 <img
                   src="/lovable-uploads/d6df25b7-3e50-4827-ad70-43fc4bb88cfa.png"
                   alt="Malshi Hansana"
-                  className="w-full h-full object-cover"
+                  className="img-responsive"
                 />
               </div>
               
               {/* Decorative elements */}
-              <div className="absolute top-0 -right-4 w-8 h-8 bg-[#FFD700] rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-2 -left-6 w-12 h-12 bg-[#0047FF] rounded-full animate-pulse"></div>
+              <div className="absolute top-0 -right-2 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-[#FFD700] rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-1 -left-3 sm:-bottom-2 sm:-left-6 w-8 h-8 sm:w-12 sm:h-12 bg-[#0047FF] rounded-full animate-pulse"></div>
             </div>
           </div>
         </div>

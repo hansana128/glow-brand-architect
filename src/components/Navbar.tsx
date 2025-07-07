@@ -21,39 +21,39 @@ const Navbar = () => {
 
   return (
     <header 
-      className="py-4 relative z-50 shadow-lg"
+      className="py-3 sm:py-4 relative z-50 shadow-lg"
       style={{
         background: "linear-gradient(135deg, #0a0e14 0%, #15256e 100%)",
       }}
     >
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto max-w-6xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
             href="#hero"
-            className="flex items-center gap-3"
+            className="flex items-center gap-2 sm:gap-3"
           >
-            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-yellow shadow-lg">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-brand-yellow shadow-lg">
               <img 
                 src="/lovable-uploads/8ce66691-2b2c-43b5-b7e1-0c982d79d88c.png" 
                 alt="Malshi Hansana Logo" 
-                className="w-full h-full object-cover"
+                className="img-responsive"
               />
             </div>
-            <div className="text-white font-bold text-lg md:text-xl">
+            <div className="text-white font-bold text-base sm:text-lg md:text-xl">
               <span className="text-brand-yellow">MALSHI</span> HANSANA
-              <p className="text-xs text-gray-300 font-normal">Web Developer | Digital Marketer</p>
+              <p className="text-xs sm:text-sm text-gray-300 font-normal hidden sm:block">Web Developer | Digital Marketer</p>
             </div>
           </a>
 
-          {/* Desktop Navigation - moved to left */}
-          <nav className="hidden md:flex items-center gap-2 ml-8">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-1 lg:gap-2 ml-4 lg:ml-8">
             {["home", "about", "services", "portfolio", "contact"].map((item) => (
               <Button
                 key={item}
                 onClick={() => scrollToSection(item)}
                 variant="outline"
-                className="uppercase text-xs font-medium border-brand-yellow/70 text-white hover:bg-brand-yellow/20 hover:text-brand-yellow transition-colors duration-300 rounded-full py-1 px-3 h-auto"
+                className="uppercase text-xs font-medium border-brand-yellow/70 text-white hover:bg-brand-yellow/20 hover:text-brand-yellow transition-colors duration-300 rounded-full py-1 px-2 lg:px-3 h-auto"
               >
                 {item}
               </Button>
@@ -63,7 +63,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden text-white hover:text-brand-yellow transition-colors duration-300"
+            className="md:hidden text-white hover:text-brand-yellow transition-colors duration-300 p-1"
           >
             {mobileMenuOpen ? (
               <X className="w-5 h-5" />
@@ -76,7 +76,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "md:hidden fixed top-[80px] left-0 right-0 backdrop-blur-md transition-all duration-500 overflow-hidden",
+            "md:hidden fixed top-[60px] sm:top-[80px] left-0 right-0 backdrop-blur-md transition-all duration-500 overflow-hidden",
             "bg-gradient-to-b from-[#0a0e14] to-[#15256e]",
             mobileMenuOpen ? "max-h-screen" : "max-h-0"
           )}

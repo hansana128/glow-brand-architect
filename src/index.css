@@ -55,7 +55,7 @@
 
 @layer components {
   .glow-btn {
-    @apply relative inline-flex items-center justify-center px-5 py-2 rounded-full overflow-hidden bg-transparent text-white uppercase font-bold tracking-wider border border-[#FFD700] transition-all duration-300 shadow-[0_0_15px_rgba(255,215,0,0.7)] text-sm sm:text-base;
+    @apply relative inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2 rounded-full overflow-hidden bg-transparent text-white uppercase font-bold tracking-wider border border-[#FFD700] transition-all duration-300 shadow-[0_0_15px_rgba(255,215,0,0.7)] text-xs sm:text-sm md:text-base;
   }
   
   .glow-btn::before {
@@ -75,15 +75,15 @@
   }
   
   .scroll-top-btn {
-    @apply fixed bottom-6 left-6 p-2 rounded-full bg-gray-800 text-white shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-[#FFD700] sm:p-3;
+    @apply fixed bottom-4 left-4 sm:bottom-6 sm:left-6 p-2 sm:p-3 rounded-full bg-gray-800 text-white shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-[#FFD700];
   }
   
   .chat-toggle {
-    @apply fixed bottom-6 right-6 p-2 rounded-full bg-gray-800 text-white shadow-lg transition-all duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-[#FFD700] sm:p-3;
+    @apply fixed bottom-4 right-4 sm:bottom-6 sm:right-6 p-2 sm:p-3 rounded-full bg-gray-800 text-white shadow-lg transition-all duration-300 cursor-pointer shadow-[0_0_15px_rgba(255,215,0,0.7)] hover:shadow-[0_0_20px_rgba(255,215,0,0.8)] z-50 border border-[#FFD700];
   }
   
   .chat-menu {
-    @apply fixed bottom-16 right-6 flex flex-col gap-2 p-2 rounded-xl bg-gray-800/80 backdrop-blur-sm border border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.5)] transition-all duration-300 z-50 scale-0 opacity-0 origin-bottom-right sm:bottom-20;
+    @apply fixed bottom-14 right-4 sm:bottom-16 sm:right-6 md:bottom-20 md:right-6 flex flex-col gap-2 p-2 rounded-xl bg-gray-800/80 backdrop-blur-sm border border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.5)] transition-all duration-300 z-50 scale-0 opacity-0 origin-bottom-right;
   }
   
   .chat-menu.active {
@@ -91,7 +91,7 @@
   }
   
   .chat-menu-item {
-    @apply p-2 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 border border-[#FFD700] shadow-[0_0_10px_rgba(255,215,0,0.5)] sm:p-3;
+    @apply p-2 sm:p-3 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 border border-[#FFD700] shadow-[0_0_10px_rgba(255,215,0,0.5)];
   }
 
   /* Portfolio card effects with constant neon glow */
@@ -130,7 +130,7 @@
 
   /* Form fields with enhanced neon glow */
   .neon-form-field {
-    @apply w-full bg-gray-800/30 border-2 border-[#FFD700] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] shadow-[0_0_12px_rgba(255,215,0,0.5)] text-sm sm:text-base;
+    @apply w-full bg-gray-800/30 border-2 border-[#FFD700] rounded-lg px-3 py-2 sm:px-4 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#FFD700] shadow-[0_0_12px_rgba(255,215,0,0.5)] text-sm sm:text-base;
   }
 
   /* Video card with neon glow */
@@ -140,12 +140,12 @@
 
   /* Back button for portfolio detail */
   .back-btn {
-    @apply inline-flex items-center gap-2 text-white bg-gray-800/50 border-2 border-[#FFD700] px-4 py-2 rounded-full text-sm font-medium shadow-[0_0_15px_rgba(255,215,0,0.6)] transition-all hover:shadow-[0_0_20px_rgba(255,215,0,0.8)];
+    @apply inline-flex items-center gap-2 text-white bg-gray-800/50 border-2 border-[#FFD700] px-3 py-2 sm:px-4 sm:py-2 rounded-full text-sm font-medium shadow-[0_0_15px_rgba(255,215,0,0.6)] transition-all hover:shadow-[0_0_20px_rgba(255,215,0,0.8)];
   }
 
   /* Yellow-themed Service Cards */
   .service-card {
-    @apply relative overflow-hidden rounded-3xl transition-all duration-500 border-2 border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.6)];
+    @apply relative overflow-hidden rounded-3xl transition-all duration-500 border-2 border-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.6)] min-h-[280px] sm:min-h-[320px] md:min-h-[380px];
   }
   
   .service-icon-container {
@@ -161,35 +161,125 @@
     transform: perspective(1000px);
     transition: all 0.3s ease;
   }
-  
-  .service-card {
-    min-height: 380px;
+
+  /* Container responsive padding */
+  .container {
+    @apply px-3 sm:px-4 md:px-6 lg:px-8 xl:px-4;
   }
 
-  /* Enhanced mobile responsiveness */
-  @media (max-width: 767px) {
+  /* Responsive spacing utilities */
+  .section-padding {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+  }
+
+  /* Responsive text sizes */
+  .hero-title {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  .section-title {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  .body-text {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+
+  /* Grid responsive classes */
+  .grid-responsive-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8;
+  }
+
+  .grid-responsive-3 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
+  }
+
+  .grid-responsive-4 {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6;
+  }
+
+  /* Mobile-first breakpoints */
+  @media (max-width: 640px) {
+    .hero-title {
+      @apply leading-tight;
+    }
+    
     .glow-btn {
-      @apply px-4 py-2 text-sm;
-    }
-    
-    .container {
-      @apply px-3;
-    }
-    
-    h1 {
-      @apply text-2xl leading-tight;
-    }
-    
-    h2 {
-      @apply text-xl;
+      @apply px-3 py-2 text-xs min-w-[120px];
     }
     
     .service-card {
-      min-height: 320px;
+      @apply min-h-[280px] p-4;
     }
     
     .portfolio-card {
       @apply mb-4;
     }
+
+    .container {
+      @apply px-3;
+    }
+
+    .section-padding {
+      @apply py-8;
+    }
+
+    /* Hide floating icons on mobile for better performance */
+    .floating-icons-container {
+      @apply hidden;
+    }
+  }
+
+  /* Tablet breakpoints */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .hero-title {
+      @apply text-3xl md:text-4xl lg:text-5xl;
+    }
+
+    .service-card {
+      @apply min-h-[320px] p-5;
+    }
+
+    .container {
+      @apply px-4;
+    }
+
+    .section-padding {
+      @apply py-12;
+    }
+  }
+
+  /* Desktop breakpoints */
+  @media (min-width: 1025px) {
+    .hero-title {
+      @apply text-5xl xl:text-6xl;
+    }
+
+    .service-card {
+      @apply min-h-[380px] p-6;
+    }
+
+    .section-padding {
+      @apply py-16;
+    }
+  }
+
+  /* Flexbox responsive utilities */
+  .flex-responsive {
+    @apply flex flex-col sm:flex-row gap-4 sm:gap-6;
+  }
+
+  .flex-responsive-center {
+    @apply flex flex-col sm:flex-row items-center gap-4 sm:gap-6;
+  }
+
+  /* Image responsive */
+  .img-responsive {
+    @apply w-full h-auto object-cover;
+  }
+
+  /* Button responsive */
+  .btn-responsive {
+    @apply w-full sm:w-auto;
   }
 }
