@@ -32,20 +32,22 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Initialize EmailJS with your public key
-      emailjs.init("JPBmI8fkroXaXk02R");
-
-      // Send email using EmailJS
-      await emailjs.send(
+      console.log("Attempting to send email with EmailJS...");
+      console.log("Form data:", formData);
+      
+      // Send email using EmailJS with proper template variables
+      const result = await emailjs.send(
         "service_w49zm8s", // Service ID
         "template_vgtrc28", // Template ID
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          user_name: formData.name,
+          user_email: formData.email,
           message: formData.message,
-          to_name: "Malshi Hansana",
-        }
+        },
+        "JPBmI8fkroXaXk02R" // Public Key
       );
+
+      console.log("EmailJS result:", result);
 
       toast({
         title: "Success!",
