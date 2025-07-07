@@ -1,20 +1,55 @@
 
 import React from "react";
+import emailjs from '@emailjs/browser';
+import { useToast } from "@/hooks/use-toast";
 
 const Hero = () => {
-  const handleRequestCV = () => {
-    const email = "malshihansana128@gmail.com";
-    const subject = "Request for CV – Potential Collaboration";
-    const body = `Hi Malshi,
+  const { toast } = useToast();
+
+  const handleRequestCV = async () => {
+    try {
+      console.log("Sending CV request email...");
+      
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        "service_w49zm8s", // Service ID
+        "template_vgtrc28", // Template ID
+        {
+          user_name: "CV Request",
+          user_email: "visitor@portfolio.com",
+          message: "Hi Malshi, I came across your portfolio and would like to request your CV to explore a possible opportunity to work together. Looking forward to hearing from you. Best regards,",
+        },
+        "JPBmI8fkroXaXk02R" // Public Key
+      );
+
+      console.log("CV request email sent:", result);
+
+      toast({
+        title: "CV Request Sent!",
+        description: "Your CV request has been sent successfully. Malshi will get back to you soon!",
+      });
+    } catch (error) {
+      console.error("Failed to send CV request:", error);
+      
+      // Fallback to mailto if EmailJS fails
+      const email = "malshihansana128@gmail.com";
+      const subject = "Request for CV – Potential Collaboration";
+      const body = `Hi Malshi,
 
 I came across your portfolio and would like to request your CV to explore a possible opportunity to work together.
 
 Looking forward to hearing from you.
 
 Best regards,`;
-    
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+      
+      const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Opening Email Client",
+        description: "Opening your default email client to send the CV request.",
+      });
+    }
   };
 
   return (
