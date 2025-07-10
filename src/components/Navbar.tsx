@@ -53,7 +53,7 @@ const Navbar = () => {
                 key={item}
                 onClick={() => scrollToSection(item)}
                 variant="outline"
-                className="uppercase text-xs font-medium border-brand-yellow/70 text-white hover:bg-brand-yellow/20 hover:text-brand-yellow transition-colors duration-300 rounded-full py-1 px-2 lg:px-3 h-auto"
+                className="uppercase text-sm font-medium border-brand-yellow/70 text-white hover:bg-brand-yellow/20 hover:text-brand-yellow transition-colors duration-300 rounded-full py-2 px-4 lg:px-5 h-10"
               >
                 {item}
               </Button>
@@ -63,12 +63,12 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden text-white hover:text-brand-yellow transition-colors duration-300 p-1"
+            className="md:hidden text-white hover:text-brand-yellow transition-colors duration-300 p-2"
           >
             {mobileMenuOpen ? (
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             ) : (
-              <MenuIcon className="w-5 h-5" />
+              <MenuIcon className="w-6 h-6" />
             )}
           </button>
         </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
                 key={item}
                 onClick={() => scrollToSection(item)}
                 variant="outline"
-                className="uppercase text-sm font-medium border-brand-yellow/70 text-white hover:bg-brand-yellow/20 hover:text-brand-yellow transition-colors duration-300 rounded-full justify-start"
+                className="uppercase text-base font-medium border-brand-yellow/70 text-white hover:bg-brand-yellow/20 hover:text-brand-yellow transition-colors duration-300 rounded-full justify-start py-3 px-6 h-12"
               >
                 {item}
               </Button>
