@@ -2,7 +2,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Carousel from "../components/Carousel";
 import About from "../components/About";
 import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
@@ -16,7 +15,6 @@ const Index = () => {
     <div className="min-h-screen bg-brand-black text-white">
       <Navbar />
       <Hero />
-      <Carousel />
       <About />
       <Services />
       <Portfolio />

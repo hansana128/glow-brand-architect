@@ -55,7 +55,7 @@ Best regards,`;
   return (
     <section
       id="home"
-      className="relative section-padding flex items-center justify-center overflow-hidden min-h-screen"
+      className="relative section-padding flex flex-col items-center justify-center overflow-hidden min-h-screen"
       style={{
         backgroundImage: "radial-gradient(circle at 30% 40%, #0047FF 0%, #000000 70%)",
       }}
@@ -111,6 +111,33 @@ Best regards,`;
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Skills Marquee Section */}
+      <div className="w-full mt-8 sm:mt-12">
+        <section className="bg-brand-blue/50 overflow-hidden py-[18px] px-0 rounded-sm">
+          <div className="marquee-container relative whitespace-nowrap">
+            <div className="flex animate-marquee">
+              {/* Duplicate the content to create seamless looping */}
+              {Array(2).fill(0).map((_, index) => (
+                <div key={index} className="flex items-center gap-4 mx-4">
+                  <span className="text-white">❄</span>
+                  <span className="text-brand-yellow text-xl font-semibold">Web Development</span>
+                  <span className="text-white">❄</span>
+                  <span className="text-brand-yellow text-xl font-semibold">UI/UX Designs</span>
+                  <span className="text-white">❄</span>
+                  <span className="text-brand-yellow text-xl font-semibold">Graphic Design</span>
+                  <span className="text-white">❄</span>
+                  <span className="text-brand-yellow text-xl font-semibold">Social Media Marketing</span>
+                  <span className="text-white">❄</span>
+                  <span className="text-brand-yellow text-xl font-semibold">SEO</span>
+                  <span className="text-white">❄</span>
+                  <span className="text-brand-yellow text-xl font-semibold">Performance Marketing</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   );
