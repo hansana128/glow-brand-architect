@@ -3,7 +3,7 @@ import React from "react";
 
 const Carousel = () => {
   return (
-    <section className="bg-brand-blue/50 overflow-hidden py-[18px] -mt-[10px] px-0 rounded-sm">
+    <section className="bg-brand-blue/50 overflow-hidden py-[18px] mt-5 px-0 rounded-sm">
       <div className="marquee-container relative whitespace-nowrap">
         <div className="flex animate-marquee">
           {/* Duplicate the content to create seamless looping */}
