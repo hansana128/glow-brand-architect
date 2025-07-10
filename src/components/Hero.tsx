@@ -114,7 +114,7 @@ Best regards,`;
       </div>
 
       {/* Skills Marquee Section */}
-      <div className="w-full mt-8 sm:mt-12">
+      <div className="w-full mt-4 sm:mt-6">
         <section className="bg-brand-blue/50 overflow-hidden py-[18px] px-0 rounded-sm">
           <div className="marquee-container relative whitespace-nowrap">
             <div className="flex animate-marquee">
