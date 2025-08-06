@@ -17,7 +17,7 @@ const About = () => {
             {/* MALSHI'S ABOUT IMAGE */}
             <div className="relative">
               <div className="w-64 h-72 lg:w-72 lg:h-80 xl:w-80 xl:h-88 rounded-xl overflow-hidden border border-brand-yellow shadow-[0_0_25px_rgba(255,215,0,0.3)]">
-                <img src="/lovable-uploads/d6e96e97-f894-4995-9509-9194140e94f9.png" alt="Malshi Hansana" className="img-responsive" />
+                <img src="/lovable-uploads/01ba5148-28b2-48f0-8c24-9a3e66ca37f1.png" alt="Malshi Hansana" className="w-full h-full object-cover" />
               </div>
 
               {/* Floating Logos in Circle - Hidden on mobile for performance */}
