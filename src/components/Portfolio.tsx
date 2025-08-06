@@ -222,6 +222,12 @@ const Portfolio = () => {
       title: "Charity For Life",
       category: "WordPress Non-Profit Site",
     },
+    {
+      url: "https://codemindglobal.com/",
+      image: "/lovable-uploads/01ba5148-28b2-48f0-8c24-9a3e66ca37f1.png",
+      title: "CodeMind Global",
+      category: "WordPress Corporate Site",
+    },
   ];
   
   // Custom Coded projects with actual URLs
