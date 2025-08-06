@@ -55,7 +55,7 @@ Best regards,`;
   return (
     <section
       id="home"
-      className="relative section-padding flex flex-col items-center justify-center overflow-hidden min-h-screen"
+      className="relative section-padding flex flex-col items-center justify-center overflow-hidden"
       style={{
         backgroundImage: "radial-gradient(circle at 30% 40%, #0047FF 0%, #000000 70%)",
       }}
