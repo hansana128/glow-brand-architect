@@ -345,12 +345,6 @@ const Portfolio = () => {
       category: "Technical Content Design",
     },
     {
-      id: "visual-digital-stars",
-      image: "/lovable-uploads/ab478334-175a-4af6-b36f-4295a9d1901e.png",
-      title: "Teaching Digital Navigation",
-      category: "Educational Design",
-    },
-    {
       id: "visual-ai-marketing",
       image: "/lovable-uploads/cf264931-7c5a-47c0-aa8e-28c77f4c7133.png",
       title: "AI Digital Marketing Mastery",
