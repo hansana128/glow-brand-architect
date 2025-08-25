@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="section-padding relative overflow-hidden pt-8 sm:pt-12">
+    <section id="about" className="section-padding relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-10 right-10 sm:top-20 sm:right-20 w-48 h-48 sm:w-72 sm:h-72 rounded-full bg-brand-blue/20 blur-[60px] sm:blur-[80px]"></div>
