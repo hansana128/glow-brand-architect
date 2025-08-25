@@ -386,6 +386,54 @@ const Portfolio = () => {
       title: "New Smart Phone Arrival",
       category: "Tech Product Design",
     },
+    {
+      id: "airpods-promo",
+      image: "/lovable-uploads/3592b266-f2cd-4b85-a2d4-37a2dc33060d.png",
+      title: "Apple AirPods Pro Promotion",
+      category: "Product Advertisement",
+    },
+    {
+      id: "aarohi-brand",
+      image: "/lovable-uploads/996d95cf-993f-4c14-bdec-34a14b1c2c03.png",
+      title: "Aarohi Fashion Brand",
+      category: "Brand Design",
+    },
+    {
+      id: "vastram-collection",
+      image: "/lovable-uploads/f62396d6-83c6-48d6-9eb6-9ede2e625ffd.png",
+      title: "Vastram Collection",
+      category: "Fashion Design",
+    },
+    {
+      id: "svasti-brand",
+      image: "/lovable-uploads/e5e6a14f-6a73-4e25-9db1-169f3ab36532.png",
+      title: "Svasti Traditional Wear",
+      category: "Brand Design",
+    },
+    {
+      id: "anvita-fashion",
+      image: "/lovable-uploads/b5e0788b-3438-4c20-8099-df721831bee5.png",
+      title: "Anvita Fashion Brand",
+      category: "Fashion Design",
+    },
+    {
+      id: "perfume-guide",
+      image: "/lovable-uploads/3227b04e-7838-4171-9ffe-50c6e0905744.png",
+      title: "Perfume Application Guide",
+      category: "Infographic Design",
+    },
+    {
+      id: "dance-classes",
+      image: "/lovable-uploads/02f3c078-5f4f-4850-b3c1-be7cece3338f.png",
+      title: "Borcelle Dance Classes",
+      category: "Event Promotion",
+    },
+    {
+      id: "salon-opening",
+      image: "/lovable-uploads/5ba15d49-5796-4117-a5ac-900e31d42ecc.png",
+      title: "Salon Grand Opening",
+      category: "Event Invitation",
+    },
   ];
 
   const openVideoModal = (video: VideoProps) => {
