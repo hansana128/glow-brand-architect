@@ -362,6 +362,36 @@ const Portfolio = () => {
       title: "5 AI Tools for Content Creation",
       category: "AI & Technology Design",
     },
+    {
+      id: "soundvibe-speaker",
+      image: "/lovable-uploads/25297a50-2813-4b88-abac-83727fa43e9f.png",
+      title: "SoundVibe Bluetooth Speaker",
+      category: "Product Advertisement",
+    },
+    {
+      id: "ladies-night-event",
+      image: "/lovable-uploads/25972f6e-cc8e-47b5-9347-6908e960f895.png",
+      title: "Ladies Night Event Poster",
+      category: "Event Design",
+    },
+    {
+      id: "headphones-sale",
+      image: "/lovable-uploads/e62a3f9e-5435-47ad-bb9c-23bba65ab9c5.png",
+      title: "Special Headphones Sale",
+      category: "E-commerce Design",
+    },
+    {
+      id: "nike-upcoming-arrival",
+      image: "/lovable-uploads/46e5df41-989a-4f56-8392-e6585368497a.png",
+      title: "Nike Upcoming Arrival",
+      category: "Product Launch",
+    },
+    {
+      id: "smartphone-arrival",
+      image: "/lovable-uploads/5c6f30c4-bfab-4107-bae1-9582125773cc.png",
+      title: "New Smart Phone Arrival",
+      category: "Tech Product Design",
+    },
   ];
 
   const openVideoModal = (video: VideoProps) => {
