@@ -55,7 +55,7 @@ Best regards,`;
   return (
     <section
       id="home"
-      className="relative section-padding flex flex-col items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-8"
       style={{
         backgroundImage: "radial-gradient(circle at 30% 40%, #0047FF 0%, #000000 70%)",
       }}
@@ -66,78 +66,77 @@ Best regards,`;
         <div className="absolute bottom-10 right-10 sm:bottom-20 sm:right-20 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-[#0047FF]/30 blur-[80px] sm:blur-[100px]"></div>
       </div>
 
-      <div className="container mx-auto z-10 max-w-6xl">
-        <div className="grid-responsive-2 items-center">
-          <div className="flex flex-col items-center text-center md:items-start md:text-left order-2 md:order-1">
-            <h1 className="hero-title font-bold mb-4 sm:mb-6 tracking-wide">
-              <span className="text-white">TURN </span>
-              <span className="text-[#FFD700]">HEADS.</span>
+      <div className="container mx-auto z-10 max-w-6xl px-4">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left order-2 lg:order-1">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 tracking-wide leading-tight">
+              <span className="text-white">MAKE YOUR</span>
               <br />
-              <span className="text-white">BUILD </span>
-              <span className="text-[#FFD700]">LEGACY.</span>
+              <span className="text-[#00e5ff]">BRAND UNFORGETTABLE</span>
             </h1>
 
-            <p className="body-text text-gray-200 mb-6 sm:mb-8 max-w-lg text-center md:text-left">
-              Not just a developer — a creative force transforming bold ideas into unforgettable brands.
+            <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-lg leading-relaxed">
+              A 19 years old halfway software engineer turned into an unapologetic branding strategist.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-              {/* Request CV Button */}
-              <button onClick={handleRequestCV} className="glow-btn btn-responsive">
-                <span>Request My CV</span>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <button onClick={handleRequestCV} className="bg-[#00e5ff] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#00e5ff]/90 transition-colors">
+                Get eBook
               </button>
-
-              {/* Hire Me Button */}
-              <a href="https://www.linkedin.com/in/malshi-hansana" className="glow-btn btn-responsive" target="_blank" rel="noopener noreferrer">
-                <span>Hire Me</span>
+              <a href="https://www.linkedin.com/in/malshi-hansana" className="border border-[#00e5ff] text-[#00e5ff] px-8 py-3 rounded-lg font-semibold hover:bg-[#00e5ff]/10 transition-colors" target="_blank" rel="noopener noreferrer">
+                Let's talk
               </a>
             </div>
           </div>
 
-          <div className="flex items-center justify-center order-1 md:order-2 mb-6 md:mb-0">
-            {/* MALSHI'S HERO IMAGE */}
-            <div className="relative">
-              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-[#FFD700] shadow-[0_0_25px_rgba(255,215,0,0.5)]">
+          <div className="flex items-center justify-center order-1 lg:order-2 relative">
+            {/* Floating UI Elements */}
+            <div className="absolute -top-8 -right-8 bg-gradient-to-br from-[#00e5ff] to-[#0099cc] rounded-xl p-4 shadow-lg animate-float">
+              <div className="text-white text-sm font-semibold">Digital Suite</div>
+              <div className="text-xs text-gray-200">Top 15%</div>
+            </div>
+            
+            <div className="absolute -bottom-8 -left-8 bg-white rounded-xl p-4 shadow-lg animate-float" style={{animationDelay: "1s"}}>
+              <div className="text-black text-sm font-semibold">150+ CONS</div>
+              <div className="text-xs text-gray-600">Converted</div>
+            </div>
+
+            <div className="absolute top-12 -left-12 w-16 h-16 bg-gradient-to-br from-[#ff6b6b] to-[#ee5a52] rounded-full flex items-center justify-center shadow-lg animate-float" style={{animationDelay: "0.5s"}}>
+              <div className="text-white text-xs font-bold">UI/UX</div>
+            </div>
+
+            {/* Main Image */}
+            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#00e5ff] shadow-[0_0_40px_rgba(0,229,255,0.3)]">
                 <img
                   src="/lovable-uploads/d6df25b7-3e50-4827-ad70-43fc4bb88cfa.png"
                   alt="Malshi Hansana"
-                  className="img-responsive"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute top-0 -right-2 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-[#FFD700] rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-1 -left-3 sm:-bottom-2 sm:-left-6 w-8 h-8 sm:w-12 sm:h-12 bg-[#0047FF] rounded-full animate-pulse"></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Skills Marquee Section */}
-      <div className="w-full mt-4 sm:mt-6">
-        <section className="bg-brand-blue/50 overflow-hidden py-[18px] px-0 rounded-sm">
-          <div className="marquee-container relative whitespace-nowrap">
-            <div className="flex animate-marquee">
-              {/* Duplicate the content to create seamless looping */}
-              {Array(2).fill(0).map((_, index) => (
-                <div key={index} className="flex items-center gap-4 mx-4">
-                  <span className="text-white">❄</span>
-                  <span className="text-brand-yellow text-xl font-semibold">Web Development</span>
-                  <span className="text-white">❄</span>
-                  <span className="text-brand-yellow text-xl font-semibold">UI/UX Designs</span>
-                  <span className="text-white">❄</span>
-                  <span className="text-brand-yellow text-xl font-semibold">Graphic Design</span>
-                  <span className="text-white">❄</span>
-                  <span className="text-brand-yellow text-xl font-semibold">Social Media Marketing</span>
-                  <span className="text-white">❄</span>
-                  <span className="text-brand-yellow text-xl font-semibold">SEO</span>
-                  <span className="text-white">❄</span>
-                  <span className="text-brand-yellow text-xl font-semibold">Performance Marketing</span>
-                </div>
-              ))}
-            </div>
+      <div className="absolute bottom-0 left-0 right-0">
+        <div className="bg-black/80 backdrop-blur-sm border-t border-[#00e5ff]/20 overflow-hidden py-4">
+          <div className="flex animate-marquee whitespace-nowrap">
+            {Array(2).fill(0).map((_, index) => (
+              <div key={index} className="flex items-center gap-8 px-8">
+                <span className="text-white text-sm">❄</span>
+                <span className="text-[#00e5ff] text-lg font-semibold">Ghostwriting</span>
+                <span className="text-white text-sm">❄</span>
+                <span className="text-[#00e5ff] text-lg font-semibold">Branding</span>
+                <span className="text-white text-sm">❄</span>
+                <span className="text-[#00e5ff] text-lg font-semibold">Designing</span>
+                <span className="text-white text-sm">❄</span>
+                <span className="text-[#00e5ff] text-lg font-semibold">LinkedIn</span>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
       </div>
     </section>
   );
