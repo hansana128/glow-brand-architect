@@ -67,7 +67,7 @@ Best regards,`;
       </div>
 
       <div className="container mx-auto z-10 max-w-6xl px-4">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left order-2 lg:order-1">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 tracking-wide leading-tight">
               <span className="text-white">MAKE YOUR</span>

@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about" className="py-16 relative overflow-hidden">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Image */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative">
