@@ -537,14 +537,122 @@ const Portfolio = () => {
 
           {/* Creative Visuals */}
           <TabsContent value="visual" className="mt-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-              {visualProjects.map((project, index) => (
-                <ImagePreviewCard
-                  key={index}
-                  project={project}
-                  onClick={openImageModal}
-                />
-              ))}
+            <div className="creative-grid">
+              {/* Row 1 */}
+              <div className="grid grid-cols-12 gap-4 mb-4">
+                <div className="col-span-6 md:col-span-3">
+                  <ImagePreviewCard 
+                    project={visualProjects[0]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-6 md:col-span-3">
+                  <ImagePreviewCard 
+                    project={visualProjects[1]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-12 md:col-span-6">
+                  <ImagePreviewCard 
+                    project={visualProjects[2]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+              </div>
+
+              {/* Row 2 */}
+              <div className="grid grid-cols-12 gap-4 mb-4">
+                <div className="col-span-12 md:col-span-4">
+                  <ImagePreviewCard 
+                    project={visualProjects[3]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-6 md:col-span-4">
+                  <ImagePreviewCard 
+                    project={visualProjects[4]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-6 md:col-span-4">
+                  <ImagePreviewCard 
+                    project={visualProjects[5]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+              </div>
+
+              {/* Row 3 */}
+              <div className="grid grid-cols-12 gap-4 mb-4">
+                <div className="col-span-6 md:col-span-3">
+                  <ImagePreviewCard 
+                    project={visualProjects[6]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-6 md:col-span-3">
+                  <ImagePreviewCard 
+                    project={visualProjects[7]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-6 md:col-span-3">
+                  <ImagePreviewCard 
+                    project={visualProjects[8]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-6 md:col-span-3">
+                  <ImagePreviewCard 
+                    project={visualProjects[9]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+              </div>
+
+              {/* Row 4 */}
+              <div className="grid grid-cols-12 gap-4 mb-4">
+                <div className="col-span-12 md:col-span-6">
+                  <ImagePreviewCard 
+                    project={visualProjects[10]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-6 md:col-span-3">
+                  <ImagePreviewCard 
+                    project={visualProjects[11]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-6 md:col-span-3">
+                  <ImagePreviewCard 
+                    project={visualProjects[12]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+              </div>
+
+              {/* Row 5 */}
+              <div className="grid grid-cols-12 gap-4 mb-4">
+                <div className="col-span-6 md:col-span-4">
+                  <ImagePreviewCard 
+                    project={visualProjects[13]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-6 md:col-span-4">
+                  <ImagePreviewCard 
+                    project={visualProjects[14]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+                <div className="col-span-12 md:col-span-4">
+                  <ImagePreviewCard 
+                    project={visualProjects[15]} 
+                    onClick={openImageModal} 
+                  />
+                </div>
+              </div>
             </div>
           </TabsContent>
         </Tabs>
