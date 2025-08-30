@@ -506,7 +506,7 @@ const Portfolio = () => {
 
           {/* WordPress Projects */}
           <TabsContent value="wordpress" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {wordpressProjects.map((project, index) => (
                 <WordPressProjectCard
                   key={index}
