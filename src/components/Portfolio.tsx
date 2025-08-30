@@ -223,10 +223,22 @@ const Portfolio = () => {
       category: "WordPress Non-Profit Site",
     },
     {
-      url: "https://codemindglobal.com/",
-      image: "/lovable-uploads/01ba5148-28b2-48f0-8c24-9a3e66ca37f1.png",
-      title: "CodeMind Global",
-      category: "WordPress Corporate Site",
+      url: "https://serenegemgallery.com/",
+      image: "/lovable-uploads/58c8a904-95d9-40c6-ac45-18eeb108d146.png",
+      title: "Serene Gem Gallery",
+      category: "WordPress Jewelry E-commerce",
+    },
+    {
+      url: "https://goodneighborslk.org/",
+      image: "/lovable-uploads/1dd42453-f2bb-4c19-b8f5-0a9ea5453e8e.png",
+      title: "Good Neighbors Sri Lanka",
+      category: "WordPress Non-Profit Organization",
+    },
+    {
+      url: "https://sorrisorestaurant.com/",
+      image: "/lovable-uploads/2307a7f0-f799-4148-aac6-28cf0a058498.png",
+      title: "Sorriso Restaurant",
+      category: "WordPress Restaurant Site",
     },
   ];
   
