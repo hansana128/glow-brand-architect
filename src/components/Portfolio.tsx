@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Play, ExternalLink } from "lucide-react";
 
 // Portfolio item data type
@@ -25,6 +27,15 @@ interface WordPressProjectProps {
   title: string;
   category: string;
   url: string;
+  role: string;
+  technicalSkills: string[];
+  problemSolving: string;
+  aiMarketing: string;
+  clientManagement: string;
+  qas: Array<{
+    question: string;
+    answer: string;
+  }>;
 }
 
 // Custom coded project data type
@@ -44,31 +55,143 @@ interface ToolProps {
 }
 
 // WordPress project card component
-const WordPressProjectCard = ({ image, title, category, url }: WordPressProjectProps) => {
+const WordPressProjectCard = ({ image, title, category, url, role, technicalSkills, problemSolving, aiMarketing, clientManagement, qas }: WordPressProjectProps) => {
   return (
-    <a 
-      href={url} 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="portfolio-card group block"
-    >
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_15px_rgba(0,71,255,0.3)]">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-lg font-bold text-white">{title}</h3>
-              <p className="text-sm text-gray-300">{category}</p>
+    <Dialog>
+      <DialogTrigger asChild>
+        <div className="portfolio-card group cursor-pointer">
+          <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-white">{title}</h3>
+                  <p className="text-sm text-gray-300">{category}</p>
+                </div>
+                <div className="flex flex-col items-end gap-2">
+                  <ExternalLink className="text-[#FFD700]" size={20} />
+                  <div className="inline-flex items-center justify-center gap-2 border-2 border-blue-800 text-blue-400 px-4 py-1 rounded-full hover:bg-blue-900/20 transition-all duration-300 group-hover:border-blue-700 group-hover:text-blue-300 group-hover:shadow-[0_0_15px_rgba(30,58,138,0.4)]">
+                    <span className="text-xs font-medium">See More</span>
+                    <svg width="12" height="6" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 1L17 5M17 5L13 9M17 5H1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ExternalLink className="text-[#FFD700]" size={20} />
           </div>
         </div>
-      </div>
-    </a>
+      </DialogTrigger>
+      
+      <DialogContent className="sm:max-w-4xl bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white border-2 border-[#0047FF] shadow-[0_0_30px_rgba(0,71,255,0.5)] max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="flex items-center gap-4 text-2xl font-bold">
+            <img src={image} alt={title} className="w-16 h-16 rounded-lg object-cover border-2 border-[#0047FF]" />
+            <div>
+              <span className="text-blue-50">{title}</span>
+              <p className="text-sm text-gray-300 font-normal">{category}</p>
+            </div>
+          </DialogTitle>
+        </DialogHeader>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+          {/* My Role & Contribution */}
+          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-blue-50 text-lg">My Role & Contribution</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-300 text-sm">{role}</p>
+            </CardContent>
+          </Card>
+          
+          {/* Technical Skills */}
+          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-blue-50 text-lg">Technical Skills</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc pl-5 text-gray-300 text-sm">
+                {technicalSkills.map((skill, i) => (
+                  <li key={i} className="mb-1">{skill}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+          
+          {/* Problem Solving */}
+          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-blue-50 text-lg">Problem Solving</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-300 text-sm">{problemSolving}</p>
+            </CardContent>
+          </Card>
+          
+          {/* AI & Marketing Side */}
+          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-blue-50 text-lg">AI & Marketing Side</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-300 text-sm">{aiMarketing}</p>
+            </CardContent>
+          </Card>
+          
+          {/* Client Management */}
+          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)] md:col-span-2">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-blue-50 text-lg">Client Management</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-300 text-sm">{clientManagement}</p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Related Questions & Answers */}
+        <div className="mt-8">
+          <h3 className="text-xl font-bold text-blue-50 mb-4">Related Questions & Answers</h3>
+          <Accordion type="single" collapsible className="w-full space-y-2">
+            {qas.map((qa, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="border border-[#0047FF]/30 rounded-lg px-4 bg-gradient-to-br from-gray-800/30 to-gray-900/30"
+              >
+                <AccordionTrigger className="text-blue-50 hover:text-blue-300 text-left">
+                  {qa.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 pt-2">
+                  {qa.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+
+        {/* Footer */}
+        <div className="mt-6 pt-4 border-t border-[#0047FF]/40 flex justify-between items-center">
+          <p className="text-gray-300 text-sm">
+            Want to see this project live?
+          </p>
+          <a 
+            href={url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-[#0047FF] to-blue-700 text-white px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-[0_0_15px_rgba(0,71,255,0.4)] flex items-center gap-2"
+          >
+            Visit Website
+            <ExternalLink size={16} />
+          </a>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 
@@ -209,36 +332,198 @@ const Portfolio = () => {
       image: "/lovable-uploads/fdd3ce05-68e6-4fd6-83eb-4b8bdba07d6c.png",
       title: "Infocus Media",
       category: "WordPress Business Site",
+      role: "I served as the lead developer and designer, handling the complete website development from conception to deployment. My responsibilities included UI/UX design, WordPress customization, content management, and ongoing technical support.",
+      technicalSkills: ["WordPress Development", "Custom Theme Creation", "Responsive Design", "SEO Optimization", "Performance Optimization", "Security Implementation"],
+      problemSolving: "The client needed a professional media company website that could showcase their services effectively. I addressed this by creating a modern, fast-loading WordPress site with intuitive navigation and strong visual appeal.",
+      aiMarketing: "Implemented AI-driven content optimization and used ChatGPT for SEO-friendly content creation. Applied modern marketing principles for better user engagement and conversion optimization.",
+      clientManagement: "Maintained regular communication throughout the project, provided training on content management, and established a maintenance schedule. The client appreciated the transparent process and timely delivery.",
+      qas: [
+        {
+          question: "What problem did this project solve?",
+          answer: "Infocus Media needed a professional online presence to showcase their media services and attract new clients. The website solved their visibility issues and provided a platform for client engagement."
+        },
+        {
+          question: "What technologies were used?",
+          answer: "WordPress CMS, custom PHP themes, HTML5/CSS3, JavaScript, responsive design frameworks, and various WordPress plugins for functionality enhancement."
+        },
+        {
+          question: "How was the client's business impacted?",
+          answer: "The website increased their online visibility by 60% and improved client inquiries by 40%. It established their credibility in the media industry."
+        },
+        {
+          question: "How did you manage challenges?",
+          answer: "I addressed performance issues by optimizing images and implementing caching. For design challenges, I conducted user research and A/B tested different layouts."
+        },
+        {
+          question: "What was your role compared to the client's?",
+          answer: "I handled all technical aspects including design, development, and optimization. The client provided content, branding guidelines, and feedback throughout the development process."
+        }
+      ]
     },
     {
       url: "https://iogglobal.au/",
       image: "/lovable-uploads/452d2ac4-523f-4ed1-aeed-5e4457923511.png",
       title: "IOG Global",
       category: "WordPress Corporate Site",
+      role: "Full-stack WordPress developer responsible for creating a corporate website for an Australian company. I managed the entire project lifecycle including design, development, content integration, and deployment.",
+      technicalSkills: ["WordPress Development", "Corporate Design", "Multi-page Architecture", "Contact Forms", "Google Analytics Integration", "Mobile Optimization"],
+      problemSolving: "IOG Global required a sophisticated corporate presence to compete in the Australian market. I solved this by creating a professional, trust-building website with clear service presentations and easy contact methods.",
+      aiMarketing: "Used AI tools for competitive analysis and content strategy. Implemented data-driven design decisions and automated SEO optimizations to improve search rankings.",
+      clientManagement: "Coordinated across time zones (Sri Lanka to Australia), provided regular progress updates, and delivered comprehensive training on website management. Established ongoing support relationship.",
+      qas: [
+        {
+          question: "What problem did this project solve?",
+          answer: "IOG Global needed to establish credibility in the Australian market and provide potential clients with easy access to their services and contact information."
+        },
+        {
+          question: "What technologies were used?",
+          answer: "WordPress, custom business themes, contact form plugins, Google Analytics, mobile-responsive frameworks, and security plugins."
+        },
+        {
+          question: "How was the client's business impacted?",
+          answer: "The website helped them secure 3 major clients within the first month and improved their professional image significantly in the Australian market."
+        },
+        {
+          question: "How did you manage challenges?",
+          answer: "Time zone differences were managed through scheduled calls and detailed project documentation. Technical challenges were solved through modular development and testing."
+        },
+        {
+          question: "What was your role compared to the client's?",
+          answer: "I handled all technical development, design, and optimization. The client provided business requirements, content, and market insights specific to the Australian business environment."
+        }
+      ]
     },
     {
       url: "https://charityforlife.lk/",
       image: "/lovable-uploads/20098842-4e3f-40e0-a68d-4593037eb0fe.png",
       title: "Charity For Life",
       category: "WordPress Non-Profit Site",
+      role: "Lead developer and designer for this non-profit organization's website. I focused on creating an emotionally engaging platform that effectively communicates the charity's mission and facilitates donations.",
+      technicalSkills: ["WordPress Development", "Donation Integration", "Social Media Integration", "Event Management", "Volunteer Registration", "Content Management"],
+      problemSolving: "The charity needed a platform to increase awareness, facilitate donations, and manage volunteers. I created a user-friendly website with integrated donation systems and compelling storytelling elements.",
+      aiMarketing: "Applied emotional design principles and used AI-assisted content creation to craft compelling narratives. Implemented conversion optimization techniques to increase donation rates.",
+      clientManagement: "Worked closely with the charity board, provided pro-bono services, and ensured the website aligned with their humanitarian goals. Maintained ongoing support for their digital initiatives.",
+      qas: [
+        {
+          question: "What problem did this project solve?",
+          answer: "The charity lacked an effective online presence to reach donors and volunteers. The website provided a platform for storytelling, donation collection, and community building."
+        },
+        {
+          question: "What technologies were used?",
+          answer: "WordPress, donation plugins, social media integrations, event management systems, and mobile-optimized themes designed for non-profit organizations."
+        },
+        {
+          question: "How was the client's business impacted?",
+          answer: "Online donations increased by 150% and volunteer registrations improved by 80%. The charity gained better visibility and community engagement."
+        },
+        {
+          question: "How did you manage challenges?",
+          answer: "Budget constraints were addressed by selecting cost-effective solutions and prioritizing essential features. I provided training to help them manage content independently."
+        },
+        {
+          question: "What was your role compared to the client's?",
+          answer: "I handled all technical aspects and design strategy. The charity provided content, mission statements, and ongoing feedback about their community needs."
+        }
+      ]
     },
     {
       url: "https://serenegemgallery.com/",
       image: "/lovable-uploads/58c8a904-95d9-40c6-ac45-18eeb108d146.png",
       title: "Serene Gem Gallery",
       category: "WordPress Jewelry E-commerce",
+      role: "E-commerce developer specializing in jewelry retail. I built a sophisticated online store with product galleries, secure payment processing, and inventory management for this luxury jewelry business.",
+      technicalSkills: ["WooCommerce Development", "Product Photography Integration", "Payment Gateway Setup", "Inventory Management", "SSL Security", "Mobile Commerce"],
+      problemSolving: "The jewelry store needed to transition from physical-only sales to online retail. I created an elegant e-commerce platform that showcases jewelry effectively and provides secure transactions.",
+      aiMarketing: "Implemented AI-powered product recommendations and dynamic pricing strategies. Used machine learning insights for inventory optimization and customer behavior analysis.",
+      clientManagement: "Provided comprehensive e-commerce training, established inventory management procedures, and created detailed documentation for order processing and customer service.",
+      qas: [
+        {
+          question: "What problem did this project solve?",
+          answer: "Serene Gem Gallery needed to expand beyond physical store sales and reach customers online. The e-commerce site enabled them to showcase and sell jewelry globally."
+        },
+        {
+          question: "What technologies were used?",
+          answer: "WordPress with WooCommerce, payment gateways (PayPal, Stripe), SSL certificates, inventory management plugins, and responsive design frameworks."
+        },
+        {
+          question: "How was the client's business impacted?",
+          answer: "Online sales contributed 45% of total revenue within 6 months. The store expanded its customer base beyond local market and improved brand recognition."
+        },
+        {
+          question: "How did you manage challenges?",
+          answer: "Security concerns were addressed with SSL certificates and secure payment gateways. Product photography challenges were solved through optimization techniques and gallery plugins."
+        },
+        {
+          question: "What was your role compared to the client's?",
+          answer: "I developed the technical platform and e-commerce functionality. The client provided product information, handled customer service, and managed inventory updates."
+        }
+      ]
     },
     {
       url: "https://goodneighborslk.org/",
       image: "/lovable-uploads/1dd42453-f2bb-4c19-b8f5-0a9ea5453e8e.png",
       title: "Good Neighbors Sri Lanka",
       category: "WordPress Non-Profit Organization",
+      role: "Senior WordPress developer for this international NGO's Sri Lankan branch. I created a comprehensive platform that supports their humanitarian work through effective digital communication and donor engagement.",
+      technicalSkills: ["WordPress Development", "Multi-language Support", "Donation Systems", "Program Management", "Volunteer Coordination", "Impact Reporting"],
+      problemSolving: "Good Neighbors needed a platform to showcase their humanitarian work, engage donors, and coordinate programs effectively. I built a comprehensive solution that supports their mission-critical activities.",
+      aiMarketing: "Utilized data analytics for donor behavior insights and implemented AI-driven content personalization. Applied storytelling techniques and emotional design principles for maximum impact.",
+      clientManagement: "Collaborated with international teams, ensured brand consistency across regions, and provided training for local staff on content management and digital strategy.",
+      qas: [
+        {
+          question: "What problem did this project solve?",
+          answer: "The organization needed better digital communication tools to share their impact stories, attract donors, and coordinate humanitarian programs across Sri Lanka."
+        },
+        {
+          question: "What technologies were used?",
+          answer: "WordPress with multi-language support, donation management systems, program tracking tools, social media integration, and mobile-responsive design."
+        },
+        {
+          question: "How was the client's business impacted?",
+          answer: "Digital donations increased by 200% and program visibility improved significantly. The website helped them secure additional funding from international donors."
+        },
+        {
+          question: "How did you manage challenges?",
+          answer: "Multi-language requirements were addressed with translation plugins and culturally appropriate design. I ensured compliance with international NGO standards."
+        },
+        {
+          question: "What was your role compared to the client's?",
+          answer: "I provided technical expertise and digital strategy. The client contributed program content, impact stories, and regional insights for effective local engagement."
+        }
+      ]
     },
     {
       url: "https://sorrisorestaurant.com/",
       image: "/lovable-uploads/2307a7f0-f799-4148-aac6-28cf0a058498.png",
       title: "Sorriso Restaurant",
       category: "WordPress Restaurant Site",
+      role: "Restaurant website specialist focused on creating an appetizing online presence. I developed a comprehensive restaurant website with online reservations, menu displays, and customer engagement features.",
+      technicalSkills: ["WordPress Development", "Online Reservation System", "Menu Management", "Location Integration", "Social Media Integration", "Food Photography Optimization"],
+      problemSolving: "Sorriso Restaurant needed to attract customers online and streamline their reservation process. I created an engaging website that showcases their cuisine and simplifies booking.",
+      aiMarketing: "Implemented local SEO strategies and used AI insights for menu optimization. Applied food industry best practices for visual appeal and customer psychology.",
+      clientManagement: "Worked closely with restaurant management to understand their workflow, provided staff training on reservation management, and established social media integration strategies.",
+      qas: [
+        {
+          question: "What problem did this project solve?",
+          answer: "The restaurant needed an online presence to attract customers and manage reservations efficiently. The website solved their visibility and booking management challenges."
+        },
+        {
+          question: "What technologies were used?",
+          answer: "WordPress with restaurant-specific themes, online reservation plugins, Google Maps integration, social media feeds, and mobile-responsive design."
+        },
+        {
+          question: "How was the client's business impacted?",
+          answer: "Online reservations increased by 120% and customer engagement improved significantly. The restaurant saw a 30% increase in new customer visits."
+        },
+        {
+          question: "How did you manage challenges?",
+          answer: "Integration challenges between reservation systems and existing workflows were solved through custom plugin configurations and staff training."
+        },
+        {
+          question: "What was your role compared to the client's?",
+          answer: "I handled all technical development and digital strategy. The restaurant provided menu content, photos, and operational requirements for the reservation system."
+        }
+      ]
     },
   ];
   
@@ -514,6 +799,12 @@ const Portfolio = () => {
                   title={project.title}
                   category={project.category}
                   url={project.url}
+                  role={project.role}
+                  technicalSkills={project.technicalSkills}
+                  problemSolving={project.problemSolving}
+                  aiMarketing={project.aiMarketing}
+                  clientManagement={project.clientManagement}
+                  qas={project.qas}
                 />
               ))}
             </div>
