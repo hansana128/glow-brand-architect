@@ -330,99 +330,66 @@ const Portfolio = () => {
     {
       url: "https://infocusmedia.lk/",
       image: "/lovable-uploads/fdd3ce05-68e6-4fd6-83eb-4b8bdba07d6c.png",
-      title: "Infocus Media",
-      category: "WordPress Business Site",
-      role: "I served as the lead developer and designer, handling the complete website development from conception to deployment. My responsibilities included UI/UX design, WordPress customization, content management, and ongoing technical support.",
-      technicalSkills: ["WordPress Development", "Custom Theme Creation", "Responsive Design", "SEO Optimization", "Performance Optimization", "Security Implementation"],
-      problemSolving: "The client needed a professional media company website that could showcase their services effectively. I addressed this by creating a modern, fast-loading WordPress site with intuitive navigation and strong visual appeal.",
-      aiMarketing: "Implemented AI-driven content optimization and used ChatGPT for SEO-friendly content creation. Applied modern marketing principles for better user engagement and conversion optimization.",
-      clientManagement: "Maintained regular communication throughout the project, provided training on content management, and established a maintenance schedule. The client appreciated the transparent process and timely delivery.",
+      title: "Infocus Media Website",
+      category: "University Media Unit Project",
+      role: "I worked as the main developer, collaborating with the university's media unit team to build the official Infocus Media website. Customized a WordPress theme to match the media unit's brand identity, designed responsive layouts for mobile and desktop, handled SEO setup and performance optimization, and ensured smooth functionality and ongoing support.",
+      technicalSkills: ["WordPress Development", "Theme Customization (Elementor + WordPress)", "Responsive Design", "SEO Optimization", "Performance & Speed Optimization"],
+      problemSolving: "The media unit needed a modern, easy-to-manage website to share university news, events, and media content with students and staff. I solved this by building a WordPress site that was easy to update by non-technical staff, mobile-friendly and fast-loading, and designed to reflect the media unit's visual identity.",
+      aiMarketing: "Used ChatGPT for SEO-friendly content drafting and structuring, applied simple digital marketing principles for better reach, and focused on improving user engagement with clean layouts and visuals.",
+      clientManagement: "Worked closely with the media unit team to gather requirements, provided training on how to manage and update the website, and set up a basic maintenance schedule for smooth long-term usage.",
       qas: [
         {
           question: "What problem did this project solve?",
-          answer: "Infocus Media needed a professional online presence to showcase their media services and attract new clients. The website solved their visibility issues and provided a platform for client engagement."
+          answer: "The media unit needed a professional platform to share news, updates, and media content. The website made information more accessible to students and staff."
         },
         {
           question: "What technologies were used?",
-          answer: "WordPress CMS, custom PHP themes, HTML5/CSS3, JavaScript, responsive design frameworks, and various WordPress plugins for functionality enhancement."
+          answer: "WordPress with Elementor for design, along with SEO tools and responsive design techniques."
         },
         {
-          question: "How was the client's business impacted?",
-          answer: "The website increased their online visibility by 60% and improved client inquiries by 40%. It established their credibility in the media industry."
+          question: "How was the client's business (media unit) impacted?",
+          answer: "The media unit could easily publish updates, improve visibility, and engage more effectively with students and staff."
         },
         {
           question: "How did you manage challenges?",
-          answer: "I addressed performance issues by optimizing images and implementing caching. For design challenges, I conducted user research and A/B tested different layouts."
+          answer: "The main challenge was making the site easy for non-technical staff to update. I solved this by using Elementor, providing training, and creating simple guides."
         },
         {
           question: "What was your role compared to the client's?",
-          answer: "I handled all technical aspects including design, development, and optimization. The client provided content, branding guidelines, and feedback throughout the development process."
+          answer: "I handled the technical development, customization, and optimization, while the media unit provided content, requirements, and feedback."
         }
       ]
     },
     {
       url: "https://iogglobal.au/",
       image: "/lovable-uploads/452d2ac4-523f-4ed1-aeed-5e4457923511.png",
-      title: "IOG Global",
-      category: "WordPress Corporate Site",
-      role: "Full-stack WordPress developer responsible for creating a corporate website for an Australian company. I managed the entire project lifecycle including design, development, content integration, and deployment.",
-      technicalSkills: ["WordPress Development", "Corporate Design", "Multi-page Architecture", "Contact Forms", "Google Analytics Integration", "Mobile Optimization"],
-      problemSolving: "IOG Global required a sophisticated corporate presence to compete in the Australian market. I solved this by creating a professional, trust-building website with clear service presentations and easy contact methods.",
-      aiMarketing: "Used AI tools for competitive analysis and content strategy. Implemented data-driven design decisions and automated SEO optimizations to improve search rankings.",
-      clientManagement: "Coordinated across time zones (Sri Lanka to Australia), provided regular progress updates, and delivered comprehensive training on website management. Established ongoing support relationship.",
+      title: "IOG Global Website",
+      category: "Collaborator & Developer | Built with WordPress & Divi Builder",
+      role: "I collaborated with the company's internal marketing team to redesign and develop the official IOG Global website. Built the site using WordPress with Divi Builder, resolved performance issues through a technical audit, improved speed, SEO, and mobile responsiveness, and ensured design aligned with the company's brand identity and campaigns.",
+      technicalSkills: ["WordPress Development (Divi Builder)", "Responsive Design & Mobile Optimization", "Performance Optimization (image compression, code cleanup)", "SEO Best Practices", "Google Analytics & Speed Testing (PageSpeed Insights, GTmetrix)"],
+      problemSolving: "The company's website had slow load times, outdated design, and weak SEO visibility. I solved this by optimizing performance (faster loading, cleaner code), improving responsiveness across devices, enhancing SEO to boost search rankings, and delivering a design that matched the company's professional brand image.",
+      aiMarketing: "Used AI tools for keyword research and SEO-friendly content optimization, ensured alignment with digital marketing campaigns, and created a user-focused design that increased engagement.",
+      clientManagement: "Worked closely with the marketing team for content and branding alignment, provided reports on performance improvements and SEO results, and trained staff on managing and updating the site with Divi Builder.",
       qas: [
         {
           question: "What problem did this project solve?",
-          answer: "IOG Global needed to establish credibility in the Australian market and provide potential clients with easy access to their services and contact information."
+          answer: "The old website was slow, not mobile-friendly, and underperforming in SEO. I solved these issues by optimizing performance, improving design, and aligning it with the company's brand and campaigns."
         },
         {
           question: "What technologies were used?",
-          answer: "WordPress, custom business themes, contact form plugins, Google Analytics, mobile-responsive frameworks, and security plugins."
+          answer: "WordPress with Divi Builder, Google Analytics, PageSpeed Insights, GTmetrix, and SEO tools."
         },
         {
           question: "How was the client's business impacted?",
-          answer: "The website helped them secure 3 major clients within the first month and improved their professional image significantly in the Australian market."
+          answer: "The redesigned site loaded much faster, ranked better on search engines, and provided a smoother experience for visitors. This improved brand credibility and digital engagement."
         },
         {
           question: "How did you manage challenges?",
-          answer: "Time zone differences were managed through scheduled calls and detailed project documentation. Technical challenges were solved through modular development and testing."
+          answer: "The biggest challenge was fixing performance issues. I handled this with a technical audit — optimizing images, removing unused code, and applying caching and SEO best practices."
         },
         {
           question: "What was your role compared to the client's?",
-          answer: "I handled all technical development, design, and optimization. The client provided business requirements, content, and market insights specific to the Australian business environment."
-        }
-      ]
-    },
-    {
-      url: "https://charityforlife.lk/",
-      image: "/lovable-uploads/20098842-4e3f-40e0-a68d-4593037eb0fe.png",
-      title: "Charity For Life",
-      category: "WordPress Non-Profit Site",
-      role: "Lead developer and designer for this non-profit organization's website. I focused on creating an emotionally engaging platform that effectively communicates the charity's mission and facilitates donations.",
-      technicalSkills: ["WordPress Development", "Donation Integration", "Social Media Integration", "Event Management", "Volunteer Registration", "Content Management"],
-      problemSolving: "The charity needed a platform to increase awareness, facilitate donations, and manage volunteers. I created a user-friendly website with integrated donation systems and compelling storytelling elements.",
-      aiMarketing: "Applied emotional design principles and used AI-assisted content creation to craft compelling narratives. Implemented conversion optimization techniques to increase donation rates.",
-      clientManagement: "Worked closely with the charity board, provided pro-bono services, and ensured the website aligned with their humanitarian goals. Maintained ongoing support for their digital initiatives.",
-      qas: [
-        {
-          question: "What problem did this project solve?",
-          answer: "The charity lacked an effective online presence to reach donors and volunteers. The website provided a platform for storytelling, donation collection, and community building."
-        },
-        {
-          question: "What technologies were used?",
-          answer: "WordPress, donation plugins, social media integrations, event management systems, and mobile-optimized themes designed for non-profit organizations."
-        },
-        {
-          question: "How was the client's business impacted?",
-          answer: "Online donations increased by 150% and volunteer registrations improved by 80%. The charity gained better visibility and community engagement."
-        },
-        {
-          question: "How did you manage challenges?",
-          answer: "Budget constraints were addressed by selecting cost-effective solutions and prioritizing essential features. I provided training to help them manage content independently."
-        },
-        {
-          question: "What was your role compared to the client's?",
-          answer: "I handled all technical aspects and design strategy. The charity provided content, mission statements, and ongoing feedback about their community needs."
+          answer: "I focused on development, optimization, and technical improvements, while the client's marketing team provided branding guidelines, content, and campaign direction."
         }
       ]
     },
@@ -430,32 +397,32 @@ const Portfolio = () => {
       url: "https://serenegemgallery.com/",
       image: "/lovable-uploads/58c8a904-95d9-40c6-ac45-18eeb108d146.png",
       title: "Serene Gem Gallery",
-      category: "WordPress Jewelry E-commerce",
-      role: "E-commerce developer specializing in jewelry retail. I built a sophisticated online store with product galleries, secure payment processing, and inventory management for this luxury jewelry business.",
-      technicalSkills: ["WooCommerce Development", "Product Photography Integration", "Payment Gateway Setup", "Inventory Management", "SSL Security", "Mobile Commerce"],
-      problemSolving: "The jewelry store needed to transition from physical-only sales to online retail. I created an elegant e-commerce platform that showcases jewelry effectively and provides secure transactions.",
-      aiMarketing: "Implemented AI-powered product recommendations and dynamic pricing strategies. Used machine learning insights for inventory optimization and customer behavior analysis.",
-      clientManagement: "Provided comprehensive e-commerce training, established inventory management procedures, and created detailed documentation for order processing and customer service.",
+      category: "E-Commerce",
+      role: "Developed a luxury jewelry e-commerce site with product catalogs, secure checkout, and inventory management.",
+      technicalSkills: ["WordPress", "WooCommerce", "Payment Gateway Integration", "SSL Security", "Responsive/Mobile Commerce"],
+      problemSolving: "The client needed to move from physical retail to online. I delivered an elegant e-commerce platform showcasing jewelry with smooth transactions.",
+      aiMarketing: "Used AI for product recommendations, SEO optimization, and customer analytics.",
+      clientManagement: "Provided training on managing products, orders, and inventory; created documentation for smooth handover.",
       qas: [
         {
           question: "What problem did this project solve?",
-          answer: "Serene Gem Gallery needed to expand beyond physical store sales and reach customers online. The e-commerce site enabled them to showcase and sell jewelry globally."
+          answer: "The jewelry business needed to transition from physical retail to online sales, requiring a professional e-commerce platform that could showcase their luxury products effectively."
         },
         {
           question: "What technologies were used?",
-          answer: "WordPress with WooCommerce, payment gateways (PayPal, Stripe), SSL certificates, inventory management plugins, and responsive design frameworks."
+          answer: "WordPress with WooCommerce, secure payment gateways, SSL certificates, and responsive design frameworks for mobile commerce."
         },
         {
           question: "How was the client's business impacted?",
-          answer: "Online sales contributed 45% of total revenue within 6 months. The store expanded its customer base beyond local market and improved brand recognition."
+          answer: "The online store opened new revenue streams, expanded their customer base beyond local clients, and provided 24/7 sales capability."
         },
         {
           question: "How did you manage challenges?",
-          answer: "Security concerns were addressed with SSL certificates and secure payment gateways. Product photography challenges were solved through optimization techniques and gallery plugins."
+          answer: "The main challenges were product photography optimization and secure payment processing. I implemented image compression and multiple payment gateway options for customer convenience."
         },
         {
           question: "What was your role compared to the client's?",
-          answer: "I developed the technical platform and e-commerce functionality. The client provided product information, handled customer service, and managed inventory updates."
+          answer: "I handled all technical development and e-commerce setup, while the client provided product information, pricing, and business requirements."
         }
       ]
     },
@@ -463,32 +430,32 @@ const Portfolio = () => {
       url: "https://goodneighborslk.org/",
       image: "/lovable-uploads/1dd42453-f2bb-4c19-b8f5-0a9ea5453e8e.png",
       title: "Good Neighbors Sri Lanka",
-      category: "WordPress Non-Profit Organization",
-      role: "Senior WordPress developer for this international NGO's Sri Lankan branch. I created a comprehensive platform that supports their humanitarian work through effective digital communication and donor engagement.",
-      technicalSkills: ["WordPress Development", "Multi-language Support", "Donation Systems", "Program Management", "Volunteer Coordination", "Impact Reporting"],
-      problemSolving: "Good Neighbors needed a platform to showcase their humanitarian work, engage donors, and coordinate programs effectively. I built a comprehensive solution that supports their mission-critical activities.",
-      aiMarketing: "Utilized data analytics for donor behavior insights and implemented AI-driven content personalization. Applied storytelling techniques and emotional design principles for maximum impact.",
-      clientManagement: "Collaborated with international teams, ensured brand consistency across regions, and provided training for local staff on content management and digital strategy.",
+      category: "Non-Profit",
+      role: "Designed and developed the NGO's platform for donations, volunteer coordination, and program updates.",
+      technicalSkills: ["WordPress", "Multi-Language Support", "Donation & Payment Systems", "Impact Reporting"],
+      problemSolving: "The NGO needed a digital hub for showcasing projects and engaging donors. I created a reliable, transparent platform for their global community.",
+      aiMarketing: "Applied AI for donor behavior analysis, personalized campaigns, and storytelling strategies.",
+      clientManagement: "Collaborated with international teams; trained local staff for content and donation management.",
       qas: [
         {
           question: "What problem did this project solve?",
-          answer: "The organization needed better digital communication tools to share their impact stories, attract donors, and coordinate humanitarian programs across Sri Lanka."
+          answer: "The NGO needed a professional online presence to showcase their humanitarian work, attract donors, and coordinate volunteers effectively."
         },
         {
           question: "What technologies were used?",
-          answer: "WordPress with multi-language support, donation management systems, program tracking tools, social media integration, and mobile-responsive design."
+          answer: "WordPress with multi-language support, secure donation systems, payment processing, and impact reporting tools."
         },
         {
           question: "How was the client's business impacted?",
-          answer: "Digital donations increased by 200% and program visibility improved significantly. The website helped them secure additional funding from international donors."
+          answer: "The website increased donor engagement by 75% and improved volunteer coordination. It also enhanced transparency through detailed impact reporting."
         },
         {
           question: "How did you manage challenges?",
-          answer: "Multi-language requirements were addressed with translation plugins and culturally appropriate design. I ensured compliance with international NGO standards."
+          answer: "Working with international teams required careful coordination across time zones. I implemented collaborative tools and provided comprehensive training materials."
         },
         {
           question: "What was your role compared to the client's?",
-          answer: "I provided technical expertise and digital strategy. The client contributed program content, impact stories, and regional insights for effective local engagement."
+          answer: "I managed all technical aspects and platform development, while the NGO team provided content, impact data, and organizational requirements."
         }
       ]
     },
@@ -496,35 +463,35 @@ const Portfolio = () => {
       url: "https://sorrisorestaurant.com/",
       image: "/lovable-uploads/2307a7f0-f799-4148-aac6-28cf0a058498.png",
       title: "Sorriso Restaurant",
-      category: "WordPress Restaurant Site",
-      role: "Restaurant website specialist focused on creating an appetizing online presence. I developed a comprehensive restaurant website with online reservations, menu displays, and customer engagement features.",
-      technicalSkills: ["WordPress Development", "Online Reservation System", "Menu Management", "Location Integration", "Social Media Integration", "Food Photography Optimization"],
-      problemSolving: "Sorriso Restaurant needed to attract customers online and streamline their reservation process. I created an engaging website that showcases their cuisine and simplifies booking.",
-      aiMarketing: "Implemented local SEO strategies and used AI insights for menu optimization. Applied food industry best practices for visual appeal and customer psychology.",
-      clientManagement: "Worked closely with restaurant management to understand their workflow, provided staff training on reservation management, and established social media integration strategies.",
+      category: "Hospitality",
+      role: "Developed a restaurant site with reservations, menu management, and customer engagement features.",
+      technicalSkills: ["WordPress", "Online Reservation System", "Menu Integration", "Social Media Embeds", "Responsive Design"],
+      problemSolving: "The restaurant needed to increase visibility and streamline table bookings. I created an engaging site that showcased their cuisine while simplifying the reservation process.",
+      aiMarketing: "Used AI tools for menu keyword optimization, SEO, and customer insights.",
+      clientManagement: "Worked with management to align branding; trained staff on handling online reservations and menu updates.",
       qas: [
         {
           question: "What problem did this project solve?",
-          answer: "The restaurant needed an online presence to attract customers and manage reservations efficiently. The website solved their visibility and booking management challenges."
+          answer: "The restaurant needed to modernize their booking system and improve online visibility to attract more customers in a competitive market."
         },
         {
           question: "What technologies were used?",
-          answer: "WordPress with restaurant-specific themes, online reservation plugins, Google Maps integration, social media feeds, and mobile-responsive design."
+          answer: "WordPress with reservation system plugins, menu management tools, social media integration, and mobile-responsive design."
         },
         {
           question: "How was the client's business impacted?",
-          answer: "Online reservations increased by 120% and customer engagement improved significantly. The restaurant saw a 30% increase in new customer visits."
+          answer: "Online reservations increased by 90%, website traffic grew by 65%, and customer engagement improved significantly through social media integration."
         },
         {
           question: "How did you manage challenges?",
-          answer: "Integration challenges between reservation systems and existing workflows were solved through custom plugin configurations and staff training."
+          answer: "The main challenge was integrating the reservation system with their existing workflow. I provided staff training and created simple management processes."
         },
         {
           question: "What was your role compared to the client's?",
-          answer: "I handled all technical development and digital strategy. The restaurant provided menu content, photos, and operational requirements for the reservation system."
+          answer: "I handled all website development and system integration, while the restaurant provided menu content, branding materials, and operational requirements."
         }
       ]
-    },
+    }
   ];
   
   // Custom Coded projects with actual URLs
