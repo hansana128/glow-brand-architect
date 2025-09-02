@@ -499,7 +499,7 @@ const Portfolio = () => {
     {
       url: "https://layout-palette-craft.lovable.app/",
       image: "/lovable-uploads/9ce14740-450e-4f73-953d-a26c00633e37.png",
-      title: "Layout Palette Craft",
+      title: "Ai Developing Web Site",
       category: "React + TypeScript E-commerce Site",
     },
     {
