@@ -740,7 +740,7 @@ const Portfolio = () => {
               value="coded" 
               className="data-[state=active]:bg-[#0047FF] data-[state=active]:text-white"
             >
-              Custom Coded Projects
+              Ai Developing Web Site
             </TabsTrigger>
             <TabsTrigger 
               value="video" 
@@ -777,7 +777,7 @@ const Portfolio = () => {
             </div>
           </TabsContent>
 
-          {/* Custom Coded Projects */}
+          {/* Ai Developing Web Site */}
           <TabsContent value="coded" className="mt-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {codedProjects.map((project, index) => (
