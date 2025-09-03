@@ -740,7 +740,7 @@ const Portfolio = () => {
               value="coded" 
               className="data-[state=active]:bg-[#0047FF] data-[state=active]:text-white"
             >
-              Ai Developing Web Site
+              AI Website Development
             </TabsTrigger>
             <TabsTrigger 
               value="video" 
