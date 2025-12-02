@@ -54,123 +54,123 @@ interface ToolProps {
   url: string;
 }
 
-// Modern Profile Card for WordPress projects
+// Modern Profile Card for WordPress projects with auto-scroll homepage preview
 const WordPressProjectCard = ({ image, title, category, url, role, technicalSkills, problemSolving, aiMarketing, clientManagement, qas }: WordPressProjectProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   return (
     <div className="group relative">
       {/* Main Profile Card */}
-      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl border-2 border-[#0047FF]/50 shadow-[0_0_30px_rgba(0,71,255,0.2)] overflow-hidden transition-all duration-500 hover:border-[#0047FF] hover:shadow-[0_0_40px_rgba(0,71,255,0.4)]">
-        {/* Glowing background effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0047FF]/5 via-transparent to-[#FFD700]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl border border-[#0047FF]/40 shadow-[0_0_20px_rgba(0,71,255,0.15)] overflow-hidden transition-all duration-500 hover:border-[#0047FF] hover:shadow-[0_0_30px_rgba(0,71,255,0.3)]">
         
-        {/* Header with image and title */}
-        <div className="relative p-6 pb-4">
-          <div className="flex items-start gap-4">
-            {/* Project Image */}
-            <div className="relative flex-shrink-0">
-              <div className="w-20 h-20 rounded-2xl overflow-hidden border-2 border-[#0047FF] shadow-[0_0_20px_rgba(0,71,255,0.3)] group-hover:shadow-[0_0_25px_rgba(0,71,255,0.5)] transition-all duration-300">
-                <img src={image} alt={title} className="w-full h-full object-cover" />
-              </div>
-              {/* Online indicator */}
-              <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-gray-900 animate-pulse"></div>
-            </div>
-            
-            {/* Title and category */}
-            <div className="flex-1 min-w-0">
-              <h3 className="text-xl font-bold text-white mb-1 truncate group-hover:text-[#FFD700] transition-colors duration-300">{title}</h3>
-              <p className="text-sm text-gray-400 line-clamp-2">{category}</p>
-            </div>
+        {/* Auto-scrolling Homepage Preview */}
+        <div className="relative h-48 overflow-hidden rounded-t-xl border-b border-[#0047FF]/30">
+          <div className="absolute inset-0 overflow-hidden">
+            <img 
+              src={image} 
+              alt={title} 
+              className="w-full object-cover object-top animate-[scroll-preview_12s_ease-in-out_infinite]"
+              style={{ minHeight: '300%' }}
+            />
+          </div>
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+          {/* Live indicator */}
+          <div className="absolute top-3 left-3 flex items-center gap-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded-full">
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-xs text-white font-medium">Live</span>
           </div>
         </div>
+        
+        {/* Content */}
+        <div className="p-4">
+          {/* Title and category */}
+          <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#FFD700] transition-colors duration-300">{title}</h3>
+          <p className="text-xs text-gray-400 mb-3">{category}</p>
 
-        {/* Skills tags */}
-        <div className="px-6 pb-4">
-          <div className="flex flex-wrap gap-2">
+          {/* Skills tags */}
+          <div className="flex flex-wrap gap-1.5 mb-3">
             {technicalSkills.slice(0, 3).map((skill, i) => (
-              <span key={i} className="px-3 py-1 text-xs font-medium bg-[#0047FF]/20 text-[#0047FF] rounded-full border border-[#0047FF]/30 hover:bg-[#0047FF]/30 transition-colors duration-200">
+              <span key={i} className="px-2 py-0.5 text-[10px] font-medium bg-[#0047FF]/20 text-[#0047FF] rounded-full border border-[#0047FF]/30">
                 {skill}
               </span>
             ))}
             {technicalSkills.length > 3 && (
-              <span className="px-3 py-1 text-xs font-medium bg-gray-700/50 text-gray-400 rounded-full">
+              <span className="px-2 py-0.5 text-[10px] font-medium bg-gray-700/50 text-gray-400 rounded-full">
                 +{technicalSkills.length - 3} more
               </span>
             )}
           </div>
-        </div>
 
-        {/* Role preview */}
-        <div className="px-6 pb-4">
-          <p className="text-sm text-gray-300 line-clamp-2">{role}</p>
-        </div>
+          {/* Role preview */}
+          <p className="text-xs text-gray-300 line-clamp-2 mb-4">{role}</p>
 
-        {/* Action buttons */}
-        <div className="px-6 pb-6 flex gap-3">
-          <button 
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="flex-1 py-3 px-4 bg-gradient-to-r from-[#0047FF] to-blue-600 text-white rounded-xl font-medium hover:from-blue-600 hover:to-blue-500 transition-all duration-300 shadow-[0_0_15px_rgba(0,71,255,0.3)] hover:shadow-[0_0_20px_rgba(0,71,255,0.5)] flex items-center justify-center gap-2"
-          >
-            <span>{isExpanded ? 'Show Less' : 'View Details'}</span>
-            <svg className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <a 
-            href={url} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="py-3 px-4 bg-transparent border-2 border-[#FFD700] text-[#FFD700] rounded-xl font-medium hover:bg-[#FFD700]/10 transition-all duration-300 flex items-center justify-center gap-2"
-          >
-            <ExternalLink size={18} />
-          </a>
+          {/* Action buttons */}
+          <div className="flex gap-2">
+            <button 
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="flex-1 py-2 px-3 bg-gradient-to-r from-[#0047FF] to-blue-600 text-white rounded-lg text-sm font-medium hover:from-blue-600 hover:to-blue-500 transition-all duration-300 flex items-center justify-center gap-1.5"
+            >
+              <span>View Details</span>
+              <svg className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <a 
+              href={url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="py-2 px-3 bg-transparent border border-[#FFD700] text-[#FFD700] rounded-lg text-sm font-medium hover:bg-[#FFD700]/10 transition-all duration-300 flex items-center justify-center"
+            >
+              <ExternalLink size={16} />
+            </a>
+          </div>
         </div>
 
         {/* Expanded content */}
-        <div className={`overflow-hidden transition-all duration-500 ${isExpanded ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="px-6 pb-6 space-y-4 border-t border-[#0047FF]/30 pt-4">
+        <div className={`overflow-hidden transition-all duration-500 ${isExpanded ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-4 pb-4 space-y-3 border-t border-[#0047FF]/30 pt-3">
             {/* Problem Solving */}
-            <div className="bg-gray-800/50 rounded-xl p-4 border border-[#0047FF]/20">
-              <h4 className="text-sm font-semibold text-[#FFD700] mb-2 flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#FFD700] rounded-full"></span>
+            <div className="bg-gray-800/50 rounded-lg p-3 border border-[#0047FF]/20">
+              <h4 className="text-xs font-semibold text-[#FFD700] mb-1.5 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 bg-[#FFD700] rounded-full"></span>
                 Problem Solving
               </h4>
-              <p className="text-sm text-gray-300">{problemSolving}</p>
+              <p className="text-xs text-gray-300">{problemSolving}</p>
             </div>
 
             {/* AI & Marketing */}
-            <div className="bg-gray-800/50 rounded-xl p-4 border border-[#0047FF]/20">
-              <h4 className="text-sm font-semibold text-[#0047FF] mb-2 flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#0047FF] rounded-full"></span>
+            <div className="bg-gray-800/50 rounded-lg p-3 border border-[#0047FF]/20">
+              <h4 className="text-xs font-semibold text-[#0047FF] mb-1.5 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 bg-[#0047FF] rounded-full"></span>
                 AI & Marketing
               </h4>
-              <p className="text-sm text-gray-300">{aiMarketing}</p>
+              <p className="text-xs text-gray-300">{aiMarketing}</p>
             </div>
 
             {/* Client Management */}
-            <div className="bg-gray-800/50 rounded-xl p-4 border border-[#0047FF]/20">
-              <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+            <div className="bg-gray-800/50 rounded-lg p-3 border border-[#0047FF]/20">
+              <h4 className="text-xs font-semibold text-green-400 mb-1.5 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
                 Client Management
               </h4>
-              <p className="text-sm text-gray-300">{clientManagement}</p>
+              <p className="text-xs text-gray-300">{clientManagement}</p>
             </div>
 
             {/* Q&A Section */}
-            <div className="mt-4">
-              <h4 className="text-sm font-semibold text-white mb-3">Quick Q&A</h4>
-              <Accordion type="single" collapsible className="space-y-2">
+            <div className="mt-3">
+              <h4 className="text-xs font-semibold text-white mb-2">Quick Q&A</h4>
+              <Accordion type="single" collapsible className="space-y-1.5">
                 {qas.slice(0, 3).map((qa, index) => (
                   <AccordionItem 
                     key={index} 
                     value={`item-${index}`}
-                    className="border border-[#0047FF]/20 rounded-lg px-3 bg-gray-800/30"
+                    className="border border-[#0047FF]/20 rounded-lg px-2 bg-gray-800/30"
                   >
-                    <AccordionTrigger className="text-sm text-gray-200 hover:text-white py-3">
+                    <AccordionTrigger className="text-xs text-gray-200 hover:text-white py-2">
                       {qa.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm text-gray-400 pb-3">
+                    <AccordionContent className="text-xs text-gray-400 pb-2">
                       {qa.answer}
                     </AccordionContent>
                   </AccordionItem>
