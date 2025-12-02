@@ -282,4 +282,17 @@
   .btn-responsive {
     @apply w-full sm:w-auto;
   }
+
+  /* Auto-scroll preview animation for project cards */
+  @keyframes scroll-preview {
+    0%, 10% {
+      transform: translateY(0);
+    }
+    45%, 55% {
+      transform: translateY(-66%);
+    }
+    90%, 100% {
+      transform: translateY(0);
+    }
+  }
 }
