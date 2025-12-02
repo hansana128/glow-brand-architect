@@ -82,13 +82,13 @@ Best regards,`;
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-              {/* Request CV Button */}
-              <button onClick={handleRequestCV} className="glow-btn btn-responsive">
-                <span>Request My CV</span>
-              </button>
-
-              {/* Hire Me Button */}
+              {/* Request CV Button - Links to LinkedIn */}
               <a href="https://www.linkedin.com/in/malshi-hansana" className="glow-btn btn-responsive" target="_blank" rel="noopener noreferrer">
+                <span>Request My CV</span>
+              </a>
+
+              {/* Hire Me Button - Links to Contact Section */}
+              <a href="#contact" className="glow-btn btn-responsive">
                 <span>Hire Me</span>
               </a>
             </div>

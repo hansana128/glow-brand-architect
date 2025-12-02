@@ -54,144 +54,133 @@ interface ToolProps {
   url: string;
 }
 
-// WordPress project card component
+// Modern Profile Card for WordPress projects
 const WordPressProjectCard = ({ image, title, category, url, role, technicalSkills, problemSolving, aiMarketing, clientManagement, qas }: WordPressProjectProps) => {
+  const [isExpanded, setIsExpanded] = React.useState(false);
+
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <div className="portfolio-card group cursor-pointer">
-          <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_15px_rgba(0,71,255,0.3)]">
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-full object-cover transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-lg font-bold text-white">{title}</h3>
-                  <p className="text-sm text-gray-300">{category}</p>
-                </div>
-                <div className="flex flex-col items-end gap-2">
-                  <ExternalLink className="text-[#FFD700]" size={20} />
-                  <div className="inline-flex items-center justify-center gap-2 border-2 border-blue-800 text-blue-400 px-4 py-1 rounded-full hover:bg-blue-900/20 transition-all duration-300 group-hover:border-blue-700 group-hover:text-blue-300 group-hover:shadow-[0_0_15px_rgba(30,58,138,0.4)]">
-                    <span className="text-xs font-medium">See More</span>
-                    <svg width="12" height="6" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13 1L17 5M17 5L13 9M17 5H1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                </div>
+    <div className="group relative">
+      {/* Main Profile Card */}
+      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl border-2 border-[#0047FF]/50 shadow-[0_0_30px_rgba(0,71,255,0.2)] overflow-hidden transition-all duration-500 hover:border-[#0047FF] hover:shadow-[0_0_40px_rgba(0,71,255,0.4)]">
+        {/* Glowing background effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0047FF]/5 via-transparent to-[#FFD700]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        {/* Header with image and title */}
+        <div className="relative p-6 pb-4">
+          <div className="flex items-start gap-4">
+            {/* Project Image */}
+            <div className="relative flex-shrink-0">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden border-2 border-[#0047FF] shadow-[0_0_20px_rgba(0,71,255,0.3)] group-hover:shadow-[0_0_25px_rgba(0,71,255,0.5)] transition-all duration-300">
+                <img src={image} alt={title} className="w-full h-full object-cover" />
               </div>
+              {/* Online indicator */}
+              <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-gray-900 animate-pulse"></div>
+            </div>
+            
+            {/* Title and category */}
+            <div className="flex-1 min-w-0">
+              <h3 className="text-xl font-bold text-white mb-1 truncate group-hover:text-[#FFD700] transition-colors duration-300">{title}</h3>
+              <p className="text-sm text-gray-400 line-clamp-2">{category}</p>
             </div>
           </div>
         </div>
-      </DialogTrigger>
-      
-      <DialogContent className="sm:max-w-4xl bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white border-2 border-[#0047FF] shadow-[0_0_30px_rgba(0,71,255,0.5)] max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="flex items-center gap-4 text-2xl font-bold">
-            <img src={image} alt={title} className="w-16 h-16 rounded-lg object-cover border-2 border-[#0047FF]" />
-            <div>
-              <span className="text-blue-50">{title}</span>
-              <p className="text-sm text-gray-300 font-normal">{category}</p>
-            </div>
-          </DialogTitle>
-        </DialogHeader>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-          {/* My Role & Contribution */}
-          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-blue-50 text-lg">My Role & Contribution</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-300 text-sm">{role}</p>
-            </CardContent>
-          </Card>
-          
-          {/* Technical Skills */}
-          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-blue-50 text-lg">Technical Skills</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc pl-5 text-gray-300 text-sm">
-                {technicalSkills.map((skill, i) => (
-                  <li key={i} className="mb-1">{skill}</li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-          
-          {/* Problem Solving */}
-          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-blue-50 text-lg">Problem Solving</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-300 text-sm">{problemSolving}</p>
-            </CardContent>
-          </Card>
-          
-          {/* AI & Marketing Side */}
-          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)]">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-blue-50 text-lg">AI & Marketing Side</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-300 text-sm">{aiMarketing}</p>
-            </CardContent>
-          </Card>
-          
-          {/* Client Management */}
-          <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-[#0047FF]/50 shadow-[0_0_15px_rgba(0,71,255,0.3)] md:col-span-2">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-blue-50 text-lg">Client Management</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-300 text-sm">{clientManagement}</p>
-            </CardContent>
-          </Card>
-        </div>
 
-        {/* Related Questions & Answers */}
-        <div className="mt-8">
-          <h3 className="text-xl font-bold text-blue-50 mb-4">Related Questions & Answers</h3>
-          <Accordion type="single" collapsible className="w-full space-y-2">
-            {qas.map((qa, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="border border-[#0047FF]/30 rounded-lg px-4 bg-gradient-to-br from-gray-800/30 to-gray-900/30"
-              >
-                <AccordionTrigger className="text-blue-50 hover:text-blue-300 text-left">
-                  {qa.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-300 pt-2">
-                  {qa.answer}
-                </AccordionContent>
-              </AccordionItem>
+        {/* Skills tags */}
+        <div className="px-6 pb-4">
+          <div className="flex flex-wrap gap-2">
+            {technicalSkills.slice(0, 3).map((skill, i) => (
+              <span key={i} className="px-3 py-1 text-xs font-medium bg-[#0047FF]/20 text-[#0047FF] rounded-full border border-[#0047FF]/30 hover:bg-[#0047FF]/30 transition-colors duration-200">
+                {skill}
+              </span>
             ))}
-          </Accordion>
+            {technicalSkills.length > 3 && (
+              <span className="px-3 py-1 text-xs font-medium bg-gray-700/50 text-gray-400 rounded-full">
+                +{technicalSkills.length - 3} more
+              </span>
+            )}
+          </div>
         </div>
 
-        {/* Footer */}
-        <div className="mt-6 pt-4 border-t border-[#0047FF]/40 flex justify-between items-center">
-          <p className="text-gray-300 text-sm">
-            Want to see this project live?
-          </p>
+        {/* Role preview */}
+        <div className="px-6 pb-4">
+          <p className="text-sm text-gray-300 line-clamp-2">{role}</p>
+        </div>
+
+        {/* Action buttons */}
+        <div className="px-6 pb-6 flex gap-3">
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex-1 py-3 px-4 bg-gradient-to-r from-[#0047FF] to-blue-600 text-white rounded-xl font-medium hover:from-blue-600 hover:to-blue-500 transition-all duration-300 shadow-[0_0_15px_rgba(0,71,255,0.3)] hover:shadow-[0_0_20px_rgba(0,71,255,0.5)] flex items-center justify-center gap-2"
+          >
+            <span>{isExpanded ? 'Show Less' : 'View Details'}</span>
+            <svg className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
           <a 
             href={url} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-[#0047FF] to-blue-700 text-white px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-[0_0_15px_rgba(0,71,255,0.4)] flex items-center gap-2"
+            className="py-3 px-4 bg-transparent border-2 border-[#FFD700] text-[#FFD700] rounded-xl font-medium hover:bg-[#FFD700]/10 transition-all duration-300 flex items-center justify-center gap-2"
           >
-            Visit Website
-            <ExternalLink size={16} />
+            <ExternalLink size={18} />
           </a>
         </div>
-      </DialogContent>
-    </Dialog>
+
+        {/* Expanded content */}
+        <div className={`overflow-hidden transition-all duration-500 ${isExpanded ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-6 pb-6 space-y-4 border-t border-[#0047FF]/30 pt-4">
+            {/* Problem Solving */}
+            <div className="bg-gray-800/50 rounded-xl p-4 border border-[#0047FF]/20">
+              <h4 className="text-sm font-semibold text-[#FFD700] mb-2 flex items-center gap-2">
+                <span className="w-2 h-2 bg-[#FFD700] rounded-full"></span>
+                Problem Solving
+              </h4>
+              <p className="text-sm text-gray-300">{problemSolving}</p>
+            </div>
+
+            {/* AI & Marketing */}
+            <div className="bg-gray-800/50 rounded-xl p-4 border border-[#0047FF]/20">
+              <h4 className="text-sm font-semibold text-[#0047FF] mb-2 flex items-center gap-2">
+                <span className="w-2 h-2 bg-[#0047FF] rounded-full"></span>
+                AI & Marketing
+              </h4>
+              <p className="text-sm text-gray-300">{aiMarketing}</p>
+            </div>
+
+            {/* Client Management */}
+            <div className="bg-gray-800/50 rounded-xl p-4 border border-[#0047FF]/20">
+              <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                Client Management
+              </h4>
+              <p className="text-sm text-gray-300">{clientManagement}</p>
+            </div>
+
+            {/* Q&A Section */}
+            <div className="mt-4">
+              <h4 className="text-sm font-semibold text-white mb-3">Quick Q&A</h4>
+              <Accordion type="single" collapsible className="space-y-2">
+                {qas.slice(0, 3).map((qa, index) => (
+                  <AccordionItem 
+                    key={index} 
+                    value={`item-${index}`}
+                    className="border border-[#0047FF]/20 rounded-lg px-3 bg-gray-800/30"
+                  >
+                    <AccordionTrigger className="text-sm text-gray-200 hover:text-white py-3">
+                      {qa.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm text-gray-400 pb-3">
+                      {qa.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -729,24 +718,12 @@ const Portfolio = () => {
 
         {/* Portfolio Tabs */}
         <Tabs defaultValue="wordpress" className="mb-8" onValueChange={(value) => setActiveTab(value)}>
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-transparent">
+          <TabsList className="grid grid-cols-2 gap-2 bg-transparent">
             <TabsTrigger 
               value="wordpress" 
               className="data-[state=active]:bg-[#0047FF] data-[state=active]:text-white"
             >
               WordPress Projects
-            </TabsTrigger>
-            <TabsTrigger 
-              value="coded" 
-              className="data-[state=active]:bg-[#0047FF] data-[state=active]:text-white"
-            >
-              AI Website Development
-            </TabsTrigger>
-            <TabsTrigger 
-              value="video" 
-              className="data-[state=active]:bg-[#0047FF] data-[state=active]:text-white"
-            >
-              AI Video Content
             </TabsTrigger>
             <TabsTrigger 
               value="visual" 
@@ -772,34 +749,6 @@ const Portfolio = () => {
                   aiMarketing={project.aiMarketing}
                   clientManagement={project.clientManagement}
                   qas={project.qas}
-                />
-              ))}
-            </div>
-          </TabsContent>
-
-          {/* Ai Developing Web Site */}
-          <TabsContent value="coded" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {codedProjects.map((project, index) => (
-                <CustomCodedProjectCard
-                  key={index}
-                  image={project.image}
-                  title={project.title}
-                  category={project.category}
-                  url={project.url}
-                />
-              ))}
-            </div>
-          </TabsContent>
-
-          {/* Video Content */}
-          <TabsContent value="video" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {videoProjects.map((video, index) => (
-                <VideoCard
-                  key={index}
-                  video={video}
-                  onPlay={openVideoModal}
                 />
               ))}
             </div>
