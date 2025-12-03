@@ -61,10 +61,10 @@ const WordPressProjectCard = ({ image, title, category, url, role, technicalSkil
   return (
     <div className="group relative">
       {/* Main Profile Card */}
-      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl border border-[#0047FF]/40 shadow-[0_0_20px_rgba(0,71,255,0.15)] overflow-hidden transition-all duration-500 hover:border-[#0047FF] hover:shadow-[0_0_30px_rgba(0,71,255,0.3)]">
+      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-xl sm:rounded-2xl border border-[#0047FF]/40 shadow-[0_0_15px_rgba(0,71,255,0.15)] sm:shadow-[0_0_20px_rgba(0,71,255,0.15)] overflow-hidden transition-all duration-500 hover:border-[#0047FF] hover:shadow-[0_0_30px_rgba(0,71,255,0.3)]">
         
         {/* Auto-scrolling Homepage Preview */}
-        <div className="relative h-48 overflow-hidden rounded-t-xl border-b border-[#0047FF]/30">
+        <div className="relative h-36 sm:h-44 md:h-48 overflow-hidden rounded-t-xl border-b border-[#0047FF]/30">
           <div className="absolute inset-0 overflow-hidden">
             <img 
               src={image} 
@@ -76,43 +76,43 @@ const WordPressProjectCard = ({ image, title, category, url, role, technicalSkil
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
           {/* Live indicator */}
-          <div className="absolute top-3 left-3 flex items-center gap-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded-full">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-xs text-white font-medium">Live</span>
+          <div className="absolute top-2 left-2 sm:top-3 sm:left-3 flex items-center gap-1.5 sm:gap-2 bg-black/60 backdrop-blur-sm px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-[10px] sm:text-xs text-white font-medium">Live</span>
           </div>
         </div>
         
         {/* Content */}
-        <div className="p-4">
+        <div className="p-3 sm:p-4">
           {/* Title and category */}
-          <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#FFD700] transition-colors duration-300">{title}</h3>
-          <p className="text-xs text-gray-400 mb-3">{category}</p>
+          <h3 className="text-sm sm:text-base md:text-lg font-bold text-white mb-0.5 sm:mb-1 group-hover:text-[#FFD700] transition-colors duration-300 line-clamp-1">{title}</h3>
+          <p className="text-[10px] sm:text-xs text-gray-400 mb-2 sm:mb-3 line-clamp-1">{category}</p>
 
           {/* Skills tags */}
-          <div className="flex flex-wrap gap-1.5 mb-3">
-            {technicalSkills.slice(0, 3).map((skill, i) => (
-              <span key={i} className="px-2 py-0.5 text-[10px] font-medium bg-[#0047FF]/20 text-[#0047FF] rounded-full border border-[#0047FF]/30">
+          <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-2 sm:mb-3">
+            {technicalSkills.slice(0, 2).map((skill, i) => (
+              <span key={i} className="px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[10px] font-medium bg-[#0047FF]/20 text-[#0047FF] rounded-full border border-[#0047FF]/30">
                 {skill}
               </span>
             ))}
-            {technicalSkills.length > 3 && (
-              <span className="px-2 py-0.5 text-[10px] font-medium bg-gray-700/50 text-gray-400 rounded-full">
-                +{technicalSkills.length - 3} more
+            {technicalSkills.length > 2 && (
+              <span className="px-1.5 sm:px-2 py-0.5 text-[8px] sm:text-[10px] font-medium bg-gray-700/50 text-gray-400 rounded-full">
+                +{technicalSkills.length - 2} more
               </span>
             )}
           </div>
 
           {/* Role preview */}
-          <p className="text-xs text-gray-300 line-clamp-2 mb-4">{role}</p>
+          <p className="text-[10px] sm:text-xs text-gray-300 line-clamp-2 mb-3 sm:mb-4">{role}</p>
 
           {/* Action buttons */}
           <div className="flex gap-2">
             <button 
               onClick={() => setIsExpanded(!isExpanded)}
-              className="flex-1 py-2 px-3 bg-gradient-to-r from-[#0047FF] to-blue-600 text-white rounded-lg text-sm font-medium hover:from-blue-600 hover:to-blue-500 transition-all duration-300 flex items-center justify-center gap-1.5"
+              className="flex-1 py-1.5 sm:py-2 px-2 sm:px-3 bg-gradient-to-r from-[#0047FF] to-blue-600 text-white rounded-lg text-xs sm:text-sm font-medium hover:from-blue-600 hover:to-blue-500 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-1.5"
             >
               <span>View Details</span>
-              <svg className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className={`w-3 h-3 sm:w-3.5 sm:h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -120,57 +120,57 @@ const WordPressProjectCard = ({ image, title, category, url, role, technicalSkil
               href={url} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="py-2 px-3 bg-transparent border border-[#FFD700] text-[#FFD700] rounded-lg text-sm font-medium hover:bg-[#FFD700]/10 transition-all duration-300 flex items-center justify-center"
+              className="py-1.5 sm:py-2 px-2 sm:px-3 bg-transparent border border-[#FFD700] text-[#FFD700] rounded-lg text-xs sm:text-sm font-medium hover:bg-[#FFD700]/10 transition-all duration-300 flex items-center justify-center"
             >
-              <ExternalLink size={16} />
+              <ExternalLink size={14} className="sm:w-4 sm:h-4" />
             </a>
           </div>
         </div>
 
         {/* Expanded content */}
-        <div className={`overflow-hidden transition-all duration-500 ${isExpanded ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="px-4 pb-4 space-y-3 border-t border-[#0047FF]/30 pt-3">
+        <div className={`overflow-hidden transition-all duration-500 ${isExpanded ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-3 sm:px-4 pb-3 sm:pb-4 space-y-2 sm:space-y-3 border-t border-[#0047FF]/30 pt-2 sm:pt-3">
             {/* Problem Solving */}
-            <div className="bg-gray-800/50 rounded-lg p-3 border border-[#0047FF]/20">
-              <h4 className="text-xs font-semibold text-[#FFD700] mb-1.5 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 bg-[#FFD700] rounded-full"></span>
+            <div className="bg-gray-800/50 rounded-lg p-2 sm:p-3 border border-[#0047FF]/20">
+              <h4 className="text-[10px] sm:text-xs font-semibold text-[#FFD700] mb-1 sm:mb-1.5 flex items-center gap-1 sm:gap-1.5">
+                <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-[#FFD700] rounded-full"></span>
                 Problem Solving
               </h4>
-              <p className="text-xs text-gray-300">{problemSolving}</p>
+              <p className="text-[10px] sm:text-xs text-gray-300">{problemSolving}</p>
             </div>
 
             {/* AI & Marketing */}
-            <div className="bg-gray-800/50 rounded-lg p-3 border border-[#0047FF]/20">
-              <h4 className="text-xs font-semibold text-[#0047FF] mb-1.5 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 bg-[#0047FF] rounded-full"></span>
+            <div className="bg-gray-800/50 rounded-lg p-2 sm:p-3 border border-[#0047FF]/20">
+              <h4 className="text-[10px] sm:text-xs font-semibold text-[#0047FF] mb-1 sm:mb-1.5 flex items-center gap-1 sm:gap-1.5">
+                <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-[#0047FF] rounded-full"></span>
                 AI & Marketing
               </h4>
-              <p className="text-xs text-gray-300">{aiMarketing}</p>
+              <p className="text-[10px] sm:text-xs text-gray-300">{aiMarketing}</p>
             </div>
 
             {/* Client Management */}
-            <div className="bg-gray-800/50 rounded-lg p-3 border border-[#0047FF]/20">
-              <h4 className="text-xs font-semibold text-green-400 mb-1.5 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+            <div className="bg-gray-800/50 rounded-lg p-2 sm:p-3 border border-[#0047FF]/20">
+              <h4 className="text-[10px] sm:text-xs font-semibold text-green-400 mb-1 sm:mb-1.5 flex items-center gap-1 sm:gap-1.5">
+                <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-green-400 rounded-full"></span>
                 Client Management
               </h4>
-              <p className="text-xs text-gray-300">{clientManagement}</p>
+              <p className="text-[10px] sm:text-xs text-gray-300">{clientManagement}</p>
             </div>
 
             {/* Q&A Section */}
-            <div className="mt-3">
-              <h4 className="text-xs font-semibold text-white mb-2">Quick Q&A</h4>
-              <Accordion type="single" collapsible className="space-y-1.5">
+            <div className="mt-2 sm:mt-3">
+              <h4 className="text-[10px] sm:text-xs font-semibold text-white mb-1.5 sm:mb-2">Quick Q&A</h4>
+              <Accordion type="single" collapsible className="space-y-1 sm:space-y-1.5">
                 {qas.slice(0, 3).map((qa, index) => (
                   <AccordionItem 
                     key={index} 
                     value={`item-${index}`}
-                    className="border border-[#0047FF]/20 rounded-lg px-2 bg-gray-800/30"
+                    className="border border-[#0047FF]/20 rounded-lg px-1.5 sm:px-2 bg-gray-800/30"
                   >
-                    <AccordionTrigger className="text-xs text-gray-200 hover:text-white py-2">
+                    <AccordionTrigger className="text-[10px] sm:text-xs text-gray-200 hover:text-white py-1.5 sm:py-2">
                       {qa.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-xs text-gray-400 pb-2">
+                    <AccordionContent className="text-[10px] sm:text-xs text-gray-400 pb-1.5 sm:pb-2">
                       {qa.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -193,19 +193,19 @@ const CustomCodedProjectCard = ({ image, title, category, url }: CustomCodedProj
       rel="noopener noreferrer" 
       className="portfolio-card group block"
     >
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+      <div className="relative overflow-hidden rounded-lg sm:rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_10px_rgba(0,71,255,0.3)] sm:shadow-[0_0_15px_rgba(0,71,255,0.3)]">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-2 sm:p-4">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-white">{title}</h3>
-              <p className="text-sm text-gray-300">{category}</p>
+              <h3 className="text-sm sm:text-base md:text-lg font-bold text-white line-clamp-1">{title}</h3>
+              <p className="text-xs sm:text-sm text-gray-300 line-clamp-1">{category}</p>
             </div>
-            <ExternalLink className="text-[#FFD700]" size={20} />
+            <ExternalLink className="text-[#FFD700] w-4 h-4 sm:w-5 sm:h-5" />
           </div>
         </div>
       </div>
@@ -222,19 +222,19 @@ const ToolCard = ({ image, title, category, url }: ToolProps) => {
       rel="noopener noreferrer" 
       className="portfolio-card group block"
     >
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+      <div className="relative overflow-hidden rounded-lg sm:rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_10px_rgba(0,71,255,0.3)] sm:shadow-[0_0_15px_rgba(0,71,255,0.3)]">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-2 sm:p-4">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-white">{title}</h3>
-              <p className="text-sm text-gray-300">{category}</p>
+              <h3 className="text-sm sm:text-base md:text-lg font-bold text-white line-clamp-1">{title}</h3>
+              <p className="text-xs sm:text-sm text-gray-300 line-clamp-1">{category}</p>
             </div>
-            <ExternalLink className="text-[#FFD700]" size={20} />
+            <ExternalLink className="text-[#FFD700] w-4 h-4 sm:w-5 sm:h-5" />
           </div>
         </div>
       </div>
@@ -246,15 +246,15 @@ const ToolCard = ({ image, title, category, url }: ToolProps) => {
 const PortfolioCard = ({ image, title, category, id }: PortfolioItemProps) => {
   return (
     <Link to={`/portfolio/${id}`} target="_blank" rel="noopener noreferrer" className="portfolio-card group">
-      <div className="relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_15px_rgba(0,71,255,0.3)]">
+      <div className="relative overflow-hidden rounded-lg sm:rounded-xl aspect-[4/3] border-2 border-[#0047FF] shadow-[0_0_10px_rgba(0,71,255,0.3)] sm:shadow-[0_0_15px_rgba(0,71,255,0.3)]">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
-          <h3 className="text-lg font-bold text-white">{title}</h3>
-          <p className="text-sm text-gray-300">{category}</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-2 sm:p-4">
+          <h3 className="text-sm sm:text-base md:text-lg font-bold text-white line-clamp-1">{title}</h3>
+          <p className="text-xs sm:text-sm text-gray-300 line-clamp-1">{category}</p>
         </div>
       </div>
     </Link>
@@ -265,7 +265,7 @@ const PortfolioCard = ({ image, title, category, id }: PortfolioItemProps) => {
 const VideoCard = ({ video, onPlay }: { video: VideoProps, onPlay: (video: VideoProps) => void }) => {
   return (
     <div
-      className="video-card relative rounded-xl overflow-hidden cursor-pointer shadow-[0_0_15px_rgba(0,71,255,0.5)] border-2 border-[#0047FF]"
+      className="video-card relative rounded-lg sm:rounded-xl overflow-hidden cursor-pointer shadow-[0_0_10px_rgba(0,71,255,0.5)] sm:shadow-[0_0_15px_rgba(0,71,255,0.5)] border-2 border-[#0047FF]"
       onClick={() => onPlay(video)}
     >
       <div className="aspect-video relative">
@@ -275,13 +275,13 @@ const VideoCard = ({ video, onPlay }: { video: VideoProps, onPlay: (video: Video
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/80 to-transparent flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-          <div className="p-3 rounded-full bg-[#0047FF]/80 text-white">
-            <Play size={24} />
+          <div className="p-2 sm:p-3 rounded-full bg-[#0047FF]/80 text-white">
+            <Play size={20} className="sm:w-6 sm:h-6" />
           </div>
         </div>
       </div>
-      <div className="p-3 bg-gradient-to-r from-[#0047FF]/30 to-[#0033CC]/50 text-white">
-        <h3 className="text-sm font-semibold">{video.title}</h3>
+      <div className="p-2 sm:p-3 bg-gradient-to-r from-[#0047FF]/30 to-[#0033CC]/50 text-white">
+        <h3 className="text-xs sm:text-sm font-semibold line-clamp-1">{video.title}</h3>
       </div>
     </div>
   );
@@ -291,7 +291,7 @@ const VideoCard = ({ video, onPlay }: { video: VideoProps, onPlay: (video: Video
 const ImagePreviewCard = ({ project, onClick }: { project: PortfolioItemProps, onClick: (project: PortfolioItemProps) => void }) => {
   return (
     <div 
-      className="portfolio-card group cursor-pointer shadow-[0_0_15px_rgba(0,71,255,0.5)] border-2 border-[#0047FF] rounded-xl overflow-hidden"
+      className="portfolio-card group cursor-pointer shadow-[0_0_10px_rgba(0,71,255,0.5)] sm:shadow-[0_0_15px_rgba(0,71,255,0.5)] border-2 border-[#0047FF] rounded-lg sm:rounded-xl overflow-hidden"
       onClick={() => onClick(project)}
     >
       <div className="relative overflow-hidden aspect-[4/3]">
@@ -300,9 +300,9 @@ const ImagePreviewCard = ({ project, onClick }: { project: PortfolioItemProps, o
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4">
-          <h3 className="text-lg font-bold text-white">{project.title}</h3>
-          <p className="text-sm text-gray-300">{project.category}</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0047FF]/90 via-[#0047FF]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-2 sm:p-4">
+          <h3 className="text-sm sm:text-base md:text-lg font-bold text-white line-clamp-1">{project.title}</h3>
+          <p className="text-xs sm:text-sm text-gray-300 line-clamp-1">{project.category}</p>
         </div>
       </div>
     </div>
@@ -698,44 +698,44 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="py-6 relative overflow-hidden">
+    <section id="portfolio" className="py-8 sm:py-12 md:py-16 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-40 right-20 w-96 h-96 rounded-full bg-[#0047FF]/30 blur-[100px]"></div>
-        <div className="absolute bottom-40 left-20 w-80 h-80 rounded-full bg-[#0033CC]/20 blur-[80px]"></div>
+        <div className="absolute top-20 right-5 sm:top-40 sm:right-20 w-48 h-48 sm:w-72 md:w-96 sm:h-72 md:h-96 rounded-full bg-[#0047FF]/30 blur-[60px] sm:blur-[80px] md:blur-[100px]"></div>
+        <div className="absolute bottom-20 left-5 sm:bottom-40 sm:left-20 w-40 h-40 sm:w-60 md:w-80 sm:h-60 md:h-80 rounded-full bg-[#0033CC]/20 blur-[50px] sm:blur-[60px] md:blur-[80px]"></div>
       </div>
 
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">
+      <div className="container mx-auto px-3 sm:px-4 max-w-6xl">
+        <div className="text-center mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
             <span className="text-white">EXPLORE MY </span>
             <span className="text-[#0047FF]">WORK</span>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-base text-gray-300 max-w-2xl mx-auto px-2">
             I build fast, secure, and beautiful websites that convert visitors into customers using modern technologies.
           </p>
         </div>
 
         {/* Portfolio Tabs */}
-        <Tabs defaultValue="wordpress" className="mb-8" onValueChange={(value) => setActiveTab(value)}>
-          <TabsList className="grid grid-cols-2 gap-2 bg-transparent">
+        <Tabs defaultValue="wordpress" className="mb-6 sm:mb-8" onValueChange={(value) => setActiveTab(value)}>
+          <TabsList className="grid grid-cols-2 gap-1 sm:gap-2 bg-transparent w-full">
             <TabsTrigger 
               value="wordpress" 
-              className="data-[state=active]:bg-[#0047FF] data-[state=active]:text-white"
+              className="text-xs sm:text-sm data-[state=active]:bg-[#0047FF] data-[state=active]:text-white px-2 sm:px-4 py-1.5 sm:py-2"
             >
               WordPress Projects
             </TabsTrigger>
             <TabsTrigger 
               value="visual" 
-              className="data-[state=active]:bg-[#0047FF] data-[state=active]:text-white"
+              className="text-xs sm:text-sm data-[state=active]:bg-[#0047FF] data-[state=active]:text-white px-2 sm:px-4 py-1.5 sm:py-2"
             >
               Creative Visuals
             </TabsTrigger>
           </TabsList>
 
           {/* WordPress Projects */}
-          <TabsContent value="wordpress" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <TabsContent value="wordpress" className="mt-4 sm:mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {wordpressProjects.map((project, index) => (
                 <WordPressProjectCard
                   key={index}
@@ -755,8 +755,8 @@ const Portfolio = () => {
           </TabsContent>
 
           {/* Creative Visuals */}
-          <TabsContent value="visual" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <TabsContent value="visual" className="mt-4 sm:mt-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
               {visualProjects.map((project, index) => (
                 <ImagePreviewCard
                   key={index}
@@ -768,8 +768,8 @@ const Portfolio = () => {
           </TabsContent>
         </Tabs>
 
-        <div className="flex justify-center mt-6">
-          <Link to="/#portfolio" className="glow-btn">
+        <div className="flex justify-center mt-4 sm:mt-6">
+          <Link to="/#portfolio" className="glow-btn text-xs sm:text-sm">
             <span>See Full Portfolio</span>
           </Link>
         </div>
@@ -777,7 +777,7 @@ const Portfolio = () => {
 
       {/* Video Modal */}
       <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
-        <DialogContent className="max-w-4xl bg-brand-black border border-[#0047FF]">
+        <DialogContent className="max-w-[95vw] sm:max-w-2xl md:max-w-4xl bg-brand-black border border-[#0047FF] p-3 sm:p-6">
           <DialogHeader>
             <DialogTitle className="text-white">{selectedVideo?.title}</DialogTitle>
           </DialogHeader>
@@ -815,7 +815,7 @@ const Portfolio = () => {
 
       {/* Image Modal */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-4xl bg-brand-black border border-[#0047FF]">
+        <DialogContent className="max-w-[95vw] sm:max-w-2xl md:max-w-4xl bg-brand-black border border-[#0047FF] p-3 sm:p-6">
           <DialogHeader>
             <DialogTitle className="text-white">{selectedImage?.title}</DialogTitle>
           </DialogHeader>
