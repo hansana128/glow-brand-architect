@@ -30,7 +30,6 @@ interface WordPressProjectProps {
   role: string;
   technicalSkills: string[];
   problemSolving: string;
-  aiMarketing: string;
   clientManagement: string;
   qas: Array<{
     question: string;
@@ -55,7 +54,7 @@ interface ToolProps {
 }
 
 // Modern Profile Card for WordPress projects with auto-scroll homepage preview
-const WordPressProjectCard = ({ image, title, category, url, role, technicalSkills, problemSolving, aiMarketing, clientManagement, qas }: WordPressProjectProps) => {
+const WordPressProjectCard = ({ image, title, category, url, role, technicalSkills, problemSolving, clientManagement, qas }: WordPressProjectProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   return (
@@ -137,15 +136,6 @@ const WordPressProjectCard = ({ image, title, category, url, role, technicalSkil
                 Problem Solving
               </h4>
               <p className="text-[10px] sm:text-xs text-gray-300">{problemSolving}</p>
-            </div>
-
-            {/* AI & Marketing */}
-            <div className="bg-gray-800/50 rounded-lg p-2 sm:p-3 border border-[#0047FF]/20">
-              <h4 className="text-[10px] sm:text-xs font-semibold text-[#0047FF] mb-1 sm:mb-1.5 flex items-center gap-1 sm:gap-1.5">
-                <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-[#0047FF] rounded-full"></span>
-                AI & Marketing
-              </h4>
-              <p className="text-[10px] sm:text-xs text-gray-300">{aiMarketing}</p>
             </div>
 
             {/* Client Management */}
@@ -324,7 +314,6 @@ const Portfolio = () => {
       role: "I worked as the main developer, collaborating with the university's media unit team to build the official Infocus Media website. Customized a WordPress theme to match the media unit's brand identity, designed responsive layouts for mobile and desktop, handled SEO setup and performance optimization, and ensured smooth functionality and ongoing support.",
       technicalSkills: ["WordPress Development", "Theme Customization (Elementor + WordPress)", "Responsive Design", "SEO Optimization", "Performance & Speed Optimization"],
       problemSolving: "The media unit needed a modern, easy-to-manage website to share university news, events, and media content with students and staff. I solved this by building a WordPress site that was easy to update by non-technical staff, mobile-friendly and fast-loading, and designed to reflect the media unit's visual identity.",
-      aiMarketing: "Used ChatGPT for SEO-friendly content drafting and structuring, applied simple digital marketing principles for better reach, and focused on improving user engagement with clean layouts and visuals.",
       clientManagement: "Worked closely with the media unit team to gather requirements, provided training on how to manage and update the website, and set up a basic maintenance schedule for smooth long-term usage.",
       qas: [
         {
@@ -357,7 +346,6 @@ const Portfolio = () => {
       role: "I collaborated with the company's internal marketing team to redesign and develop the official IOG Global website. Built the site using WordPress with Divi Builder, resolved performance issues through a technical audit, improved speed, SEO, and mobile responsiveness, and ensured design aligned with the company's brand identity and campaigns.",
       technicalSkills: ["WordPress Development (Divi Builder)", "Responsive Design & Mobile Optimization", "Performance Optimization (image compression, code cleanup)", "SEO Best Practices", "Google Analytics & Speed Testing (PageSpeed Insights, GTmetrix)"],
       problemSolving: "The company's website had slow load times, outdated design, and weak SEO visibility. I solved this by optimizing performance (faster loading, cleaner code), improving responsiveness across devices, enhancing SEO to boost search rankings, and delivering a design that matched the company's professional brand image.",
-      aiMarketing: "Used AI tools for keyword research and SEO-friendly content optimization, ensured alignment with digital marketing campaigns, and created a user-focused design that increased engagement.",
       clientManagement: "Worked closely with the marketing team for content and branding alignment, provided reports on performance improvements and SEO results, and trained staff on managing and updating the site with Divi Builder.",
       qas: [
         {
@@ -390,7 +378,6 @@ const Portfolio = () => {
       role: "Developed a luxury jewelry e-commerce site with product catalogs, secure checkout, and inventory management.",
       technicalSkills: ["WordPress", "WooCommerce", "Payment Gateway Integration", "SSL Security", "Responsive/Mobile Commerce"],
       problemSolving: "The client needed to move from physical retail to online. I delivered an elegant e-commerce platform showcasing jewelry with smooth transactions.",
-      aiMarketing: "Used AI for product recommendations, SEO optimization, and customer analytics.",
       clientManagement: "Provided training on managing products, orders, and inventory; created documentation for smooth handover.",
       qas: [
         {
@@ -423,7 +410,6 @@ const Portfolio = () => {
       role: "Designed and developed the NGO's platform for donations, volunteer coordination, and program updates.",
       technicalSkills: ["WordPress", "Multi-Language Support", "Donation & Payment Systems", "Impact Reporting"],
       problemSolving: "The NGO needed a digital hub for showcasing projects and engaging donors. I created a reliable, transparent platform for their global community.",
-      aiMarketing: "Applied AI for donor behavior analysis, personalized campaigns, and storytelling strategies.",
       clientManagement: "Collaborated with international teams; trained local staff for content and donation management.",
       qas: [
         {
@@ -456,7 +442,6 @@ const Portfolio = () => {
       role: "Developed a restaurant site with reservations, menu management, and customer engagement features.",
       technicalSkills: ["WordPress", "Online Reservation System", "Menu Integration", "Social Media Embeds", "Responsive Design"],
       problemSolving: "The restaurant needed to increase visibility and streamline table bookings. I created an engaging site that showcased their cuisine while simplifying the reservation process.",
-      aiMarketing: "Used AI tools for menu keyword optimization, SEO, and customer insights.",
       clientManagement: "Worked with management to align branding; trained staff on handling online reservations and menu updates.",
       qas: [
         {
@@ -746,7 +731,6 @@ const Portfolio = () => {
                   role={project.role}
                   technicalSkills={project.technicalSkills}
                   problemSolving={project.problemSolving}
-                  aiMarketing={project.aiMarketing}
                   clientManagement={project.clientManagement}
                   qas={project.qas}
                 />
